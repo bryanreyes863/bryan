@@ -614,8 +614,7 @@ var num = 0;
 var newnum;
 
 socket.on('sec',function(seconds){
-	console.log(seconds)
-
+	
 	var windowW = window.innerWidth;
 
 	if(count_down != null){
