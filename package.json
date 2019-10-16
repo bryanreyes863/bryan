@@ -1,0 +1,21 @@
+{
+  "name": "dograce",
+  "version": "1.0.1",
+  "description": "this is a game",
+  "main": "server.js",
+  "scripts": {
+    "test": "run",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "dograce"
+  ],
+  "author": "bryan",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "mongodb": "^3.3.2",
+    "socket.io": "^2.2.0"
+  }
+}

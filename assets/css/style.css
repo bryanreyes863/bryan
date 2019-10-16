@@ -1,0 +1,31 @@
+body{
+	background-color: #171a1c!important;
+}
+
+#track_bg{
+	position: fixed;
+	width: 100%;
+	/*max-height: 900px;*/
+	z-index: -10;
+	
+}
+#table_bg{
+	position: absolute;
+	width: 100%;
+	z-index: -10;
+	
+}
+.result-container{
+	border: 1px solid white;
+	height: 200px;
+	width: 340px;
+}
+.image-holder{
+	display: inline-block;
+	padding: 10px;
+}
+.result-box{
+	width: 220px;
+	height: 100px;
+	border: 1px solid white;
+}
