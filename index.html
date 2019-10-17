@@ -22,9 +22,14 @@
 </head>
 <script src="/socket.io/socket.io.js"></script>
 <body>
+	<div class="loading_animation_con">
+		<img src="assets/images/DOGLOADING.png" id="loadingAnimation">
+		<p>Components Loaded <strong><span id="percent">0%</span></strong></p>
+	</div>
+
 <!-- 		<img id="rank" src="assets/images/rank_panel.png" style="z-index: 1; height: 20%; bottom: 25px;"> -->
-		<img id="track_bg" src="assets/images/bg_track/bg_track_1.jpg">
-		<canvas id="gameCanvas"></canvas>
+		<img id="track_bg" src="assets/images/bg_track/bg_track_1.jpg" style="opacity: 0;">
+		<canvas id="gameCanvas" style="opacity: 0;"></canvas>
 		<div id="win_overlay"></div>
 </body>
 <script type="text/javascript" src="https://code.createjs.com/1.0.0/createjs.min.js"></script>

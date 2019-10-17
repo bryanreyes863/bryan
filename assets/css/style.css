@@ -29,3 +29,18 @@ body{
 	height: 100px;
 	border: 1px solid white;
 }
+
+
+.loading_animation_con img{
+	width: 100px;
+}
+
+
+.loading_animation_con {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	text-align: center;
+	padding-top: 5%;
+	color: white;
+}

@@ -220,11 +220,39 @@ maniFest = [
 
 loader = new createjs.LoadQueue(false);
 loader.on('fileload' , handleFile);
+loader.on('progress', handleProgress, this);
 loader.addEventListener("complete" , loadingComplete);
 loader.loadManifest(maniFest,true);
 
 
 window.addEventListener("resize" , resize);
+
+
+function handleProgress() {
+	total = Math.round(loader.progress / 1 * 100);
+
+	if (total == 100) {
+		setTimeout(function(){
+
+			
+			socket.emit('newVisitors');
+			$('.loading_animation_con').animate({
+				'opacity': '0'
+			},100);
+
+			$('#track_bg').animate({
+				'opacity': '1'
+			},1000);
+
+			$('#gameCanvas').animate({
+				'opacity': '1'
+			},1000);
+		},2000);
+	}
+
+	$('#percent').html(total+'%');
+    // $('.loader p').html(Math.round(loader.progress / 1 * 100) + "%")
+}
 
 
 // function getRandomName(name){
@@ -597,7 +625,6 @@ function getRank(){
 	}
 }
 
-socket.emit('newVisitors');
 
 socket.on('loadDataGame', function(data){
 
@@ -614,7 +641,6 @@ var num = 0;
 var newnum;
 
 socket.on('sec',function(seconds){
-	
 	var windowW = window.innerWidth;
 
 	if(count_down != null){
@@ -694,7 +720,6 @@ function runTrack(num){
 				finish = true;
 			},2500)
 
-			console.log(finish)
 
 			$('#track_bg').attr("src" , "../assets/images/bg_track/bg_track_"+num+".jpg");
 
