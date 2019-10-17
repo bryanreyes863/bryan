@@ -234,6 +234,9 @@ function handleProgress() {
 	if (total == 100) {
 		setTimeout(function(){
 
+			setInterval(function(){
+					getRank();
+			},1500);
 			
 			socket.emit('newVisitors');
 			$('.loading_animation_con').animate({
@@ -529,15 +532,6 @@ function resize(){
 
 	// tick();
 }
-
-
-
-
-setInterval(function(){
-
-		getRank();
-
-},1500);
 
 
 
