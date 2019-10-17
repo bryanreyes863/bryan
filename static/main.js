@@ -50,6 +50,8 @@ var count;
 var time_count;
 var count_down;
 
+
+var shouldStart = false;
 // var screen_name1;
 // var screen_name2;
 // var screen_name3;
@@ -234,6 +236,7 @@ function handleProgress() {
 	if (total == 100) {
 		setTimeout(function(){
 
+			shouldStart = true;
 			setInterval(function(){
 					getRank();
 			},1500);
@@ -621,12 +624,14 @@ function getRank(){
 
 
 socket.on('loadDataGame', function(data){
+	if (shouldStart) {
 
 		if (data[0].rounds < 10 ) {
 			count.text = "00"+data[0].rounds;
 		}else {
 			count.text = ""+(data[0].rounds + 1);
 		}
+	}
 
 
 });
@@ -635,97 +640,109 @@ var num = 0;
 var newnum;
 
 socket.on('sec',function(seconds){
-	var windowW = window.innerWidth;
+	if (shouldStart) {
 
-	if(count_down != null){
+		var windowW = window.innerWidth;
 
-		if (seconds < 10 ) {
-			count_down.text = '00:0'+seconds;
-		}else {
-			count_down.text = '00:'+seconds;
+		if(count_down != null){
+
+			if (seconds < 10 ) {
+				count_down.text = '00:0'+seconds;
+			}else {
+				count_down.text = '00:'+seconds;
+			}
+
+			if (seconds == 1) {
+
+				runTrack(num);
+				startLine();
+			} 
+
+			if (seconds == 10) {
+
+				dog1obj.alpha = 0;
+				dog2obj.alpha = 0;
+				dog3obj.alpha = 0;
+				dog4obj.alpha = 0;
+				dog5obj.alpha = 0;
+				dog6obj.alpha = 0;
+				resize();
+			}
+
 		}
-
-		if (seconds == 1) {
-
-			runTrack(num);
-			startLine();
-		} 
-
-		if (seconds == 10) {
-
-			dog1obj.alpha = 0;
-			dog2obj.alpha = 0;
-			dog3obj.alpha = 0;
-			dog4obj.alpha = 0;
-			dog5obj.alpha = 0;
-			dog6obj.alpha = 0;
-			resize();
-		}
-
 	}
 
 })
 
 function startLine(){
 
-	var windowW = window.innerWidth;
+	if (shouldStart) {
 
-	createjs.Tween.get(line)
-	.to({scaleX: (windowW * 1)  / bg.image.height}, 4200, createjs.Ease.linear)
-	.to({scaleX: (windowW * 2)  / bg.image.height}, 4200, createjs.Ease.linear)
-	.to({scaleX: (windowW * 3)  / bg.image.height}, 4200, createjs.Ease.linear)
-	.to({scaleX: (windowW * 4)  / bg.image.height}, 4200, createjs.Ease.linear)
-	.to({scaleX: (windowW * 5)  / bg.image.height}, 4200, createjs.Ease.linear)
-	.to({scaleX: (windowW * 6)  / bg.image.height}, 4200, createjs.Ease.linear)
-	.to({scaleX: (windowW * 7)  / bg.image.height}, 4200, createjs.Ease.linear)
-	.to({scaleX: (windowW * 8.4)  / bg.image.height}, 5000, createjs.Ease.linear);
+		var windowW = window.innerWidth;
+
+		createjs.Tween.get(line)
+		.to({scaleX: (windowW * 1)  / bg.image.height}, 4200, createjs.Ease.linear)
+		.to({scaleX: (windowW * 2)  / bg.image.height}, 4200, createjs.Ease.linear)
+		.to({scaleX: (windowW * 3)  / bg.image.height}, 4200, createjs.Ease.linear)
+		.to({scaleX: (windowW * 4)  / bg.image.height}, 4200, createjs.Ease.linear)
+		.to({scaleX: (windowW * 5)  / bg.image.height}, 4200, createjs.Ease.linear)
+		.to({scaleX: (windowW * 6)  / bg.image.height}, 4200, createjs.Ease.linear)
+		.to({scaleX: (windowW * 7)  / bg.image.height}, 4200, createjs.Ease.linear)
+		.to({scaleX: (windowW * 8.4)  / bg.image.height}, 5000, createjs.Ease.linear);
+	}
 
 }
 
 function runTrack(num){
 
-	 win1 = null;
-	 win2 = null;
-	 win3 = null;
-	 win4 = null;
-	 win5 = null;
-	 win6 = null;
+	if (shouldStart) {
 
-	finish = false;
+		 win1 = null;
+		 win2 = null;
+		 win3 = null;
+		 win4 = null;
+		 win5 = null;
+		 win6 = null;
 
-		newnum = num;
-		if (num == 17) {
-			dog1obj.alpha = 1;
-			dog2obj.alpha = 1;
-			dog3obj.alpha = 1;
-			dog4obj.alpha = 1;
-			dog5obj.alpha = 1;
-			dog6obj.alpha = 1;
-			rundog(dog_arr[0]['name'],dog_arr[1]['name'],dog_arr[2]['name'],dog_arr[3]['name'],dog_arr[4]['name'],dog_arr[5]['name'])
-		}
+		finish = false;
 
-		if (num < 415) {
-			num++;
-			changeTrack(num);
-		} else {
+			newnum = num;
+			if (num == 17) {
+				dog1obj.alpha = 1;
+				dog2obj.alpha = 1;
+				dog3obj.alpha = 1;
+				dog4obj.alpha = 1;
+				dog5obj.alpha = 1;
+				dog6obj.alpha = 1;
+				rundog(dog_arr[0]['name'],dog_arr[1]['name'],dog_arr[2]['name'],dog_arr[3]['name'],dog_arr[4]['name'],dog_arr[5]['name'])
+			}
 
-			setTimeout(function(){
+			if (num < 415) {
+				num++;
+				changeTrack(num);
+			} else {
 
-				finish = true;
-			},2500)
+				setTimeout(function(){
+
+					finish = true;
+				},2500)
 
 
-			$('#track_bg').attr("src" , "../assets/images/bg_track/bg_track_"+num+".jpg");
+				$('#track_bg').attr("src" , "../assets/images/bg_track/bg_track_"+num+".jpg");
 
-		}
+			}
+	}
 }
 
 	function changeTrack(num) {
-		$('#track_bg').attr("src" , "../assets/images/bg_track/bg_track_"+num+".jpg");
+		if (shouldStart) {
 
-		setTimeout(function(){
-			return runTrack(num);
-		},80)
+			$('#track_bg').attr("src" , "../assets/images/bg_track/bg_track_"+num+".jpg");
+
+			setTimeout(function(){
+				return runTrack(num);
+			},80)
+		}
 	}
 
 // function getMove(){
@@ -737,333 +754,335 @@ function runTrack(num){
 
 
 	function completeRun(obj) {
+		if (shouldStart) {
 
-		var windowW = window.innerWidth;
-
-
-		if (win1 == null || win2 == null || win3 == null) {
-
-			if (win1 == null) {
-				createjs.Tween.get(panel_arrival)
-				.to({x : $('#track_bg').width() * 0.85 }, 100 , createjs.Ease.easeOutExpo)
-
-			}
-
-			setTimeout(function(){
-				spriteSheet.framerate = 0.0001;
-				createjs.Ticker.paused = true;
+			var windowW = window.innerWidth;
 
 
-				$('#track_bg').css('filter' , 'grayscale(100%)');
+			if (win1 == null || win2 == null || win3 == null) {
+
 				if (win1 == null) {
-
-
-					if (obj['target']['currentAnimation'] == 'dog1') {
-						flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag1.x = panel_arrival.x + 20 ;
-						flag1.y = panel_arrival.y + 8;
-						win_name1.x = flag1.x + 65;
-						win_name1.y = flag1.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog2'){
-						flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag2.x = panel_arrival.x + 20 ;
-						flag2.y = panel_arrival.y + 8;
-						win_name2.x = flag2.x + 65;
-						win_name2.y = flag2.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog3'){
-						flag3.scaleX = flag3.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag3.x = panel_arrival.x + 20 ;
-						flag3.y = panel_arrival.y + 8;
-						win_name3.x = flag3.x + 65;
-						win_name3.y = flag3.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog4'){
-						flag4.scaleX = flag4.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag4.x = panel_arrival.x + 20 ;
-						flag4.y = panel_arrival.y + 8;
-						win_name4.x = flag4.x + 65;
-						win_name4.y = flag4.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog5'){
-						flag5.scaleX = flag5.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag5.x = panel_arrival.x + 20 ;
-						flag5.y = panel_arrival.y + 8;
-						win_name5.x = flag5.x + 65;
-						win_name5.y = flag5.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog6'){
-						flag6.scaleX = flag6.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag6.x = panel_arrival.x + 20 ;
-						flag6.y = panel_arrival.y + 8;
-						win_name6.x = flag6.x + 65;
-						win_name6.y = flag6.y + 10;
-
-					}
-
-					win1 = obj['target']['currentAnimation'];
-
-				} else if (win2 == null) {
-
-					if (obj['target']['currentAnimation'] == 'dog1') {
-						flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag1.x = panel_arrival.x + 20 ;
-						flag1.y = panel_arrival.y + 62;
-						win_name1.x = flag1.x + 65;
-						win_name1.y = flag1.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog2'){
-						flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag2.x = panel_arrival.x + 20 ;
-						flag2.y = panel_arrival.y + 62;
-						win_name2.x = flag2.x + 65;
-						win_name2.y = flag2.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog3'){
-						flag3.scaleX = flag3.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag3.x = panel_arrival.x + 20 ;
-						flag3.y = panel_arrival.y + 62;
-						win_name3.x = flag3.x + 65;
-						win_name3.y = flag3.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog4'){
-						flag4.scaleX = flag4.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag4.x = panel_arrival.x + 20 ;
-						flag4.y = panel_arrival.y + 62;
-						win_name4.x = flag4.x + 65;
-						win_name4.y = flag4.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog5'){
-						flag5.scaleX = flag5.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag5.x = panel_arrival.x + 20 ;
-						flag5.y = panel_arrival.y + 62;
-						win_name5.x = flag5.x + 65;
-						win_name5.y = flag5.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog6'){
-						flag6.scaleX = flag6.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag6.x = panel_arrival.x + 20 ;
-						flag6.y = panel_arrival.y + 62;
-						win_name6.x = flag6.x + 65;
-						win_name6.y = flag6.y + 10;
-
-					}
-
-					win2 = obj['target']['currentAnimation'];
-
-				} else if (win3 == null) {
-
-					if (obj['target']['currentAnimation'] == 'dog1') {
-						flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag1.x = panel_arrival.x + 20 ;
-						flag1.y = panel_arrival.y + 116;
-						win_name1.x = flag1.x + 65;
-						win_name1.y = flag1.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog2'){
-						flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag2.x = panel_arrival.x + 20 ;
-						flag2.y = panel_arrival.y + 116;
-						win_name2.x = flag2.x + 65;
-						win_name2.y = flag2.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog3'){
-						flag3.scaleX = flag3.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag3.x = panel_arrival.x + 20 ;
-						flag3.y = panel_arrival.y + 116;
-						win_name3.x = flag3.x + 65;
-						win_name3.y = flag3.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog4'){
-						flag4.scaleX = flag4.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag4.x = panel_arrival.x + 20 ;
-						flag4.y = panel_arrival.y + 116;
-						win_name4.x = flag4.x + 65;
-						win_name4.y = flag4.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog5'){
-						flag5.scaleX = flag5.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag5.x = panel_arrival.x + 20 ;
-						flag5.y = panel_arrival.y + 116;
-						win_name5.x = flag5.x + 65;
-						win_name5.y = flag5.y + 10;
-
-					} else if (obj['target']['currentAnimation'] == 'dog6'){
-						flag6.scaleX = flag6.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-						flag6.x = panel_arrival.x + 20 ;
-						flag6.y = panel_arrival.y + 116;
-						win_name6.x = flag6.x + 65;
-						win_name6.y = flag6.y + 10;
-
-					}
-
-					win3 = obj['target']['currentAnimation'];
+					createjs.Tween.get(panel_arrival)
+					.to({x : $('#track_bg').width() * 0.85 }, 100 , createjs.Ease.easeOutExpo)
 
 				}
 
 				setTimeout(function(){
-					createjs.Ticker.paused = false;
-					spriteSheet.framerate = 35;
-					$('#track_bg').css('filter' , 'grayscale(0%)');
-					createjs.Tween.get(obj['target'])
-					.to({x: (obj['target']['x'] + ($('#track_bg').width() * 1.2))}, 1500, createjs.Ease.linear)
-				},1000)
+					spriteSheet.framerate = 0.0001;
+					createjs.Ticker.paused = true;
 
-			},100)
-		} else {
-			createjs.Tween.get(obj['target'])
-			.to({x: (obj['target']['x'] + ($('#track_bg').width() * 1.2))}, 1500, createjs.Ease.linear)
 
-			if (win4 == null) {
+					$('#track_bg').css('filter' , 'grayscale(100%)');
+					if (win1 == null) {
 
-				if (obj['target']['currentAnimation'] == 'dog1') {
-					flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag1.x = panel_arrival.x + 20 ;
-					flag1.y = panel_arrival.y + 168;
-					win_name1.x = flag1.x + 65;
-					win_name1.y = flag1.y + 10;
 
-				} else if (obj['target']['currentAnimation'] == 'dog2'){
-					flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag2.x = panel_arrival.x + 20 ;
-					flag2.y = panel_arrival.y + 168;
-					win_name2.x = flag2.x + 65;
-					win_name2.y = flag2.y + 10;
+						if (obj['target']['currentAnimation'] == 'dog1') {
+							flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag1.x = panel_arrival.x + 20 ;
+							flag1.y = panel_arrival.y + 8;
+							win_name1.x = flag1.x + 65;
+							win_name1.y = flag1.y + 10;
 
-				} else if (obj['target']['currentAnimation'] == 'dog3'){
-					flag3.scaleX = flag3.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag3.x = panel_arrival.x + 20 ;
-					flag3.y = panel_arrival.y + 168;
-					win_name3.x = flag3.x + 65;
-					win_name3.y = flag3.y + 10;
+						} else if (obj['target']['currentAnimation'] == 'dog2'){
+							flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag2.x = panel_arrival.x + 20 ;
+							flag2.y = panel_arrival.y + 8;
+							win_name2.x = flag2.x + 65;
+							win_name2.y = flag2.y + 10;
 
-				} else if (obj['target']['currentAnimation'] == 'dog4'){
-					flag4.scaleX = flag4.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag4.x = panel_arrival.x + 20 ;
-					flag4.y = panel_arrival.y + 168;
-					win_name4.x = flag4.x + 65;
-					win_name4.y = flag4.y + 10;
+						} else if (obj['target']['currentAnimation'] == 'dog3'){
+							flag3.scaleX = flag3.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag3.x = panel_arrival.x + 20 ;
+							flag3.y = panel_arrival.y + 8;
+							win_name3.x = flag3.x + 65;
+							win_name3.y = flag3.y + 10;
 
-				} else if (obj['target']['currentAnimation'] == 'dog5'){
-					flag5.scaleX = flag5.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag5.x = panel_arrival.x + 20 ;
-					flag5.y = panel_arrival.y + 168;
-					win_name5.x = flag5.x + 65;
-					win_name5.y = flag5.y + 10;
+						} else if (obj['target']['currentAnimation'] == 'dog4'){
+							flag4.scaleX = flag4.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag4.x = panel_arrival.x + 20 ;
+							flag4.y = panel_arrival.y + 8;
+							win_name4.x = flag4.x + 65;
+							win_name4.y = flag4.y + 10;
 
-				} else if (obj['target']['currentAnimation'] == 'dog6'){
-					flag6.scaleX = flag6.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag6.x = panel_arrival.x + 20 ;
-					flag6.y = panel_arrival.y + 168;
-					win_name6.x = flag6.x + 65;
-					win_name6.y = flag6.y + 10;
+						} else if (obj['target']['currentAnimation'] == 'dog5'){
+							flag5.scaleX = flag5.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag5.x = panel_arrival.x + 20 ;
+							flag5.y = panel_arrival.y + 8;
+							win_name5.x = flag5.x + 65;
+							win_name5.y = flag5.y + 10;
 
+						} else if (obj['target']['currentAnimation'] == 'dog6'){
+							flag6.scaleX = flag6.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag6.x = panel_arrival.x + 20 ;
+							flag6.y = panel_arrival.y + 8;
+							win_name6.x = flag6.x + 65;
+							win_name6.y = flag6.y + 10;
+
+						}
+
+						win1 = obj['target']['currentAnimation'];
+
+					} else if (win2 == null) {
+
+						if (obj['target']['currentAnimation'] == 'dog1') {
+							flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag1.x = panel_arrival.x + 20 ;
+							flag1.y = panel_arrival.y + 62;
+							win_name1.x = flag1.x + 65;
+							win_name1.y = flag1.y + 10;
+
+						} else if (obj['target']['currentAnimation'] == 'dog2'){
+							flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag2.x = panel_arrival.x + 20 ;
+							flag2.y = panel_arrival.y + 62;
+							win_name2.x = flag2.x + 65;
+							win_name2.y = flag2.y + 10;
+
+						} else if (obj['target']['currentAnimation'] == 'dog3'){
+							flag3.scaleX = flag3.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag3.x = panel_arrival.x + 20 ;
+							flag3.y = panel_arrival.y + 62;
+							win_name3.x = flag3.x + 65;
+							win_name3.y = flag3.y + 10;
+
+						} else if (obj['target']['currentAnimation'] == 'dog4'){
+							flag4.scaleX = flag4.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag4.x = panel_arrival.x + 20 ;
+							flag4.y = panel_arrival.y + 62;
+							win_name4.x = flag4.x + 65;
+							win_name4.y = flag4.y + 10;
+
+						} else if (obj['target']['currentAnimation'] == 'dog5'){
+							flag5.scaleX = flag5.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag5.x = panel_arrival.x + 20 ;
+							flag5.y = panel_arrival.y + 62;
+							win_name5.x = flag5.x + 65;
+							win_name5.y = flag5.y + 10;
+
+						} else if (obj['target']['currentAnimation'] == 'dog6'){
+							flag6.scaleX = flag6.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag6.x = panel_arrival.x + 20 ;
+							flag6.y = panel_arrival.y + 62;
+							win_name6.x = flag6.x + 65;
+							win_name6.y = flag6.y + 10;
+
+						}
+
+						win2 = obj['target']['currentAnimation'];
+
+					} else if (win3 == null) {
+
+						if (obj['target']['currentAnimation'] == 'dog1') {
+							flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag1.x = panel_arrival.x + 20 ;
+							flag1.y = panel_arrival.y + 116;
+							win_name1.x = flag1.x + 65;
+							win_name1.y = flag1.y + 10;
+
+						} else if (obj['target']['currentAnimation'] == 'dog2'){
+							flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag2.x = panel_arrival.x + 20 ;
+							flag2.y = panel_arrival.y + 116;
+							win_name2.x = flag2.x + 65;
+							win_name2.y = flag2.y + 10;
+
+						} else if (obj['target']['currentAnimation'] == 'dog3'){
+							flag3.scaleX = flag3.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag3.x = panel_arrival.x + 20 ;
+							flag3.y = panel_arrival.y + 116;
+							win_name3.x = flag3.x + 65;
+							win_name3.y = flag3.y + 10;
+
+						} else if (obj['target']['currentAnimation'] == 'dog4'){
+							flag4.scaleX = flag4.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag4.x = panel_arrival.x + 20 ;
+							flag4.y = panel_arrival.y + 116;
+							win_name4.x = flag4.x + 65;
+							win_name4.y = flag4.y + 10;
+
+						} else if (obj['target']['currentAnimation'] == 'dog5'){
+							flag5.scaleX = flag5.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag5.x = panel_arrival.x + 20 ;
+							flag5.y = panel_arrival.y + 116;
+							win_name5.x = flag5.x + 65;
+							win_name5.y = flag5.y + 10;
+
+						} else if (obj['target']['currentAnimation'] == 'dog6'){
+							flag6.scaleX = flag6.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+							flag6.x = panel_arrival.x + 20 ;
+							flag6.y = panel_arrival.y + 116;
+							win_name6.x = flag6.x + 65;
+							win_name6.y = flag6.y + 10;
+
+						}
+
+						win3 = obj['target']['currentAnimation'];
+
+					}
+
+					setTimeout(function(){
+						createjs.Ticker.paused = false;
+						spriteSheet.framerate = 35;
+						$('#track_bg').css('filter' , 'grayscale(0%)');
+						createjs.Tween.get(obj['target'])
+						.to({x: (obj['target']['x'] + ($('#track_bg').width() * 1.2))}, 1500, createjs.Ease.linear)
+					},1000)
+
+				},100)
+			} else {
+				createjs.Tween.get(obj['target'])
+				.to({x: (obj['target']['x'] + ($('#track_bg').width() * 1.2))}, 1500, createjs.Ease.linear)
+
+				if (win4 == null) {
+
+					if (obj['target']['currentAnimation'] == 'dog1') {
+						flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag1.x = panel_arrival.x + 20 ;
+						flag1.y = panel_arrival.y + 168;
+						win_name1.x = flag1.x + 65;
+						win_name1.y = flag1.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog2'){
+						flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag2.x = panel_arrival.x + 20 ;
+						flag2.y = panel_arrival.y + 168;
+						win_name2.x = flag2.x + 65;
+						win_name2.y = flag2.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog3'){
+						flag3.scaleX = flag3.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag3.x = panel_arrival.x + 20 ;
+						flag3.y = panel_arrival.y + 168;
+						win_name3.x = flag3.x + 65;
+						win_name3.y = flag3.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog4'){
+						flag4.scaleX = flag4.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag4.x = panel_arrival.x + 20 ;
+						flag4.y = panel_arrival.y + 168;
+						win_name4.x = flag4.x + 65;
+						win_name4.y = flag4.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog5'){
+						flag5.scaleX = flag5.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag5.x = panel_arrival.x + 20 ;
+						flag5.y = panel_arrival.y + 168;
+						win_name5.x = flag5.x + 65;
+						win_name5.y = flag5.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog6'){
+						flag6.scaleX = flag6.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag6.x = panel_arrival.x + 20 ;
+						flag6.y = panel_arrival.y + 168;
+						win_name6.x = flag6.x + 65;
+						win_name6.y = flag6.y + 10;
+
+					}
+
+					win4 = obj['target']['currentAnimation'];
+
+				} else if (win5 == null) {
+
+
+					if (obj['target']['currentAnimation'] == 'dog1') {
+						flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag1.x = panel_arrival.x + 20 ;
+						flag1.y = panel_arrival.y + 222;
+						win_name1.x = flag1.x + 65;
+						win_name1.y = flag1.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog2'){
+						flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag2.x = panel_arrival.x + 20 ;
+						flag2.y = panel_arrival.y + 222;
+						win_name2.x = flag2.x + 65;
+						win_name2.y = flag2.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog3'){
+						flag3.scaleX = flag3.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag3.x = panel_arrival.x + 20 ;
+						flag3.y = panel_arrival.y + 222;
+						win_name3.x = flag3.x + 65;
+						win_name3.y = flag3.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog4'){
+						flag4.scaleX = flag4.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag4.x = panel_arrival.x + 20 ;
+						flag4.y = panel_arrival.y + 222;
+						win_name4.x = flag4.x + 65;
+						win_name4.y = flag4.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog5'){
+						flag5.scaleX = flag5.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag5.x = panel_arrival.x + 20 ;
+						flag5.y = panel_arrival.y + 222;
+						win_name5.x = flag5.x + 65;
+						win_name5.y = flag5.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog6'){
+						flag6.scaleX = flag6.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag6.x = panel_arrival.x + 20 ;
+						flag6.y = panel_arrival.y + 222;
+						win_name6.x = flag6.x + 65;
+						win_name6.y = flag6.y + 10;
+
+					}
+
+					win5 = obj['target']['currentAnimation'];
+
+				} else if (win6 == null) {
+
+					if (obj['target']['currentAnimation'] == 'dog1') {
+						flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag1.x = panel_arrival.x + 20 ;
+						flag1.y = panel_arrival.y + 278;
+						win_name1.x = flag1.x + 65;
+						win_name1.y = flag1.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog2'){
+						flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag2.x = panel_arrival.x + 20 ;
+						flag2.y = panel_arrival.y + 278;
+						win_name2.x = flag2.x + 65;
+						win_name2.y = flag2.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog3'){
+						flag3.scaleX = flag3.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag3.x = panel_arrival.x + 20 ;
+						flag3.y = panel_arrival.y + 278;
+						win_name3.x = flag3.x + 65;
+						win_name3.y = flag3.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog4'){
+						flag4.scaleX = flag4.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag4.x = panel_arrival.x + 20 ;
+						flag4.y = panel_arrival.y + 278;
+						win_name4.x = flag4.x + 65;
+						win_name4.y = flag4.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog5'){
+						flag5.scaleX = flag5.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag5.x = panel_arrival.x + 20 ;
+						flag5.y = panel_arrival.y + 278;
+						win_name5.x = flag5.x + 65;
+						win_name5.y = flag5.y + 10;
+
+					} else if (obj['target']['currentAnimation'] == 'dog6'){
+						flag6.scaleX = flag6.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
+						flag6.x = panel_arrival.x + 20 ;
+						flag6.y = panel_arrival.y + 278;
+						win_name6.x = flag6.x + 65;
+						win_name6.y = flag6.y + 10;
+
+					}
+
+					win6 = obj['target']['currentAnimation'];
 				}
 
-				win4 = obj['target']['currentAnimation'];
 
-			} else if (win5 == null) {
-
-
-				if (obj['target']['currentAnimation'] == 'dog1') {
-					flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag1.x = panel_arrival.x + 20 ;
-					flag1.y = panel_arrival.y + 222;
-					win_name1.x = flag1.x + 65;
-					win_name1.y = flag1.y + 10;
-
-				} else if (obj['target']['currentAnimation'] == 'dog2'){
-					flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag2.x = panel_arrival.x + 20 ;
-					flag2.y = panel_arrival.y + 222;
-					win_name2.x = flag2.x + 65;
-					win_name2.y = flag2.y + 10;
-
-				} else if (obj['target']['currentAnimation'] == 'dog3'){
-					flag3.scaleX = flag3.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag3.x = panel_arrival.x + 20 ;
-					flag3.y = panel_arrival.y + 222;
-					win_name3.x = flag3.x + 65;
-					win_name3.y = flag3.y + 10;
-
-				} else if (obj['target']['currentAnimation'] == 'dog4'){
-					flag4.scaleX = flag4.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag4.x = panel_arrival.x + 20 ;
-					flag4.y = panel_arrival.y + 222;
-					win_name4.x = flag4.x + 65;
-					win_name4.y = flag4.y + 10;
-
-				} else if (obj['target']['currentAnimation'] == 'dog5'){
-					flag5.scaleX = flag5.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag5.x = panel_arrival.x + 20 ;
-					flag5.y = panel_arrival.y + 222;
-					win_name5.x = flag5.x + 65;
-					win_name5.y = flag5.y + 10;
-
-				} else if (obj['target']['currentAnimation'] == 'dog6'){
-					flag6.scaleX = flag6.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag6.x = panel_arrival.x + 20 ;
-					flag6.y = panel_arrival.y + 222;
-					win_name6.x = flag6.x + 65;
-					win_name6.y = flag6.y + 10;
-
-				}
-
-				win5 = obj['target']['currentAnimation'];
-
-			} else if (win6 == null) {
-
-				if (obj['target']['currentAnimation'] == 'dog1') {
-					flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag1.x = panel_arrival.x + 20 ;
-					flag1.y = panel_arrival.y + 278;
-					win_name1.x = flag1.x + 65;
-					win_name1.y = flag1.y + 10;
-
-				} else if (obj['target']['currentAnimation'] == 'dog2'){
-					flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag2.x = panel_arrival.x + 20 ;
-					flag2.y = panel_arrival.y + 278;
-					win_name2.x = flag2.x + 65;
-					win_name2.y = flag2.y + 10;
-
-				} else if (obj['target']['currentAnimation'] == 'dog3'){
-					flag3.scaleX = flag3.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag3.x = panel_arrival.x + 20 ;
-					flag3.y = panel_arrival.y + 278;
-					win_name3.x = flag3.x + 65;
-					win_name3.y = flag3.y + 10;
-
-				} else if (obj['target']['currentAnimation'] == 'dog4'){
-					flag4.scaleX = flag4.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag4.x = panel_arrival.x + 20 ;
-					flag4.y = panel_arrival.y + 278;
-					win_name4.x = flag4.x + 65;
-					win_name4.y = flag4.y + 10;
-
-				} else if (obj['target']['currentAnimation'] == 'dog5'){
-					flag5.scaleX = flag5.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag5.x = panel_arrival.x + 20 ;
-					flag5.y = panel_arrival.y + 278;
-					win_name5.x = flag5.x + 65;
-					win_name5.y = flag5.y + 10;
-
-				} else if (obj['target']['currentAnimation'] == 'dog6'){
-					flag6.scaleX = flag6.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-					flag6.x = panel_arrival.x + 20 ;
-					flag6.y = panel_arrival.y + 278;
-					win_name6.x = flag6.x + 65;
-					win_name6.y = flag6.y + 10;
-
-				}
-
-				win6 = obj['target']['currentAnimation'];
 			}
 
-
 		}
-
 
 
 	}
@@ -1094,82 +1113,97 @@ function runTrack(num){
 
 
 	socket.on('result' , function(data){
+		if (shouldStart) {
 
-		var getRanking = setInterval(function(){
-			getRank();
-		},1500);
 
-		win1 = null;
-		win2 = null;
-		win3 = null;
-		win4 = null;
-		win5 = null;
-		win6 = null;
+			var getRanking = setInterval(function(){
+				getRank();
+			},1500);
+
+			win1 = null;
+			win2 = null;
+			win3 = null;
+			win4 = null;
+			win5 = null;
+			win6 = null;
+		}
     
 	})
 
 	socket.on('dog1' , function(data){
-	console.log(data)
+	
+		if (shouldStart) {
 
-		createjs.Tween.get(dog_arr[0][ 'name'])
-	        .to({x: ($('#track_bg').width() / data.move1 )}, 7500, createjs.Ease.linear)
-	        .to({x: ( $('#track_bg').width() / data.move2 )}, 8000, createjs.Ease.linear)
-	        .to({x: ( $('#track_bg').width() / data.move3 )}, 8000, createjs.Ease.linear)
-	        .to({x: ( $('#track_bg').width() / data.move4 )}, 5000, createjs.Ease.linear)
-	        .to({x:($('#track_bg').width() / data.win_res )}, 3000, createjs.Ease.linear) // 4
-	        .to({x: ($('#track_bg').width() / 2.5)}, data.speed1, createjs.Ease.linear).call(completeRun)
+			createjs.Tween.get(dog_arr[0][ 'name'])
+		        .to({x: ($('#track_bg').width() / data.move1 )}, 7500, createjs.Ease.linear)
+		        .to({x: ( $('#track_bg').width() / data.move2 )}, 8000, createjs.Ease.linear)
+		        .to({x: ( $('#track_bg').width() / data.move3 )}, 8000, createjs.Ease.linear)
+		        .to({x: ( $('#track_bg').width() / data.move4 )}, 5000, createjs.Ease.linear)
+		        .to({x:($('#track_bg').width() / data.win_res )}, 3000, createjs.Ease.linear) // 4
+		        .to({x: ($('#track_bg').width() / 2.5)}, data.speed1, createjs.Ease.linear).call(completeRun)
+		}
 	})
 
 
 	socket.on('dog2' , function(data){
-    
-		createjs.Tween.get(dog_arr[1]['name'])
-        .to({x: ($('#track_bg').width() / data.move1 )}, 7500, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move2 )}, 8000, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move3 )}, 8000, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move4 )}, 5000, createjs.Ease.linear)
-        .to({x:($('#track_bg').width() / data.win_res )}, 3000, createjs.Ease.linear) // 8
-        .to({x: ($('#track_bg').width() / 2.5)}, data.speed2, createjs.Ease.linear).call(completeRun)
+	    if (shouldStart) {
+
+			createjs.Tween.get(dog_arr[1]['name'])
+	        .to({x: ($('#track_bg').width() / data.move1 )}, 7500, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move2 )}, 8000, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move3 )}, 8000, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move4 )}, 5000, createjs.Ease.linear)
+	        .to({x:($('#track_bg').width() / data.win_res )}, 3000, createjs.Ease.linear) // 8
+	        .to({x: ($('#track_bg').width() / 2.5)}, data.speed2, createjs.Ease.linear).call(completeRun)
+	    }
 
 
 	})
 	socket.on('dog3' , function(data){
+		if (shouldStart) {
 
-		createjs.Tween.get(dog_arr[2]['name'])
-        .to({x: ($('#track_bg').width() / data.move1 )}, 7500, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move2 )}, 8000, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move3 )}, 8000, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move4 )}, 5000, createjs.Ease.linear)
-        .to({x:($('#track_bg').width() / data.win_res )}, 3000, createjs.Ease.linear) // 10
-        .to({x: ($('#track_bg').width() / 2.5 )}, data.speed3, createjs.Ease.linear).call(completeRun)
+			createjs.Tween.get(dog_arr[2]['name'])
+	        .to({x: ($('#track_bg').width() / data.move1 )}, 7500, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move2 )}, 8000, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move3 )}, 8000, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move4 )}, 5000, createjs.Ease.linear)
+	        .to({x:($('#track_bg').width() / data.win_res )}, 3000, createjs.Ease.linear) // 10
+	        .to({x: ($('#track_bg').width() / 2.5 )}, data.speed3, createjs.Ease.linear).call(completeRun)
+		}
 	})
 	socket.on('dog4' , function(data){
+		if (shouldStart) {
 
-		createjs.Tween.get(dog_arr[3]['name'])
-        .to({x: ($('#track_bg').width() / data.move1 )}, 7500, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move2 )}, 8000, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move3 )}, 8000, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move4 )}, 5000, createjs.Ease.linear)
-        .to({x:($('#track_bg').width() / data.win_res )}, 3000, createjs.Ease.linear) // -6.6
-        .to({x: ($('#track_bg').width() / 2.5 )}, data.speed4, createjs.Ease.linear).call(completeRun)
+			createjs.Tween.get(dog_arr[3]['name'])
+	        .to({x: ($('#track_bg').width() / data.move1 )}, 7500, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move2 )}, 8000, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move3 )}, 8000, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move4 )}, 5000, createjs.Ease.linear)
+	        .to({x:($('#track_bg').width() / data.win_res )}, 3000, createjs.Ease.linear) // -6.6
+	        .to({x: ($('#track_bg').width() / 2.5 )}, data.speed4, createjs.Ease.linear).call(completeRun)
+		}
 	})
 	socket.on('dog5' , function(data){
+		if (shouldStart) {
 
-		createjs.Tween.get(dog_arr[4]['name'])
-        .to({x: ($('#track_bg').width() / data.move1 )}, 7500, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move2 )}, 8000, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move3 )}, 8000, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move4 )}, 5000, createjs.Ease.linear)
-        .to({x:($('#track_bg').width() / data.win_res )}, 3000, createjs.Ease.linear) // -7
-        .to({x: ($('#track_bg').width() / 2.5 )}, data.speed5, createjs.Ease.linear).call(completeRun)
+			createjs.Tween.get(dog_arr[4]['name'])
+	        .to({x: ($('#track_bg').width() / data.move1 )}, 7500, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move2 )}, 8000, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move3 )}, 8000, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move4 )}, 5000, createjs.Ease.linear)
+	        .to({x:($('#track_bg').width() / data.win_res )}, 3000, createjs.Ease.linear) // -7
+	        .to({x: ($('#track_bg').width() / 2.5 )}, data.speed5, createjs.Ease.linear).call(completeRun)
+		}
 	})
 	socket.on('dog6' , function(data){
-		
-		createjs.Tween.get(dog_arr[5]['name'])
-        .to({x: ($('#track_bg').width() / data.move1 )}, 7500, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move2 )}, 8000, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move3 )}, 8000, createjs.Ease.linear)
-        .to({x: ( $('#track_bg').width() / data.move4 )}, 5000, createjs.Ease.linear)
-        .to({x:($('#track_bg').width() / data.win_res )}, 3000, createjs.Ease.linear) // -7.4
-        .to({x: ($('#track_bg').width() / 2.5)},data.speed6, createjs.Ease.linear).call(completeRun)
+		if (shouldStart) {
+			
+			createjs.Tween.get(dog_arr[5]['name'])
+	        .to({x: ($('#track_bg').width() / data.move1 )}, 7500, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move2 )}, 8000, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move3 )}, 8000, createjs.Ease.linear)
+	        .to({x: ( $('#track_bg').width() / data.move4 )}, 5000, createjs.Ease.linear)
+	        .to({x:($('#track_bg').width() / data.win_res )}, 3000, createjs.Ease.linear) // -7.4
+	        .to({x: ($('#track_bg').width() / 2.5)},data.speed6, createjs.Ease.linear).call(completeRun)
+		}
 	})
