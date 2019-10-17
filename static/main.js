@@ -2852,8 +2852,7 @@ function runTrack(num){
 
 			newnum = num;
 			if (num == 17) {
-				imageBackground.alpha = 1;
-				$('#track_bg').css('opacity' , 0);
+
 				dog1obj.alpha = 1;
 				dog2obj.alpha = 1;
 				dog3obj.alpha = 1;
@@ -2861,6 +2860,8 @@ function runTrack(num){
 				dog5obj.alpha = 1;
 				dog6obj.alpha = 1;
 				rundog(dog_arr[0]['name'],dog_arr[1]['name'],dog_arr[2]['name'],dog_arr[3]['name'],dog_arr[4]['name'],dog_arr[5]['name'])
+				imageBackground.alpha = 1;
+				$('#track_bg').css('opacity' , 0);
 			}
 
 			if (num < 415) {
@@ -2871,8 +2872,12 @@ function runTrack(num){
 				setTimeout(function(){
 					finish = true;
 				},2500)
-				$('#track_bg').attr("src" , "../assets/images/bg_track/bg_track_415.jpg");
-				imageBackground.alpha = 0;
+				setTimeout(function(){
+
+					$('#track_bg').attr("src" , "../assets/images/bg_track/bg_track_415.jpg");
+					imageBackground.alpha = 0;
+				},5000);
+				
 				$('#track_bg').css('opacity' , 1);
 
 			}
