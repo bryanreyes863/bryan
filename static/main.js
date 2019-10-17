@@ -216,8 +216,2142 @@ maniFest = [
 	{
 		"src" : "assets/images/flags6.png" ,
 		"id" : "flag6" 
-	}
+	},
+
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_0.jpg" ,
+		"id" : "bgTrack_0" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_1.jpg" ,
+		"id" : "bgTrack_1" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_2.jpg" ,
+		"id" : "bgTrack_2" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_3.jpg" ,
+		"id" : "bgTrack_3" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_4.jpg" ,
+		"id" : "bgTrack_4" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_5.jpg" ,
+		"id" : "bgTrack_5" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_6.jpg" ,
+		"id" : "bgTrack_6" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_7.jpg" ,
+		"id" : "bgTrack_7" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_8.jpg" ,
+		"id" : "bgTrack_8" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_9.jpg" ,
+		"id" : "bgTrack_9" 
+	},
+
 	
+	{
+		"src" : "assets/images/bg_track/bg_track_10.jpg" ,
+		"id" : "bgTrack_10" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_11.jpg" ,
+		"id" : "bgTrack_11" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_12.jpg" ,
+		"id" : "bgTrack_12" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_13.jpg" ,
+		"id" : "bgTrack_13" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_14.jpg" ,
+		"id" : "bgTrack_14" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_15.jpg" ,
+		"id" : "bgTrack_15" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_16.jpg" ,
+		"id" : "bgTrack_16" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_17.jpg" ,
+		"id" : "bgTrack_17" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_18.jpg" ,
+		"id" : "bgTrack_18" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_19.jpg" ,
+		"id" : "bgTrack_19" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_20.jpg" ,
+		"id" : "bgTrack_20" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_21.jpg" ,
+		"id" : "bgTrack_21" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_22.jpg" ,
+		"id" : "bgTrack_22" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_23.jpg" ,
+		"id" : "bgTrack_23" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_24.jpg" ,
+		"id" : "bgTrack_24" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_25.jpg" ,
+		"id" : "bgTrack_25" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_26.jpg" ,
+		"id" : "bgTrack_26" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_27.jpg" ,
+		"id" : "bgTrack_27" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_28.jpg" ,
+		"id" : "bgTrack_28" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_29.jpg" ,
+		"id" : "bgTrack_29" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_30.jpg" ,
+		"id" : "bgTrack_30" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_31.jpg" ,
+		"id" : "bgTrack_31" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_32.jpg" ,
+		"id" : "bgTrack_32" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_33.jpg" ,
+		"id" : "bgTrack_33" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_34.jpg" ,
+		"id" : "bgTrack_34" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_35.jpg" ,
+		"id" : "bgTrack_35" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_36.jpg" ,
+		"id" : "bgTrack_36" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_37.jpg" ,
+		"id" : "bgTrack_37" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_38.jpg" ,
+		"id" : "bgTrack_38" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_39.jpg" ,
+		"id" : "bgTrack_39" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_40.jpg" ,
+		"id" : "bgTrack_40" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_41.jpg" ,
+		"id" : "bgTrack_41" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_42.jpg" ,
+		"id" : "bgTrack_42" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_43.jpg" ,
+		"id" : "bgTrack_43" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_44.jpg" ,
+		"id" : "bgTrack_44" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_45.jpg" ,
+		"id" : "bgTrack_45" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_46.jpg" ,
+		"id" : "bgTrack_46" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_47.jpg" ,
+		"id" : "bgTrack_47" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_48.jpg" ,
+		"id" : "bgTrack_48" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_49.jpg" ,
+		"id" : "bgTrack_49" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_50.jpg" ,
+		"id" : "bgTrack_50" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_51.jpg" ,
+		"id" : "bgTrack_51" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_52.jpg" ,
+		"id" : "bgTrack_52" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_53.jpg" ,
+		"id" : "bgTrack_53" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_54.jpg" ,
+		"id" : "bgTrack_54" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_55.jpg" ,
+		"id" : "bgTrack_55" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_56.jpg" ,
+		"id" : "bgTrack_56" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_57.jpg" ,
+		"id" : "bgTrack_57" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_58.jpg" ,
+		"id" : "bgTrack_58" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_59.jpg" ,
+		"id" : "bgTrack_59" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_60.jpg" ,
+		"id" : "bgTrack_60" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_61.jpg" ,
+		"id" : "bgTrack_61" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_62.jpg" ,
+		"id" : "bgTrack_62" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_63.jpg" ,
+		"id" : "bgTrack_63" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_64.jpg" ,
+		"id" : "bgTrack_64" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_65.jpg" ,
+		"id" : "bgTrack_65" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_66.jpg" ,
+		"id" : "bgTrack_66" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_67.jpg" ,
+		"id" : "bgTrack_67" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_68.jpg" ,
+		"id" : "bgTrack_68" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_69.jpg" ,
+		"id" : "bgTrack_69" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_70.jpg" ,
+		"id" : "bgTrack_70" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_71.jpg" ,
+		"id" : "bgTrack_71" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_72.jpg" ,
+		"id" : "bgTrack_72" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_73.jpg" ,
+		"id" : "bgTrack_73" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_74.jpg" ,
+		"id" : "bgTrack_74" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_75.jpg" ,
+		"id" : "bgTrack_75" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_76.jpg" ,
+		"id" : "bgTrack_76" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_77.jpg" ,
+		"id" : "bgTrack_77" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_78.jpg" ,
+		"id" : "bgTrack_78" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_79.jpg" ,
+		"id" : "bgTrack_79" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_80.jpg" ,
+		"id" : "bgTrack_80" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_81.jpg" ,
+		"id" : "bgTrack_81" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_82.jpg" ,
+		"id" : "bgTrack_82" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_83.jpg" ,
+		"id" : "bgTrack_83" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_84.jpg" ,
+		"id" : "bgTrack_84" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_85.jpg" ,
+		"id" : "bgTrack_85" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_86.jpg" ,
+		"id" : "bgTrack_86" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_87.jpg" ,
+		"id" : "bgTrack_87" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_88.jpg" ,
+		"id" : "bgTrack_88" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_89.jpg" ,
+		"id" : "bgTrack_89" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_90.jpg" ,
+		"id" : "bgTrack_90" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_91.jpg" ,
+		"id" : "bgTrack_91" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_92.jpg" ,
+		"id" : "bgTrack_92" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_93.jpg" ,
+		"id" : "bgTrack_93" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_94.jpg" ,
+		"id" : "bgTrack_94" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_95.jpg" ,
+		"id" : "bgTrack_95" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_96.jpg" ,
+		"id" : "bgTrack_96" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_97.jpg" ,
+		"id" : "bgTrack_97" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_98.jpg" ,
+		"id" : "bgTrack_98" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_99.jpg" ,
+		"id" : "bgTrack_99" 
+	},
+
+	
+	{
+		"src" : "assets/images/bg_track/bg_track_100.jpg" ,
+		"id" : "bgTrack_100" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_101.jpg" ,
+		"id" : "bgTrack_101" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_102.jpg" ,
+		"id" : "bgTrack_102" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_103.jpg" ,
+		"id" : "bgTrack_103" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_104.jpg" ,
+		"id" : "bgTrack_104" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_105.jpg" ,
+		"id" : "bgTrack_105" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_106.jpg" ,
+		"id" : "bgTrack_106" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_107.jpg" ,
+		"id" : "bgTrack_107" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_108.jpg" ,
+		"id" : "bgTrack_108" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_109.jpg" ,
+		"id" : "bgTrack_109" 
+	},
+
+	
+	{
+		"src" : "assets/images/bg_track/bg_track_110.jpg" ,
+		"id" : "bgTrack_110" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_111.jpg" ,
+		"id" : "bgTrack_111" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_112.jpg" ,
+		"id" : "bgTrack_112" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_113.jpg" ,
+		"id" : "bgTrack_113" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_114.jpg" ,
+		"id" : "bgTrack_114" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_115.jpg" ,
+		"id" : "bgTrack_115" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_116.jpg" ,
+		"id" : "bgTrack_116" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_117.jpg" ,
+		"id" : "bgTrack_117" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_118.jpg" ,
+		"id" : "bgTrack_118" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_119.jpg" ,
+		"id" : "bgTrack_119" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_120.jpg" ,
+		"id" : "bgTrack_120" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_121.jpg" ,
+		"id" : "bgTrack_121" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_122.jpg" ,
+		"id" : "bgTrack_122" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_123.jpg" ,
+		"id" : "bgTrack_123" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_124.jpg" ,
+		"id" : "bgTrack_124" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_125.jpg" ,
+		"id" : "bgTrack_125" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_126.jpg" ,
+		"id" : "bgTrack_126" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_127.jpg" ,
+		"id" : "bgTrack_127" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_128.jpg" ,
+		"id" : "bgTrack_128" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_129.jpg" ,
+		"id" : "bgTrack_129" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_130.jpg" ,
+		"id" : "bgTrack_130" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_131.jpg" ,
+		"id" : "bgTrack_131" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_132.jpg" ,
+		"id" : "bgTrack_132" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_133.jpg" ,
+		"id" : "bgTrack_133" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_134.jpg" ,
+		"id" : "bgTrack_134" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_135.jpg" ,
+		"id" : "bgTrack_135" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_136.jpg" ,
+		"id" : "bgTrack_136" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_137.jpg" ,
+		"id" : "bgTrack_137" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_138.jpg" ,
+		"id" : "bgTrack_138" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_139.jpg" ,
+		"id" : "bgTrack_139" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_140.jpg" ,
+		"id" : "bgTrack_140" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_141.jpg" ,
+		"id" : "bgTrack_141" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_142.jpg" ,
+		"id" : "bgTrack_142" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_143.jpg" ,
+		"id" : "bgTrack_143" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_144.jpg" ,
+		"id" : "bgTrack_144" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_145.jpg" ,
+		"id" : "bgTrack_145" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_146.jpg" ,
+		"id" : "bgTrack_146" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_147.jpg" ,
+		"id" : "bgTrack_147" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_148.jpg" ,
+		"id" : "bgTrack_148" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_149.jpg" ,
+		"id" : "bgTrack_149" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_150.jpg" ,
+		"id" : "bgTrack_150" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_151.jpg" ,
+		"id" : "bgTrack_151" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_152.jpg" ,
+		"id" : "bgTrack_152" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_153.jpg" ,
+		"id" : "bgTrack_153" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_154.jpg" ,
+		"id" : "bgTrack_154" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_155.jpg" ,
+		"id" : "bgTrack_155" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_156.jpg" ,
+		"id" : "bgTrack_156" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_157.jpg" ,
+		"id" : "bgTrack_157" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_158.jpg" ,
+		"id" : "bgTrack_158" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_159.jpg" ,
+		"id" : "bgTrack_159" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_160.jpg" ,
+		"id" : "bgTrack_160" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_161.jpg" ,
+		"id" : "bgTrack_161" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_162.jpg" ,
+		"id" : "bgTrack_162" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_163.jpg" ,
+		"id" : "bgTrack_163" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_164.jpg" ,
+		"id" : "bgTrack_164" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_165.jpg" ,
+		"id" : "bgTrack_165" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_166.jpg" ,
+		"id" : "bgTrack_166" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_167.jpg" ,
+		"id" : "bgTrack_167" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_168.jpg" ,
+		"id" : "bgTrack_168" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_169.jpg" ,
+		"id" : "bgTrack_169" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_170.jpg" ,
+		"id" : "bgTrack_170" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_171.jpg" ,
+		"id" : "bgTrack_171" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_172.jpg" ,
+		"id" : "bgTrack_172" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_173.jpg" ,
+		"id" : "bgTrack_173" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_174.jpg" ,
+		"id" : "bgTrack_174" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_175.jpg" ,
+		"id" : "bgTrack_175" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_176.jpg" ,
+		"id" : "bgTrack_176" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_177.jpg" ,
+		"id" : "bgTrack_177" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_178.jpg" ,
+		"id" : "bgTrack_178" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_179.jpg" ,
+		"id" : "bgTrack_179" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_180.jpg" ,
+		"id" : "bgTrack_180" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_181.jpg" ,
+		"id" : "bgTrack_181" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_182.jpg" ,
+		"id" : "bgTrack_182" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_183.jpg" ,
+		"id" : "bgTrack_183" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_184.jpg" ,
+		"id" : "bgTrack_184" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_185.jpg" ,
+		"id" : "bgTrack_185" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_186.jpg" ,
+		"id" : "bgTrack_186" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_187.jpg" ,
+		"id" : "bgTrack_187" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_188.jpg" ,
+		"id" : "bgTrack_188" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_189.jpg" ,
+		"id" : "bgTrack_189" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_190.jpg" ,
+		"id" : "bgTrack_190" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_191.jpg" ,
+		"id" : "bgTrack_191" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_192.jpg" ,
+		"id" : "bgTrack_192" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_193.jpg" ,
+		"id" : "bgTrack_193" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_194.jpg" ,
+		"id" : "bgTrack_194" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_195.jpg" ,
+		"id" : "bgTrack_195" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_196.jpg" ,
+		"id" : "bgTrack_196" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_197.jpg" ,
+		"id" : "bgTrack_197" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_198.jpg" ,
+		"id" : "bgTrack_198" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_199.jpg" ,
+		"id" : "bgTrack_199" 
+	},
+
+	
+	{
+		"src" : "assets/images/bg_track/bg_track_200.jpg" ,
+		"id" : "bgTrack_200" 
+	},
+
+
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_201.jpg" ,
+		"id" : "bgTrack_201" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_202.jpg" ,
+		"id" : "bgTrack_202" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_203.jpg" ,
+		"id" : "bgTrack_203" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_204.jpg" ,
+		"id" : "bgTrack_204" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_205.jpg" ,
+		"id" : "bgTrack_205" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_206.jpg" ,
+		"id" : "bgTrack_206" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_207.jpg" ,
+		"id" : "bgTrack_207" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_208.jpg" ,
+		"id" : "bgTrack_208" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_209.jpg" ,
+		"id" : "bgTrack_209" 
+	},
+
+	
+	{
+		"src" : "assets/images/bg_track/bg_track_210.jpg" ,
+		"id" : "bgTrack_210" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_211.jpg" ,
+		"id" : "bgTrack_211" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_212.jpg" ,
+		"id" : "bgTrack_212" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_213.jpg" ,
+		"id" : "bgTrack_213" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_214.jpg" ,
+		"id" : "bgTrack_214" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_215.jpg" ,
+		"id" : "bgTrack_215" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_216.jpg" ,
+		"id" : "bgTrack_216" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_217.jpg" ,
+		"id" : "bgTrack_217" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_218.jpg" ,
+		"id" : "bgTrack_218" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_219.jpg" ,
+		"id" : "bgTrack_219" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_220.jpg" ,
+		"id" : "bgTrack_220" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_221.jpg" ,
+		"id" : "bgTrack_221" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_222.jpg" ,
+		"id" : "bgTrack_222" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_223.jpg" ,
+		"id" : "bgTrack_223" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_224.jpg" ,
+		"id" : "bgTrack_224" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_225.jpg" ,
+		"id" : "bgTrack_225" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_226.jpg" ,
+		"id" : "bgTrack_226" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_227.jpg" ,
+		"id" : "bgTrack_227" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_228.jpg" ,
+		"id" : "bgTrack_228" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_229.jpg" ,
+		"id" : "bgTrack_229" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_230.jpg" ,
+		"id" : "bgTrack_230" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_231.jpg" ,
+		"id" : "bgTrack_231" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_232.jpg" ,
+		"id" : "bgTrack_232" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_233.jpg" ,
+		"id" : "bgTrack_233" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_234.jpg" ,
+		"id" : "bgTrack_234" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_235.jpg" ,
+		"id" : "bgTrack_235" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_236.jpg" ,
+		"id" : "bgTrack_236" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_237.jpg" ,
+		"id" : "bgTrack_237" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_238.jpg" ,
+		"id" : "bgTrack_238" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_239.jpg" ,
+		"id" : "bgTrack_239" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_240.jpg" ,
+		"id" : "bgTrack_240" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_241.jpg" ,
+		"id" : "bgTrack_241" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_242.jpg" ,
+		"id" : "bgTrack_242" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_243.jpg" ,
+		"id" : "bgTrack_243" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_244.jpg" ,
+		"id" : "bgTrack_244" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_245.jpg" ,
+		"id" : "bgTrack_245" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_246.jpg" ,
+		"id" : "bgTrack_246" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_247.jpg" ,
+		"id" : "bgTrack_247" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_248.jpg" ,
+		"id" : "bgTrack_248" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_249.jpg" ,
+		"id" : "bgTrack_249" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_250.jpg" ,
+		"id" : "bgTrack_250" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_251.jpg" ,
+		"id" : "bgTrack_251" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_252.jpg" ,
+		"id" : "bgTrack_252" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_253.jpg" ,
+		"id" : "bgTrack_253" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_254.jpg" ,
+		"id" : "bgTrack_254" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_255.jpg" ,
+		"id" : "bgTrack_255" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_256.jpg" ,
+		"id" : "bgTrack_256" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_257.jpg" ,
+		"id" : "bgTrack_257" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_258.jpg" ,
+		"id" : "bgTrack_258" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_259.jpg" ,
+		"id" : "bgTrack_259" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_260.jpg" ,
+		"id" : "bgTrack_260" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_261.jpg" ,
+		"id" : "bgTrack_261" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_262.jpg" ,
+		"id" : "bgTrack_262" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_263.jpg" ,
+		"id" : "bgTrack_263" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_264.jpg" ,
+		"id" : "bgTrack_264" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_265.jpg" ,
+		"id" : "bgTrack_265" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_266.jpg" ,
+		"id" : "bgTrack_266" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_267.jpg" ,
+		"id" : "bgTrack_267" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_268.jpg" ,
+		"id" : "bgTrack_268" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_269.jpg" ,
+		"id" : "bgTrack_269" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_270.jpg" ,
+		"id" : "bgTrack_270" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_271.jpg" ,
+		"id" : "bgTrack_271" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_272.jpg" ,
+		"id" : "bgTrack_272" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_273.jpg" ,
+		"id" : "bgTrack_273" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_274.jpg" ,
+		"id" : "bgTrack_274" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_275.jpg" ,
+		"id" : "bgTrack_275" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_276.jpg" ,
+		"id" : "bgTrack_276" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_277.jpg" ,
+		"id" : "bgTrack_277" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_278.jpg" ,
+		"id" : "bgTrack_278" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_279.jpg" ,
+		"id" : "bgTrack_279" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_280.jpg" ,
+		"id" : "bgTrack_280" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_281.jpg" ,
+		"id" : "bgTrack_281" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_282.jpg" ,
+		"id" : "bgTrack_282" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_283.jpg" ,
+		"id" : "bgTrack_283" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_284.jpg" ,
+		"id" : "bgTrack_284" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_285.jpg" ,
+		"id" : "bgTrack_285" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_286.jpg" ,
+		"id" : "bgTrack_286" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_287.jpg" ,
+		"id" : "bgTrack_287" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_288.jpg" ,
+		"id" : "bgTrack_288" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_289.jpg" ,
+		"id" : "bgTrack_289" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_290.jpg" ,
+		"id" : "bgTrack_290" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_291.jpg" ,
+		"id" : "bgTrack_291" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_292.jpg" ,
+		"id" : "bgTrack_292" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_293.jpg" ,
+		"id" : "bgTrack_293" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_294.jpg" ,
+		"id" : "bgTrack_294" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_295.jpg" ,
+		"id" : "bgTrack_295" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_296.jpg" ,
+		"id" : "bgTrack_296" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_297.jpg" ,
+		"id" : "bgTrack_297" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_298.jpg" ,
+		"id" : "bgTrack_298" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_299.jpg" ,
+		"id" : "bgTrack_299" 
+	},
+
+	
+	{
+		"src" : "assets/images/bg_track/bg_track_300.jpg" ,
+		"id" : "bgTrack_300" 
+	},
+
+
+
+
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_301.jpg" ,
+		"id" : "bgTrack_301" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_302.jpg" ,
+		"id" : "bgTrack_302" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_303.jpg" ,
+		"id" : "bgTrack_303" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_304.jpg" ,
+		"id" : "bgTrack_304" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_305.jpg" ,
+		"id" : "bgTrack_305" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_306.jpg" ,
+		"id" : "bgTrack_306" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_307.jpg" ,
+		"id" : "bgTrack_307" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_308.jpg" ,
+		"id" : "bgTrack_308" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_309.jpg" ,
+		"id" : "bgTrack_309" 
+	},
+
+	
+	{
+		"src" : "assets/images/bg_track/bg_track_310.jpg" ,
+		"id" : "bgTrack_310" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_311.jpg" ,
+		"id" : "bgTrack_311" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_312.jpg" ,
+		"id" : "bgTrack_312" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_313.jpg" ,
+		"id" : "bgTrack_313" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_314.jpg" ,
+		"id" : "bgTrack_314" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_315.jpg" ,
+		"id" : "bgTrack_315" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_316.jpg" ,
+		"id" : "bgTrack_316" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_317.jpg" ,
+		"id" : "bgTrack_317" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_318.jpg" ,
+		"id" : "bgTrack_318" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_319.jpg" ,
+		"id" : "bgTrack_319" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_320.jpg" ,
+		"id" : "bgTrack_320" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_321.jpg" ,
+		"id" : "bgTrack_321" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_322.jpg" ,
+		"id" : "bgTrack_322" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_323.jpg" ,
+		"id" : "bgTrack_323" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_324.jpg" ,
+		"id" : "bgTrack_324" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_325.jpg" ,
+		"id" : "bgTrack_325" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_326.jpg" ,
+		"id" : "bgTrack_326" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_327.jpg" ,
+		"id" : "bgTrack_327" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_328.jpg" ,
+		"id" : "bgTrack_328" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_329.jpg" ,
+		"id" : "bgTrack_329" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_330.jpg" ,
+		"id" : "bgTrack_330" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_331.jpg" ,
+		"id" : "bgTrack_331" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_332.jpg" ,
+		"id" : "bgTrack_332" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_333.jpg" ,
+		"id" : "bgTrack_333" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_334.jpg" ,
+		"id" : "bgTrack_334" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_335.jpg" ,
+		"id" : "bgTrack_335" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_336.jpg" ,
+		"id" : "bgTrack_336" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_337.jpg" ,
+		"id" : "bgTrack_337" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_338.jpg" ,
+		"id" : "bgTrack_338" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_339.jpg" ,
+		"id" : "bgTrack_339" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_340.jpg" ,
+		"id" : "bgTrack_340" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_341.jpg" ,
+		"id" : "bgTrack_341" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_342.jpg" ,
+		"id" : "bgTrack_342" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_343.jpg" ,
+		"id" : "bgTrack_343" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_344.jpg" ,
+		"id" : "bgTrack_344" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_345.jpg" ,
+		"id" : "bgTrack_345" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_346.jpg" ,
+		"id" : "bgTrack_346" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_347.jpg" ,
+		"id" : "bgTrack_347" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_348.jpg" ,
+		"id" : "bgTrack_348" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_349.jpg" ,
+		"id" : "bgTrack_349" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_350.jpg" ,
+		"id" : "bgTrack_350" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_351.jpg" ,
+		"id" : "bgTrack_351" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_352.jpg" ,
+		"id" : "bgTrack_352" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_353.jpg" ,
+		"id" : "bgTrack_353" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_354.jpg" ,
+		"id" : "bgTrack_354" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_355.jpg" ,
+		"id" : "bgTrack_355" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_356.jpg" ,
+		"id" : "bgTrack_356" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_357.jpg" ,
+		"id" : "bgTrack_357" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_358.jpg" ,
+		"id" : "bgTrack_358" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_359.jpg" ,
+		"id" : "bgTrack_359" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_360.jpg" ,
+		"id" : "bgTrack_360" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_361.jpg" ,
+		"id" : "bgTrack_361" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_362.jpg" ,
+		"id" : "bgTrack_362" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_363.jpg" ,
+		"id" : "bgTrack_363" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_364.jpg" ,
+		"id" : "bgTrack_364" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_365.jpg" ,
+		"id" : "bgTrack_365" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_366.jpg" ,
+		"id" : "bgTrack_366" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_367.jpg" ,
+		"id" : "bgTrack_367" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_368.jpg" ,
+		"id" : "bgTrack_368" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_369.jpg" ,
+		"id" : "bgTrack_369" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_370.jpg" ,
+		"id" : "bgTrack_370" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_371.jpg" ,
+		"id" : "bgTrack_371" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_372.jpg" ,
+		"id" : "bgTrack_372" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_373.jpg" ,
+		"id" : "bgTrack_373" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_374.jpg" ,
+		"id" : "bgTrack_374" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_375.jpg" ,
+		"id" : "bgTrack_375" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_376.jpg" ,
+		"id" : "bgTrack_376" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_377.jpg" ,
+		"id" : "bgTrack_377" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_378.jpg" ,
+		"id" : "bgTrack_378" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_379.jpg" ,
+		"id" : "bgTrack_379" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_380.jpg" ,
+		"id" : "bgTrack_380" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_381.jpg" ,
+		"id" : "bgTrack_381" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_382.jpg" ,
+		"id" : "bgTrack_382" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_383.jpg" ,
+		"id" : "bgTrack_383" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_384.jpg" ,
+		"id" : "bgTrack_384" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_385.jpg" ,
+		"id" : "bgTrack_385" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_386.jpg" ,
+		"id" : "bgTrack_386" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_387.jpg" ,
+		"id" : "bgTrack_387" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_388.jpg" ,
+		"id" : "bgTrack_388" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_389.jpg" ,
+		"id" : "bgTrack_389" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_390.jpg" ,
+		"id" : "bgTrack_390" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_391.jpg" ,
+		"id" : "bgTrack_391" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_392.jpg" ,
+		"id" : "bgTrack_392" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_393.jpg" ,
+		"id" : "bgTrack_393" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_394.jpg" ,
+		"id" : "bgTrack_394" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_395.jpg" ,
+		"id" : "bgTrack_395" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_396.jpg" ,
+		"id" : "bgTrack_396" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_397.jpg" ,
+		"id" : "bgTrack_397" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_398.jpg" ,
+		"id" : "bgTrack_398" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_399.jpg" ,
+		"id" : "bgTrack_399" 
+	},
+
+	
+	{
+		"src" : "assets/images/bg_track/bg_track_400.jpg" ,
+		"id" : "bgTrack_400" 
+	},
+
+
+	{
+		"src" : "assets/images/bg_track/bg_track_401.jpg" ,
+		"id" : "bgTrack_401" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_402.jpg" ,
+		"id" : "bgTrack_402" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_403.jpg" ,
+		"id" : "bgTrack_403" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_404.jpg" ,
+		"id" : "bgTrack_404" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_405.jpg" ,
+		"id" : "bgTrack_405" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_406.jpg" ,
+		"id" : "bgTrack_406" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_407.jpg" ,
+		"id" : "bgTrack_407" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_408.jpg" ,
+		"id" : "bgTrack_408" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_409.jpg" ,
+		"id" : "bgTrack_409" 
+	},
+
+	
+	{
+		"src" : "assets/images/bg_track/bg_track_410.jpg" ,
+		"id" : "bgTrack_410" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_411.jpg" ,
+		"id" : "bgTrack_411" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_412.jpg" ,
+		"id" : "bgTrack_412" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_413.jpg" ,
+		"id" : "bgTrack_413" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_414.jpg" ,
+		"id" : "bgTrack_414" 
+	},
+
+	{
+		"src" : "assets/images/bg_track/bg_track_415.jpg" ,
+		"id" : "bgTrack_415" 
+	},
+
+
 ];
 
 loader = new createjs.LoadQueue(false);
@@ -286,6 +2420,11 @@ function loadingComplete(){
 	// screen_name5 = getRandomName(namesss)
 	// screen_name6 = getRandomName(namesss)
 
+	// num = 2;
+	imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_0"));
+
+	
+
 	dog1_name = new createjs.Text("MABOY","20px Arial","#fefefe");
 	dog2_name = new createjs.Text("COWBOY", "20px Arial", "#fefefe");
 	dog3_name = new createjs.Text("BUNGAL", "20px Arial", "#fefefe");
@@ -334,7 +2473,10 @@ function loadingComplete(){
 	ranks[5]['name'] = dog6_rank;
 
 
+	bgContainer = new createjs.Container();
 	container = new createjs.Container();
+	bgContainer.addChild(imageBackground);
+
 	dogContainer = new createjs.Container();
 
 	for( var i = 0; i < assets.length; i++){
@@ -368,7 +2510,7 @@ function loadingComplete(){
 
 
 		line.scaleX = 1;
-		stage.addChild(container,rank,dog1_rank,dog2_rank,dog3_rank,dog4_rank,dog5_rank,dog6_rank,line,dog1_name,dog2_name,dog3_name,dog4_name,dog5_name,dog6_name,panel_arrival,flag1,flag2,flag3,flag4,flag5,flag6,win_name1,win_name2,win_name3,win_name4,win_name5,win_name6,time_bet,round,count,time_count,count_down);
+		stage.addChild(bgContainer,container,rank,dog1_rank,dog2_rank,dog3_rank,dog4_rank,dog5_rank,dog6_rank,line,dog1_name,dog2_name,dog3_name,dog4_name,dog5_name,dog6_name,panel_arrival,flag1,flag2,flag3,flag4,flag5,flag6,win_name1,win_name2,win_name3,win_name4,win_name5,win_name6,time_bet,round,count,time_count,count_down);
 		tick(); 
 		resize();
 	}
@@ -391,10 +2533,12 @@ function resize(){
 	var windowH =  window.innerHeight;
 	var windowW = window.innerWidth;
 
-	stage.canvas.width = $('#track_bg').width();
-	stage.canvas.height = window.innerHeight - 50;
+	stage.canvas.width = windowW;
+	stage.canvas.height = window.innerHeight - 10;
 
 
+		imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+		imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
 
 		time_bet.scaleX = (windowW - (windowW * 2.5)) / bg.image.height;
 		time_bet.scaleY = (windowW - (windowW / 2.4)) / bg.image.height;
@@ -708,6 +2852,8 @@ function runTrack(num){
 
 			newnum = num;
 			if (num == 17) {
+				imageBackground.alpha = 1;
+				$('#track_bg').css('opacity' , 0);
 				dog1obj.alpha = 1;
 				dog2obj.alpha = 1;
 				dog3obj.alpha = 1;
@@ -723,12 +2869,11 @@ function runTrack(num){
 			} else {
 
 				setTimeout(function(){
-
 					finish = true;
 				},2500)
-
-
-				$('#track_bg').attr("src" , "../assets/images/bg_track/bg_track_"+num+".jpg");
+				$('#track_bg').attr("src" , "../assets/images/bg_track/bg_track_415.jpg");
+				imageBackground.alpha = 0;
+				$('#track_bg').css('opacity' , 1);
 
 			}
 	}
@@ -736,8 +2881,15 @@ function runTrack(num){
 
 	function changeTrack(num) {
 		if (shouldStart) {
+			
+			imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+num));
+			bgContainer.removeAllChildren();
+			bgContainer.addChild(imageBackground);
 
-			$('#track_bg').attr("src" , "../assets/images/bg_track/bg_track_"+num+".jpg");
+			var windowW = window.innerWidth;
+			imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+			imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+			stage.update();
 
 			setTimeout(function(){
 				return runTrack(num);
@@ -1197,7 +3349,7 @@ function runTrack(num){
 	})
 	socket.on('dog6' , function(data){
 		if (shouldStart) {
-			
+
 			createjs.Tween.get(dog_arr[5]['name'])
 	        .to({x: ($('#track_bg').width() / data.move1 )}, 7500, createjs.Ease.linear)
 	        .to({x: ( $('#track_bg').width() / data.move2 )}, 8000, createjs.Ease.linear)
