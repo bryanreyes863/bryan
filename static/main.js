@@ -50,6 +50,8 @@ var count;
 var time_count;
 var count_down;
 
+var arr_resize = [];
+var win_pos_y = [8,62,116,168,222,278];
 
 var shouldStart = false;
 // var screen_name1;
@@ -138,7 +140,6 @@ var dog_arr = [
 var final;
 
 stage = new createjs.Stage('gameCanvas');
-
 maniFest = [
 	{
 		"src" : "assets/images/time-bet.png" ,
@@ -218,7 +219,8 @@ maniFest = [
 		"id" : "flag6" 
 	},
 
-
+]
+maniFest2 = [
 
 	{
 		"src" : "assets/images/bg_track/bg_track_0.jpg" ,
@@ -2358,7 +2360,11 @@ loader = new createjs.LoadQueue(false);
 loader.on('fileload' , handleFile);
 loader.on('progress', handleProgress, this);
 loader.addEventListener("complete" , loadingComplete);
+
 loader.loadManifest(maniFest,true);
+
+loader2 = new createjs.LoadQueue(false);
+loader2.loadManifest(maniFest2,true);
 
 
 window.addEventListener("resize" , resize);
@@ -2412,6 +2418,7 @@ function loadingComplete(){
 
 	stage.canvas.width = $('#track_bg').width();
 	stage.canvas.height =  window.innerHeight - 50;
+	var arr_length = arr_resize.length;
 
 	// screen_name1 = getRandomName(namesss)
 	// screen_name2 = getRandomName(namesss)
@@ -2532,9 +2539,33 @@ function resize(){
 
 	var windowH =  window.innerHeight;
 	var windowW = window.innerWidth;
+	// var arr_length = arr_resize.length;
 
 	stage.canvas.width = windowW;
 	stage.canvas.height = window.innerHeight - 10;
+
+
+	// for(i = 0; i < arr_length; i++){
+
+	// 	arr_resize[i]['win1'].y = windowW / 4 + arr_resize[i]['win1_pos']
+	// 	arr_resize[i]['win1'].scaleX = arr_resize[i]['win1'].scaleY = (windowW - (windowW / 1.5)) / bg.image.height;
+
+	// 	arr_resize[i]['win2'].y = windowW / 4 + arr_resize[i]['win2_pos']
+	// 	arr_resize[i]['win2'].scaleX = arr_resize[i]['win2'].scaleY = (windowW - (windowW / 1.5)) / bg.image.height;
+
+	// 	arr_resize[i]['win3'].y = windowW / 4 + arr_resize[i]['win3_pos']
+	// 	arr_resize[i]['win3'].scaleX = arr_resize[i]['win3'].scaleY = (windowW - (windowW / 1.5)) / bg.image.height;
+
+	// 	arr_resize[i]['win4'].y = windowW / 4 + arr_resize[i]['win4_pos']
+	// 	arr_resize[i]['win4'].scaleX = arr_resize[i]['win4'].scaleY = (windowW - (windowW / 1.5)) / bg.image.height;
+
+	// 	arr_resize[i]['win5'].y = windowW / 4 + arr_resize[i]['win5_pos']
+	// 	arr_resize[i]['win5'].scaleX = arr_resize[i]['win5'].scaleY = (windowW - (windowW / 1.5)) / bg.image.height;
+
+	// 	arr_resize[i]['win6'].y = windowW / 4 + arr_resize[i]['win6_pos']
+	// 	arr_resize[i]['win6'].scaleX = arr_resize[i]['win6'].scaleY = (windowW - (windowW / 1.5)) / bg.image.height;
+
+	// }
 
 
 		imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
@@ -2685,6 +2716,8 @@ function resize(){
 
 function getRank(){
 
+
+
 	if (finish == false) {
 
 		innerpos = [];
@@ -2707,10 +2740,9 @@ function getRank(){
 	   		return  b - a;
 		});
 
-
-
-
 		for(i = 0; i < ranks.length; i++) {
+
+			var windowW = window.innerWidth;
 
 			if (innerpos[0] == ranks[i]['position']) {
 				createjs.Tween.get(ranks[i]['name'])
@@ -2887,7 +2919,7 @@ function runTrack(num){
 	function changeTrack(num) {
 		if (shouldStart) {
 			
-			imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+num));
+			imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+num));
 			bgContainer.removeAllChildren();
 			bgContainer.addChild(imageBackground);
 
@@ -3238,10 +3270,32 @@ function runTrack(num){
 
 
 			}
-
 		}
 
 
+
+			// var obj = {
+
+			// 	'win1' :  flag1,
+			// 	'win2' :  flag2,
+			// 	'win3' :  flag3,
+			// 	'win4' :  flag4,
+			// 	'win5' :  flag5,
+			// 	'win6' :  flag6,
+
+			// 	'win1_pos' : win_pos_y[0],
+			// 	'win2_pos' : win_pos_y[1],
+			// 	'win3_pos' : win_pos_y[2],
+			// 	'win4_pos' : win_pos_y[3],
+			// 	'win5_pos' : win_pos_y[4],
+			// 	'win6_pos' : win_pos_y[5]
+
+			// }
+
+			// arr_resize.push(obj)
+			// bgContainer.addChild(win1,win2,win3,win4,win5,win6)
+			// stage.update();
+			
 	}
 
 
