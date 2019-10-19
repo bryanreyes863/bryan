@@ -2955,7 +2955,7 @@ function runTrack(num){
 
 							flag2.x =  $('#track_bg').width() * 0.87;
 							flag2.y =   windowW / dog_place_y[0];
-							wwin_name2.x = flag2.x + 30;
+							win_name2.x = flag2.x + 30;
 							win_name2.y =  flag2.y + 3;
 
 						} else if (obj['target']['currentAnimation'] == 'dog3'){
