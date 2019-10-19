@@ -3124,7 +3124,7 @@ function runTrack(num){
 					} else if (obj['target']['currentAnimation'] == 'dog4'){
 						flag4.x =  $('#track_bg').width() * 0.87;
 						flag4.y =   windowW / dog_place_y[3];
-						wwin_name4.x = flag4.x + 30;
+						win_name4.x = flag4.x + 30;
 						win_name4.y =  flag4.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog5'){
@@ -3167,7 +3167,7 @@ function runTrack(num){
 					} else if (obj['target']['currentAnimation'] == 'dog4'){
 						flag4.x =  $('#track_bg').width() * 0.87;
 						flag4.y =   windowW / dog_place_y[4];
-						wwin_name4.x = flag4.x + 30;
+						win_name4.x = flag4.x + 30;
 						win_name4.y =  flag4.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog5'){
