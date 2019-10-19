@@ -13,6 +13,8 @@ var third;
 var round_count;
 var dogs_text;
 
+var object_con;
+
 stage = new createjs.Stage('tableCanvas');
 
 var arr_resize = [];
