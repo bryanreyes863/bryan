@@ -504,13 +504,13 @@ setInterval(function(){
 				  		},1000);
 
 
-				setTimeout(function(){
-					dbo.collection('game').insertOne(gameObj , function(eer , res){
-						if (err) throw err;
-						console.log('ROUNDS' + rounds + 'Recorded');
-						db.close();
-					});
-				},1000);
+				// setTimeout(function(){
+				// 	dbo.collection('game').insertOne(gameObj , function(eer , res){
+				// 		if (err) throw err;
+				// 		console.log('ROUNDS' + rounds + 'Recorded');
+				// 		db.close();
+				// 	});
+				// },1000);
 
 		});
 

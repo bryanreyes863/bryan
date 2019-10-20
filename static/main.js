@@ -2477,7 +2477,6 @@ function loadingComplete(){
 	ranks[4]['name'] = dog5_rank;
 	ranks[5]['name'] = dog6_rank;
 
-
 	bgContainer = new createjs.Container();
 	container = new createjs.Container();
 	bgContainer.addChild(imageBackground);
@@ -2521,7 +2520,6 @@ function loadingComplete(){
 	}
 
 var speed = 1;
-
 
 createjs.Ticker.addEventListener("tick", stage);
 createjs.Ticker.setFPS(speed);
@@ -2939,8 +2937,6 @@ function runTrack(num){
 					spriteSheet.framerate = 0.0001;
 					createjs.Ticker.paused = true;
 
-
-					$('#track_bg').css('filter' , 'grayscale(100%)');
 					if (win1 == null) {
 
 
@@ -3091,7 +3087,7 @@ function runTrack(num){
 					setTimeout(function(){
 						createjs.Ticker.paused = false;
 						spriteSheet.framerate = 35;
-						$('#track_bg').css('filter' , 'grayscale(0%)');
+
 						createjs.Tween.get(obj['target'])
 						.to({x: (obj['target']['x'] + ($('#track_bg').width() * 1.2))}, 1500, createjs.Ease.linear)
 					},1000)

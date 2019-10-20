@@ -326,46 +326,47 @@ socket.on('loadDataGame' , function(data){
 
 	object_con.removeAllChildren();
 
-	if (already == true) {
+		if (already == true) {
 
-		if (data.length == 1) {
+			if (data.length == 1) {
 
-			//result 1
+				//result 1
 
-			gameresult(data[0],0); 
+				gameresult(data[0],0); 
 
-		} else if (data.length == 2) {
-			//result2
+			} else if (data.length == 2) {
+				//result2
 
-			gameresult(data[1],1);
+				gameresult(data[1],1);
 
-		} else if (data.length == 3) {
-			//result3
+			} else if (data.length == 3) {
+				//result3
 
-			gameresult(data[2],2);
+				gameresult(data[2],2);
 
-		} else if (data.length == 4) {
-			//result4
+			} else if (data.length == 4) {
+				//result4
 
-			gameresult(data[3],3);
-			
-		} else if (data.length == 5) {
-			//result5
+				gameresult(data[3],3);
+				
+			} else if (data.length == 5) {
+				//result5
 
-			gameresult(data[4],4);
+				gameresult(data[4],4);
 
-		} else if (data.length == 6) {
-			//result6
+			} else if (data.length == 6) {
+				//result6
 
-			gameresult(data[0],0);
-			gameresult(data[1],1);
-			gameresult(data[2],2);
-			gameresult(data[3],3);
-			gameresult(data[4],4);
-			gameresult(data[5],5);
+				gameresult(data[0],0);
+				gameresult(data[1],1);
+				gameresult(data[2],2);
+				gameresult(data[3],3);
+				gameresult(data[4],4);
+				gameresult(data[5],5);
+			}
+
 		}
 
-	}
 
 })
 
@@ -703,7 +704,7 @@ function gameresult(result,num){
 			run6.x = $('#table_bg').width() / dog_place_width[5];
 			run6.y = windowW / dog_place_arr[num];
 
-		} 
+		}
 
 		var showround = round_count.clone();
 
@@ -743,8 +744,6 @@ function gameresult(result,num){
 			'run6x' : dog_place_width[5],
 			'runy' : dog_place_arr[num]
 		}
-
-
 
 
 
