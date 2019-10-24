@@ -440,79 +440,9 @@ setInterval(function(){
 			sixth_place = 'dog6';
 		}
 
-		setTimeout(function(){
-
-						MongoClient.connect(url,function(err,db){
-							if (err) throw err;
-							var dbo = db.db('dograce');
-							var mysort = {_id : -1};
-							dbo.collection('game').find().limit(6).sort(mysort).toArray(function(err , result){
-								if (err) throw err;
-								io.sockets.emit('loadDataGame',result);
-								db.close();
-							})
-						})
-
-		},1000)
 
 		io.sockets.emit('gameData' , {'rounds' : rounds , 'hash' : hash , 'first_place' : first_place , 'second_place' : second_place , 'third_place' : third_place , 'fourth_place' : fourth_place , 'fifth_place' : fifth_place , 'sixth_place' : sixth_place});
 
-		MongoClient.connect(url, {userNewUrlParse : true} , function (err, db) {
-
-
-				if (err) throw err;
-
-				var dbo = db.db('dograce');
-
-				var gameObj = {
-					nowdate : nowdate,
-					rounds : rounds,
-					hash : hash,
-					first_place : first_place,
-					second_place : second_place,
-					third_place : third_place,
-					fourth_place : fourth_place,
-					fifth_place : fifth_place,
-					sixth_place : sixth_place
-
-				}
-
-				// if (gameRes == 1) {
-				// 	var apiRes = '1';
-				// } else {
-				// 	var apiRes = '2';
-				// }
-
-
-					var jsonObj = {
-						rounds : rounds,
-						first : first_place,
-						second : second_place,
-						third : third_place,
-						fourth : fourth_place,
-						fifth : fifth_place,
-						sixth : sixth_place
-
-					}
-
-				  		var fs = require('fs');
-				  		let data = JSON.stringify(jsonObj);
-				
-
-				  		setTimeout(function(){
-				  			fs.writeFileSync('result.json', data);
-				  		},1000);
-
-
-				// setTimeout(function(){
-				// 	dbo.collection('game').insertOne(gameObj , function(eer , res){
-				// 		if (err) throw err;
-				// 		console.log('ROUNDS' + rounds + 'Recorded');
-				// 		db.close();
-				// 	});
-				// },1000);
-
-		});
 
 		setTimeout(function(){
 
@@ -571,6 +501,85 @@ setInterval(function(){
 					'win_res' : result_container[5]['win_res'] , 
 					'speed6' :result_container[5]['speed6']
 				})
+
+			setTimeout(function(){
+
+
+				MongoClient.connect(url, {userNewUrlParse : true} , function (err, db) {
+
+
+						if (err) throw err;
+
+						var dbo = db.db('dograce');
+
+						var gameObj = {
+							nowdate : nowdate,
+							rounds : rounds,
+							hash : hash,
+							first_place : first_place,
+							second_place : second_place,
+							third_place : third_place,
+							fourth_place : fourth_place,
+							fifth_place : fifth_place,
+							sixth_place : sixth_place
+
+						}
+
+						// if (gameRes == 1) {
+						// 	var apiRes = '1';
+						// } else {
+						// 	var apiRes = '2';
+						// }
+
+
+							var jsonObj = {
+								rounds : rounds,
+								first : first_place,
+								second : second_place,
+								third : third_place,
+								fourth : fourth_place,
+								fifth : fifth_place,
+								sixth : sixth_place
+
+							}
+
+						  		var fs = require('fs');
+						  		let data = JSON.stringify(jsonObj);
+						
+
+						  		setTimeout(function(){
+						  			fs.writeFileSync('result.json', data);
+						  		},1000);
+
+
+						setTimeout(function(){
+							dbo.collection('game').insertOne(gameObj , function(eer , res){
+								if (err) throw err;
+								console.log('ROUNDS' + rounds + 'Recorded');
+								db.close();
+							});
+						},1000);
+
+				});
+
+				setTimeout(function(){
+
+					MongoClient.connect(url,function(err,db){
+						if (err) throw err;
+						var dbo = db.db('dograce');
+						var mysort = {_id : -1};
+						dbo.collection('game').find().limit(6).sort(mysort).toArray(function(err , result){
+							if (err) throw err;
+							io.sockets.emit('loadDataGame',result);
+							db.close();
+						})
+					})
+					
+				},5000);
+
+			},30000);
+
+
 
 			setTimeout(function(){
 				genRes(result_container);

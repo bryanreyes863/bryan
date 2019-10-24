@@ -157,6 +157,9 @@ function loadingComplete(){
 	resize();
 	already = true;
 
+	socket.emit('newVisitors');
+
+
 }
 
 createjs.Ticker.addEventListener("tick", stage);
@@ -319,8 +322,6 @@ function resize(){
 	res_dog_6.alpha = 0;
 
 }
-
-socket.emit('newVisitors');
 
 socket.on('loadDataGame' , function(data){
 
@@ -708,9 +709,17 @@ function gameresult(result,num){
 
 		var showround = round_count.clone();
 
-		 win_first.alpha = 1;
+		if (win_first) {
+		 	win_first.alpha = 1;
+		}
+		if (win_second) {
+
 		 win_second.alpha = 1;
+		}
+		if (win_third) {
+
 		 win_third.alpha = 1;
+		}
 
 
 		showround.alpha = 1;

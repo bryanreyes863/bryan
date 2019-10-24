@@ -2569,14 +2569,14 @@ function resize(){
 
 		flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
 		flag1.x =  $('#track_bg').width() * 2;
-		flag1.y =   windowW / 3.93;
+		flag1.y =   windowW / 2;
 		win_name1.scaleX = win_name1.scaleY =  (windowW - (windowW / 1.55)) / bg.image.height;
 		win_name1.x = flag1.x + 30;
 		win_name1.y =  flag1.y + 3;
 
 		flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
 		flag2.x =  $('#track_bg').width() * 2;
-		flag2.y =   windowW / 3.55;
+		flag2.y =   windowW / 3.5;
 		win_name2.scaleX = win_name2.scaleY =  (windowW - (windowW / 1.55)) / bg.image.height;
 		win_name2.x = flag2.x + 30;
 		win_name2.y =  flag2.y + 3;
@@ -2780,7 +2780,7 @@ socket.on('loadDataGame', function(data){
 	if (shouldStart) {
 
 		if (data[0].rounds < 10 ) {
-			count.text = "00"+data[0].rounds;
+			count.text = "00"+(data[0].rounds + 1);
 		}else {
 			count.text = ""+(data[0].rounds + 1);
 		}
@@ -2939,149 +2939,162 @@ function runTrack(num){
 
 					if (win1 == null) {
 
+						setTimeout(function(){
 
-						if (obj['target']['currentAnimation'] == 'dog1') {
+						
 
-							flag1.x =  $('#track_bg').width() * 0.87;
-							flag1.y =   windowW / dog_place_y[0];
-							win_name1.x = flag1.x + 30;
-							win_name1.y =  flag1.y + 3;
+							if (obj['target']['currentAnimation'] == 'dog1') {
 
-						} else if (obj['target']['currentAnimation'] == 'dog2'){
+								flag1.x =  $('#track_bg').width() * 0.87;
+								flag1.y =   windowW / dog_place_y[0];
+								win_name1.x = flag1.x + 30;
+								win_name1.y =  flag1.y + 3;
 
-							flag2.x =  $('#track_bg').width() * 0.87;
-							flag2.y =   windowW / dog_place_y[0];
-							win_name2.x = flag2.x + 30;
-							win_name2.y =  flag2.y + 3;
+							} else if (obj['target']['currentAnimation'] == 'dog2'){
 
-						} else if (obj['target']['currentAnimation'] == 'dog3'){
+								flag2.x =  $('#track_bg').width() * 0.87;
+								flag2.y =   windowW / dog_place_y[0];
+								win_name2.x = flag2.x + 30;
+								win_name2.y =  flag2.y + 3;
 
-							flag3.x =  $('#track_bg').width() * 0.87;
-							flag3.y =   windowW / dog_place_y[0];
-							win_name3.x = flag3.x + 30;
-							win_name3.y =  flag3.y + 3;
+							} else if (obj['target']['currentAnimation'] == 'dog3'){
 
-						} else if (obj['target']['currentAnimation'] == 'dog4'){
+								flag3.x =  $('#track_bg').width() * 0.87;
+								flag3.y =   windowW / dog_place_y[0];
+								win_name3.x = flag3.x + 30;
+								win_name3.y =  flag3.y + 3;
 
-							flag4.x =  $('#track_bg').width() * 0.87;
-							flag4.y =   windowW / dog_place_y[0];
-							win_name4.x = flag4.x + 30;
-							win_name4.y =  flag4.y + 3;
+							} else if (obj['target']['currentAnimation'] == 'dog4'){
 
-						} else if (obj['target']['currentAnimation'] == 'dog5'){
+								flag4.x =  $('#track_bg').width() * 0.87;
+								flag4.y =   windowW / dog_place_y[0];
+								win_name4.x = flag4.x + 30;
+								win_name4.y =  flag4.y + 3;
 
-							flag5.x =  $('#track_bg').width() * 0.87;
-							flag5.y =   windowW / dog_place_y[0];
-							win_name5.x = flag5.x + 30;
-							win_name5.y =  flag5.y + 3;
+							} else if (obj['target']['currentAnimation'] == 'dog5'){
 
-						} else if (obj['target']['currentAnimation'] == 'dog6'){
+								flag5.x =  $('#track_bg').width() * 0.87;
+								flag5.y =   windowW / dog_place_y[0];
+								win_name5.x = flag5.x + 30;
+								win_name5.y =  flag5.y + 3;
 
-							flag6.x =  $('#track_bg').width() * 0.87;
-							flag6.y =   windowW / dog_place_y[0];
-							win_name6.x = flag6.x + 30;
-							win_name6.y =  flag6.y + 3;
+							} else if (obj['target']['currentAnimation'] == 'dog6'){
 
-						}
+								flag6.x =  $('#track_bg').width() * 0.87;
+								flag6.y =   windowW / dog_place_y[0];
+								win_name6.x = flag6.x + 30;
+								win_name6.y =  flag6.y + 3;
 
-						win1 = obj['target']['currentAnimation'];
+							}
+
+							win1 = obj['target']['currentAnimation'];
+
+						},100)
 
 					} else if (win2 == null) {
 
-						if (obj['target']['currentAnimation'] == 'dog1') {
+						setTimeout(function(){
 
-							flag1.x =  $('#track_bg').width() * 0.87;
-							flag1.y =   windowW / dog_place_y[1];
-							win_name1.x = flag1.x + 30;
-							win_name1.y =  flag1.y + 3;
+							if (obj['target']['currentAnimation'] == 'dog1') {
 
-						} else if (obj['target']['currentAnimation'] == 'dog2'){
+								flag1.x =  $('#track_bg').width() * 0.87;
+								flag1.y =   windowW / dog_place_y[1];
+								win_name1.x = flag1.x + 30;
+								win_name1.y =  flag1.y + 3;
 
-							flag2.x =  $('#track_bg').width() * 0.87;
-							flag2.y =   windowW / dog_place_y[1];
-							win_name2.x = flag2.x + 30;
-							win_name2.y =  flag2.y + 3;
+							} else if (obj['target']['currentAnimation'] == 'dog2'){
 
-						} else if (obj['target']['currentAnimation'] == 'dog3'){
+								flag2.x =  $('#track_bg').width() * 0.87;
+								flag2.y =   windowW / dog_place_y[1];
+								win_name2.x = flag2.x + 30;
+								win_name2.y =  flag2.y + 3;
 
-							flag3.x =  $('#track_bg').width() * 0.87;
-							flag3.y =   windowW / dog_place_y[1];
-							win_name3.x = flag3.x + 30;
-							win_name3.y =  flag3.y + 3;
+							} else if (obj['target']['currentAnimation'] == 'dog3'){
 
-						} else if (obj['target']['currentAnimation'] == 'dog4'){
+								flag3.x =  $('#track_bg').width() * 0.87;
+								flag3.y =   windowW / dog_place_y[1];
+								win_name3.x = flag3.x + 30;
+								win_name3.y =  flag3.y + 3;
 
-							flag4.x =  $('#track_bg').width() * 0.87;
-							flag4.y =   windowW / dog_place_y[1];
-							win_name4.x = flag4.x + 30;
-							win_name4.y =  flag4.y + 3;
+							} else if (obj['target']['currentAnimation'] == 'dog4'){
 
-						} else if (obj['target']['currentAnimation'] == 'dog5'){
+								flag4.x =  $('#track_bg').width() * 0.87;
+								flag4.y =   windowW / dog_place_y[1];
+								win_name4.x = flag4.x + 30;
+								win_name4.y =  flag4.y + 3;
 
-							flag5.x =  $('#track_bg').width() * 0.87;
-							flag5.y =   windowW / dog_place_y[1];
-							win_name5.x = flag5.x + 30;
-							win_name5.y =  flag5.y + 3;
+							} else if (obj['target']['currentAnimation'] == 'dog5'){
 
-						} else if (obj['target']['currentAnimation'] == 'dog6'){
+								flag5.x =  $('#track_bg').width() * 0.87;
+								flag5.y =   windowW / dog_place_y[1];
+								win_name5.x = flag5.x + 30;
+								win_name5.y =  flag5.y + 3;
 
-							flag6.x =  $('#track_bg').width() * 0.87;
-							flag6.y =   windowW / dog_place_y[1];
-							win_name6.x = flag6.x + 30;
-						  	win_name6.y =  flag6.y + 3;
+							} else if (obj['target']['currentAnimation'] == 'dog6'){
 
-						}
+								flag6.x =  $('#track_bg').width() * 0.87;
+								flag6.y =   windowW / dog_place_y[1];
+								win_name6.x = flag6.x + 30;
+							  	win_name6.y =  flag6.y + 3;
 
-						win2 = obj['target']['currentAnimation'];
+							}
+
+							win2 = obj['target']['currentAnimation'];
+
+						},200)
 
 					} else if (win3 == null) {
 
-						if (obj['target']['currentAnimation'] == 'dog1') {
+						setTimeout(function(){
 
-							flag1.x =  $('#track_bg').width() * 0.87;
-							flag1.y =   windowW / dog_place_y[2];
-							win_name1.x = flag1.x + 30;
-							win_name1.y =  flag1.y + 3;
 
-						} else if (obj['target']['currentAnimation'] == 'dog2'){
+							if (obj['target']['currentAnimation'] == 'dog1') {
 
-							flag2.x =  $('#track_bg').width() * 0.87;
-							flag2.y =   windowW / dog_place_y[2];
-							win_name2.x = flag2.x + 30;
-							win_name2.y =  flag2.y + 3;
+								flag1.x =  $('#track_bg').width() * 0.87;
+								flag1.y =   windowW / dog_place_y[2];
+								win_name1.x = flag1.x + 30;
+								win_name1.y =  flag1.y + 3;
 
-						} else if (obj['target']['currentAnimation'] == 'dog3'){
+							} else if (obj['target']['currentAnimation'] == 'dog2'){
 
-							flag3.x =  $('#track_bg').width() * 0.87;
-							flag3.y =   windowW / dog_place_y[2];
-							win_name3.x = flag3.x + 30;
-							win_name3.y =  flag3.y + 3;
+								flag2.x =  $('#track_bg').width() * 0.87;
+								flag2.y =   windowW / dog_place_y[2];
+								win_name2.x = flag2.x + 30;
+								win_name2.y =  flag2.y + 3;
 
-						} else if (obj['target']['currentAnimation'] == 'dog4'){
+							} else if (obj['target']['currentAnimation'] == 'dog3'){
 
-							flag4.x =  $('#track_bg').width() * 0.87;
-							flag4.y =   windowW / dog_place_y[2];
-							win_name4.x = flag4.x + 30;
-							win_name4.y =  flag4.y + 3;
+								flag3.x =  $('#track_bg').width() * 0.87;
+								flag3.y =   windowW / dog_place_y[2];
+								win_name3.x = flag3.x + 30;
+								win_name3.y =  flag3.y + 3;
 
-						} else if (obj['target']['currentAnimation'] == 'dog5'){
+							} else if (obj['target']['currentAnimation'] == 'dog4'){
 
-							flag5.x =  $('#track_bg').width() * 0.87;
-							flag5.y =   windowW / dog_place_y[2];
-							win_name5.x = flag5.x + 30;
-							win_name5.y =  flag5.y + 3;
+								flag4.x =  $('#track_bg').width() * 0.87;
+								flag4.y =   windowW / dog_place_y[2];
+								win_name4.x = flag4.x + 30;
+								win_name4.y =  flag4.y + 3;
 
-						} else if (obj['target']['currentAnimation'] == 'dog6'){
+							} else if (obj['target']['currentAnimation'] == 'dog5'){
 
-							flag6.x =  $('#track_bg').width() * 0.87;
-							flag6.y =   windowW / dog_place_y[2];
-							win_name6.x = flag6.x + 30;
-							win_name6.y =  flag6.y + 3;
+								flag5.x =  $('#track_bg').width() * 0.87;
+								flag5.y =   windowW / dog_place_y[2];
+								win_name5.x = flag5.x + 30;
+								win_name5.y =  flag5.y + 3;
 
-						}
+							} else if (obj['target']['currentAnimation'] == 'dog6'){
 
-						win3 = obj['target']['currentAnimation'];
+								flag6.x =  $('#track_bg').width() * 0.87;
+								flag6.y =   windowW / dog_place_y[2];
+								win_name6.x = flag6.x + 30;
+								win_name6.y =  flag6.y + 3;
 
+							}
+
+							win3 = obj['target']['currentAnimation'];
+
+						},300)
 					}
 
 					setTimeout(function(){
