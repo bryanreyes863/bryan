@@ -91,6 +91,15 @@ table td {
 	text-align: center;
 }
 
+.tresult img{
+    display: inline-block;
+    width: 33%;
+}
+
+.dogFlag{
+    width: 4%;
+}
+
 .tresult{
 	width: 5%;
 }

@@ -2777,6 +2777,7 @@ function getRank(){
 
 
 socket.on('loadDataGame', function(data){
+
 	if (shouldStart) {
 
 		if (data[0].rounds < 10 ) {

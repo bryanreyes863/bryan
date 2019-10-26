@@ -284,7 +284,7 @@ setInterval(function(){
 
 		} else if (result_container[2]['speed3'] == 200) {
 
-			first_place = 'dof3';
+			first_place = 'dog3';
 
 		} else if (result_container[3]['speed4'] == 200) {
 
@@ -525,13 +525,6 @@ setInterval(function(){
 
 						}
 
-						// if (gameRes == 1) {
-						// 	var apiRes = '1';
-						// } else {
-						// 	var apiRes = '2';
-						// }
-
-
 							var jsonObj = {
 								rounds : rounds,
 								first : first_place,
@@ -673,7 +666,7 @@ io.on('connection' , function(socket){
 					    
 					    io.to(socketid).emit('pageCount', dataCount);
 					    db.close();
-					});			
+					});		
 			})
 		})
 

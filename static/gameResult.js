@@ -22,45 +22,15 @@ socket.on('loadDatahis' , function(data){
 	var sniff_data = '';
 	for(p = 0; p < pastLen; p++){
 
-		var pastdata = data[0];
+		var pastdata = data[p];
 
-			if (pastdata.first_place == 1) {
-
-				var gameRes = '1';
-				var gameResColor = '1Res'
-
-			} else if (pastdata.second_place == 2) {
-
-				var gameRes = '2';
-				var gameResColor = '2Res'
-
-			} else if (pastdata.third_place == 3) {
-
-				var gameRes = '3';
-				var gameResColor = '3Res'
-
-			} else if (pastdata.fourth_place == 4) {
-
-				var gameRes = '4';
-				var gameResColor = '4Res'
-
-			} else if (pastdata.fifth_place == 5) {
-
-				var gameRes = '5';
-				var gameResColor = '5Res'
-				
-			} else if (pastdata.sixth_place == 6) {
-
-				var gameRes = '6';
-				var gameResColor = '6Res'
-				
-			}
-
-		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
+$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
 			+pastdata.rounds+'</td><td class="thash">'
 			+pastdata.hash+'</td><td class="tsaltcode">'
-			+pastdata._id+'</td><td class="result '+gameResColor+'">'
-			+gameRes+'</td></tr>')
+			+pastdata._id+'</td><td class="tresult <img class="dogFlag" src="assets/images/dogplace/'+pastdata.first_place+'.jpg">'
+			+'<img class="dogFlag" src="assets/images/dogplace/'+pastdata.first_place+'.jpg">'
+			+'<img class="dogFlag" src="assets/images/dogplace/'+pastdata.second_place+'.jpg">'
+			+'<img class="dogFlag" src="assets/images/dogplace/'+pastdata.third_place+'.jpg"></td></tr>')
 	}
 
 
@@ -195,45 +165,13 @@ $('#checkResult').click(function(){
 
 socket.on('resdata' , function(data){
 
-
 	if (data.length > 0) {
 		$('#invalidtxt').hide();
 		$('#result_round').html(data[0].rounds);
-
-		if (data[0].first_place == 1) {
-
-			var gameRes = '1';
-
-			$('#result_num').css('color' , '#37aee2');
-
-		} else if (data[0].second_place == 2 ){
-
-			var gameRes = '2';
-			$('#result_num').css('color' , 'red');
-
-		} else if(data[0].third_place == 3 ){
-
-			var gameRes = '3';
-			$('#result_num').css('color' , 'white');
-
-		} else if(data[0].fourth_place == 4 ){
-
-			var gameRes = '4';
-			$('#result_num').css('color' , 'black');
-
-		} else if(data[0].fifth_place == 5 ){
-
-			var gameRes = '5';
-			$('#result_num').css('color' , '#ffa31a');
-
-		} else if(data[0].sixth_place == 6 ){
-
-			var gameRes = '6';
-			$('#result_num').css('color' , ' #808080');
-
-		}
-
-		$('#result_num').html(gameRes);
+		
+		$('#result_num').html('<img class="dogFlag" src="assets/images/dogplace/'+data[0].first_place+'.jpg">'
+			+'<img class="dogFlag" src="assets/images/dogplace/'+data[0].second_place+'.jpg">'
+			+'<img class="dogFlag" src="assets/images/dogplace/'+data[0].third_place+'.jpg">');
 
 		$('#restext').show();
 
@@ -242,19 +180,19 @@ socket.on('resdata' , function(data){
 })
 
 
-socket.on('invalid' , function(data){
-	$('#invalidtxt').show();
-	$('#restext').hide();
-	$('#invalidtxt').html('정보가 일치하지 않습니다.');
-})
+	socket.on('invalid' , function(data){
+		$('#invalidtxt').show();
+		$('#restext').hide();
+		$('#invalidtxt').html('정보가 일치하지 않습니다.');
+	})
 
- $('#date-picker').change(function(){
- 	var dateval = $(this).val();
- 	socket.emit('sortbydate' , dateval);
- 	$('.gameresult table .gameobjects').remove();
- })
+	 $('#date-picker').change(function(){
+	 	var dateval = $(this).val();
+	 	socket.emit('sortbydate' , dateval);
+	 	$('.gameresult table .gameobjects').remove();
+	 })
 
- $(document).ready(function(){
+$(document).ready(function(){
 
  	$(document).on('click','.loadpagesbtn',function(){
  		var skip = 10 * $(this).html();
@@ -274,51 +212,20 @@ socket.on('invalid' , function(data){
 
 			var pastdata = data[p];
 
-
-			if (pastdata.first_place == 1) {
-
-				var gameRes = '1';
-				var gameResColor = '1Res'
-
-			} else if (pastdata.second_place == 2) {
-
-				var gameRes = '2';
-				var gameResColor = '2Res'
-
-			} else if (pastdata.third_place == 3) {
-
-				var gameRes = '3';
-				var gameResColor = '3Res'
-
-			} else if (pastdata.fourth_place == 4) {
-
-				var gameRes = '4';
-				var gameResColor = '4Res'
-
-			} else if (pastdata.fifth_place == 5) {
-
-				var gameRes = '5';
-				var gameResColor = '5Res'
-				
-			} else if (pastdata.sixth_place == 6) {
-
-				var gameRes = '6';
-				var gameResColor = '6Res'
-				
-			}
-
 		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
 			+pastdata.rounds+'</td><td class="thash">'
 			+pastdata.hash+'</td><td class="tsaltcode">'
-			+pastdata._id+'</td><td class="result  '+gameResColor+'">'
-			+gameRes+'</td></tr>')
+			+pastdata._id+'</td><td class="tresult <img class="dogFlag" src="assets/images/dogplace/'+pastdata.first_place+'.jpg">'
+			+'<img class="dogFlag" src="assets/images/dogplace/'+pastdata.first_place+'.jpg">'
+			+'<img class="dogFlag" src="assets/images/dogplace/'+pastdata.second_place+'.jpg">'
+			+'<img class="dogFlag" src="assets/images/dogplace/'+pastdata.third_place+'.jpg"></td></tr>')
 		
 		}
 
  	})
 
 
- })
+})
 
  	socket.on('loadsort',function(sortres){
 		var pastLen = sortres.length;
@@ -326,45 +233,13 @@ socket.on('invalid' , function(data){
 		for(p = 0; p < pastLen; p++) {
 		var pastdata = sortres[p];
 
-
-			if (pastdata.first_place == 1) {
-
-				var gameRes = '1';
-				var gameResColor = '1Res'
-
-			} else if (pastdata.second_place == 2) {
-
-				var gameRes = '2';
-				var gameResColor = '2Res'
-
-			} else if (pastdata.third_place == 3) {
-
-				var gameRes = '3';
-				var gameResColor = '3Res'
-
-			} else if (pastdata.fourth_place == 4) {
-
-				var gameRes = '4';
-				var gameResColor = '4Res'
-
-			} else if (pastdata.fifth_place == 5) {
-
-				var gameRes = '5';
-				var gameResColor = '5Res'
-				
-			} else if (pastdata.sixth_place == 6) {
-
-				var gameRes = '6';
-				var gameResColor = '6Res'
-				
-			}
-
-
 		$('.gameresult table').append('<tr class="gameobjects"><td class="trounds">'
 			+pastdata.rounds+'</td><td class="thash">'
 			+pastdata.hash+'</td><td class="tsaltcode">'
-			+pastdata._id+'</td><td class="result  '+gameResColor+'">'
-			+gameRes+'</td></tr>')
+			+pastdata._id+'</td><td class="tresult <img class="dogFlag" src="assets/images/dogplace/'+pastdata.first_place+'.jpg">'
+			+'<img class="dogFlag" src="assets/images/dogplace/'+pastdata.first_place+'.jpg">'
+			+'<img class="dogFlag" src="assets/images/dogplace/'+pastdata.second_place+'.jpg">'
+			+'<img class="dogFlag" src="assets/images/dogplace/'+pastdata.third_place+'.jpg"></td></tr>')
 		}
  })
 
