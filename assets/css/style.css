@@ -107,6 +107,15 @@ width: 18%;
     overflow: auto;
 }
 
+.modal-body{
+    border: none!important;
+}
+
 .modal-header{
     border: none!important;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
