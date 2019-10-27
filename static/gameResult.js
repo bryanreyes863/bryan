@@ -56,7 +56,7 @@ socket.on('pageCount',function(data) {
 	}
 
 
-function prevPage() {
+function prevPage(pages) {
 
 		if (records_per_page == pages) {
 
@@ -81,7 +81,7 @@ function prevPage() {
 		}
 }
 
-function nextPage() {
+function nextPage(pages) {
 	if (lastone == 0){
 		var rs_limiter = records_per_page;
 	}else {
@@ -168,7 +168,7 @@ socket.on('resdata' , function(data){
 	if (data.length > 0) {
 		$('#invalidtxt').hide();
 		$('#result_round').html(data[0].rounds);
-		
+
 		$('#result_num').html('<img class="dogFlag" src="assets/images/dogplace/'+data[0].first_place+'.jpg">'
 			+'<img class="dogFlag" src="assets/images/dogplace/'+data[0].second_place+'.jpg">'
 			+'<img class="dogFlag" src="assets/images/dogplace/'+data[0].third_place+'.jpg">');

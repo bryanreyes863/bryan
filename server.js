@@ -28,6 +28,10 @@ app.get('/gameResult',function(request, response){
 	response.sendFile(path.join(__dirname, 'gameResult.html'));
 })
 
+app.get('/hashcode',function(request, response){
+	response.sendFile(path.join(__dirname, 'hashCode.html'));
+})
+
 app.get('/',function(request, response){
 	response.sendFile(path.join(__dirname, 'index.html'));
 })
