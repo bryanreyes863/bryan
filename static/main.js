@@ -2990,7 +2990,7 @@ function runTrack(num){
 
 							win1 = obj['target']['currentAnimation'];
 
-						},100)
+						},200)
 
 					} else if (win2 == null) {
 
@@ -3042,7 +3042,7 @@ function runTrack(num){
 
 							win2 = obj['target']['currentAnimation'];
 
-						},200)
+						},400)
 
 					} else if (win3 == null) {
 
@@ -3095,7 +3095,7 @@ function runTrack(num){
 
 							win3 = obj['target']['currentAnimation'];
 
-						},300)
+						},600)
 					}
 
 					setTimeout(function(){
