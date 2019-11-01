@@ -216,8 +216,11 @@ maniFest = [
 	{
 		"src" : "assets/images/flags6.png" ,
 		"id" : "flag6" 
-	},
+	}
 
+]
+
+maniFest2 = [
 	{
 		"src" : "assets/images/bg_track/bg_track_0.jpg" ,
 		"id" : "bgTrack_0" 
@@ -2347,8 +2350,7 @@ maniFest = [
 	{
 		"src" : "assets/images/bg_track/bg_track_415.jpg" ,
 		"id" : "bgTrack_415" 
-	},
-
+	}
 ]
 
 loader = new createjs.LoadQueue(false);
@@ -2358,8 +2360,8 @@ loader.addEventListener("complete" , loadingComplete);
 
 loader.loadManifest(maniFest,true);
 
-// loader2 = new createjs.LoadQueue(false);
-// loader2.loadManifest(maniFest2,true);
+loader2 = new createjs.LoadQueue(false);
+loader2.loadManifest(maniFest2,true);
 
 
 window.addEventListener("resize" , resize);
@@ -2890,7 +2892,7 @@ function runTrack(num){
 	function changeTrack(num) {
 		if (shouldStart) {
 			
-			imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+num));
+			imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+num));
 			bgContainer.removeAllChildren();
 			bgContainer.addChild(imageBackground);
 
