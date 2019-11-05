@@ -9,7 +9,7 @@ var io = socketIO(server);
 
 var moment = require('moment');
 // var url = "mongodb://localhost:27017/dograce";
-var url = "mongodb://joemar12:joemar12@ds229078.mlab.com:29078/dograce";
+var url = "mongodb+srv://joemar12:joemar12@cluster0-hbe6s.mongodb.net/admin?retryWrites=true&w=majority";
 
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
