@@ -1031,7 +1031,7 @@ function runTrack(num,num2){
 
 			console.log(num)
 
-			if (num < 407) {
+			if (num < 406) {
 
 					num++;
 					num2++;
@@ -1140,15 +1140,7 @@ function runTrack(num,num2){
 					imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
 					stage.update();
 				},720)
-				// setTimeout(function(){
-
-				// 	setTimeout(function(){
-
-				// 	})
 					
-
-				// 	imageBackground.alpha = 0;
-				// },5000);
 				
 				$('#track_bg').css('opacity' , 1);
 
@@ -1194,13 +1186,6 @@ function runTrack(num,num2){
 			},80)
 		// }
 	}
-
-// function getMove(){
-
-// 	var max = $('#track_bg').width();
-// 	return (Math.random() * 4) + 1.2;
-// }
-
 
 
 	function completeRun(obj) {
@@ -1273,7 +1258,7 @@ function runTrack(num,num2){
 
 							win1 = obj['target']['currentAnimation'];
 
-						},200)
+						},300)
 
 					} else if (win2 == null) {
 
@@ -1325,7 +1310,7 @@ function runTrack(num,num2){
 
 							win2 = obj['target']['currentAnimation'];
 
-						},400)
+						},500)
 
 					} else if (win3 == null) {
 
@@ -1378,7 +1363,7 @@ function runTrack(num,num2){
 
 							win3 = obj['target']['currentAnimation'];
 
-						},600)
+						},700)
 					}
 
 					setTimeout(function(){
