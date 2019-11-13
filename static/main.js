@@ -1634,14 +1634,3 @@ function runTrack(num,num2){
 	        .to({x: ($('#track_bg').width() / 2.5)},data.speed6, createjs.Ease.linear).call(completeRun)
 		}
 	})
-
-	var isTabActive;
-
-	window.onfocus = function(){
-		isTabActive = true;
-		location.reload();
-	}
-
-	window.onblur = function(){
-		isTabActive = false;
-	}
