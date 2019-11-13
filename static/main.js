@@ -1639,9 +1639,9 @@ function runTrack(num,num2){
 
 	window.onfocus = function(){
 		isTabActive = true;
+		location.reload();
 	}
 
 	window.onblur = function(){
 		isTabActive = false;
-		location.reload();
 	}
