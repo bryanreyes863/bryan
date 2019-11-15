@@ -1039,7 +1039,7 @@ function runTrack(num,num2){
 
 			if (window.mobilecheck()) {
 
-				if (num < 406 && count_down.text != '00:25') {
+				if (num < 406 && count_down.text != '00:27') {
 
 						num++;
 						num2++;
@@ -1125,7 +1125,7 @@ function runTrack(num,num2){
 						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
 						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
 						stage.update();
-					},400)
+					},480)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_55.png");
 						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+55));
@@ -1136,7 +1136,7 @@ function runTrack(num,num2){
 						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
 						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
 						stage.update();
-					},400)
+					},560)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_56.png");
 						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+56));
@@ -1147,7 +1147,7 @@ function runTrack(num,num2){
 						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
 						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
 						stage.update();
-					},80)
+					},640)
 						
 					
 					$('#track_bg').css('opacity' , 1);
@@ -1242,7 +1242,7 @@ function runTrack(num,num2){
 						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
 						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
 						stage.update();
-					},400)
+					},480)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_55.png");
 						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+55));
@@ -1253,7 +1253,7 @@ function runTrack(num,num2){
 						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
 						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
 						stage.update();
-					},400)
+					},560)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_56.png");
 						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+56));
@@ -1264,7 +1264,7 @@ function runTrack(num,num2){
 						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
 						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
 						stage.update();
-					},80)
+					},640)
 						
 					
 					$('#track_bg').css('opacity' , 1);
