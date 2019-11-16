@@ -1039,7 +1039,7 @@ function runTrack(num,num2){
 
 			if (window.mobilecheck()) {
 
-				if (num < 406) {
+				if (num < 406 && count_down.text != '00:27') {
 
 						num++;
 						num2++;
