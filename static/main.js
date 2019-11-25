@@ -216,11 +216,7 @@ maniFest = [
 	{
 		"src" : "assets/images/flags6.png" ,
 		"id" : "flag6" 
-	}
-
-]
-
-maniFest2 = [
+	},
 	{
 		"src" : "assets/images/tinyfier/bg_track_0.png" ,
 		"id" : "bgTrack_0" 
@@ -510,7 +506,12 @@ maniFest2 = [
 		"src" : "assets/images/tinyfier/bg_track_56.png" ,
 		"id" : "bgTrack_56" 
 	}
+
 ]
+
+// maniFest2 = [
+	
+// ]
 
 
 
@@ -521,8 +522,8 @@ loader.addEventListener("complete" , loadingComplete);
 
 loader.loadManifest(maniFest,true);
 
-loader2 = new createjs.LoadQueue(false);
-loader2.loadManifest(maniFest2,true);
+// loader2 = new createjs.LoadQueue(false);
+// loader2.loadManifest(maniFest2,true);
 
 
 window.addEventListener("resize" , resize);
@@ -1287,7 +1288,7 @@ function runTrack(num,num2){
 		// console.log(num)
 		// if (shouldStart) {
 			// if (num == 22) {
-				imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+num));
+				imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+num));
 				bgContainer.removeAllChildren();
 				bgContainer.addChild(imageBackground);
 
@@ -1307,7 +1308,7 @@ function runTrack(num,num2){
 		// console.log(num2)
 		// if (shouldStart) {
 			
-			imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+num2));
+			imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+num2));
 			bgContainer.removeAllChildren();
 			bgContainer.addChild(imageBackground);
 
