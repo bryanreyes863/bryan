@@ -62,6 +62,71 @@ var shouldStart = false;
 
 // var namesss = ["skustaklee","kingbadger","abdul","Aginaya","Agimat","Alakdanesa","Alamid","Asero","Bagwis","Batang X","Batang Z","Maria Ozawa","Bryan","Tubul","kupal","tangina","malupit","shivalManyan","loooonie","mr.PEPE","RATBU","SHIVAL","DAWNLUD ANYA ?"];
 
+// A first approximation
+var images = [
+	'assets/images/tinyfier/bg_track_0.png',
+	'assets/images/tinyfier/bg_track_1.png',
+	'assets/images/tinyfier/bg_track_2.png',
+	'assets/images/tinyfier/bg_track_3.png',
+	'assets/images/tinyfier/bg_track_4.png',
+	'assets/images/tinyfier/bg_track_5.png',
+	'assets/images/tinyfier/bg_track_6.png',
+	'assets/images/tinyfier/bg_track_7.png',
+	'assets/images/tinyfier/bg_track_8.png',
+	'assets/images/tinyfier/bg_track_9.png',
+	'assets/images/tinyfier/bg_track_10.png',
+	'assets/images/tinyfier/bg_track_11.png',
+	'assets/images/tinyfier/bg_track_12.png',
+	'assets/images/tinyfier/bg_track_13.png',
+	'assets/images/tinyfier/bg_track_14.png',
+	'assets/images/tinyfier/bg_track_15.png',
+	'assets/images/tinyfier/bg_track_16.png',
+	'assets/images/tinyfier/bg_track_17.png',
+	'assets/images/tinyfier/bg_track_18.png',
+	'assets/images/tinyfier/bg_track_19.png',
+	'assets/images/tinyfier/bg_track_20.png',
+	'assets/images/tinyfier/bg_track_21.png',
+	'assets/images/tinyfier/bg_track_22.png',
+	'assets/images/tinyfier/bg_track_23.png',
+	'assets/images/tinyfier/bg_track_24.png',
+	'assets/images/tinyfier/bg_track_25.png',
+	'assets/images/tinyfier/bg_track_26.png',
+	'assets/images/tinyfier/bg_track_27.png',
+	'assets/images/tinyfier/bg_track_28.png',
+	'assets/images/tinyfier/bg_track_29.png',
+	'assets/images/tinyfier/bg_track_30.png',
+	'assets/images/tinyfier/bg_track_31.png',
+	'assets/images/tinyfier/bg_track_32.png',
+	'assets/images/tinyfier/bg_track_33.png',
+	'assets/images/tinyfier/bg_track_34.png',
+	'assets/images/tinyfier/bg_track_35.png',
+	'assets/images/tinyfier/bg_track_36.png',
+	'assets/images/tinyfier/bg_track_37.png',
+	'assets/images/tinyfier/bg_track_38.png',
+	'assets/images/tinyfier/bg_track_39.png',
+	'assets/images/tinyfier/bg_track_40.png',
+	'assets/images/tinyfier/bg_track_41.png',
+	'assets/images/tinyfier/bg_track_42.png',
+	'assets/images/tinyfier/bg_track_43.png',
+	'assets/images/tinyfier/bg_track_44.png',
+	'assets/images/tinyfier/bg_track_45.png',
+	'assets/images/tinyfier/bg_track_46.png',
+	'assets/images/tinyfier/bg_track_47.png',
+	'assets/images/tinyfier/bg_track_48.png',
+	'assets/images/tinyfier/bg_track_48.png',
+	'assets/images/tinyfier/bg_track_50.png',
+	'assets/images/tinyfier/bg_track_51.png',
+	'assets/images/tinyfier/bg_track_52.png',
+	'assets/images/tinyfier/bg_track_53.png',
+	'assets/images/tinyfier/bg_track_54.png',
+	'assets/images/tinyfier/bg_track_55.png',
+	'assets/images/tinyfier/bg_track_56.png'
+],
+    preload = new Image();
+// Since you're using jQuery...
+$.each(images, function(index, value) {
+    preload.src = value;     // Changing the src requests the corresponding file
+});
 
 var ranks = [
 	{
