@@ -1063,7 +1063,7 @@ function runTrack(num,num2){
 
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_49.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+49));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+49));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1074,7 +1074,7 @@ function runTrack(num,num2){
 					},80)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_50.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+50));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+50));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1085,7 +1085,7 @@ function runTrack(num,num2){
 					},160)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_51.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+51));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+51));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1096,7 +1096,7 @@ function runTrack(num,num2){
 					},240)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_52.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+52));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+52));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1107,7 +1107,7 @@ function runTrack(num,num2){
 					},320)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_53.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+53));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+53));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1118,7 +1118,7 @@ function runTrack(num,num2){
 					},400)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_54.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+54));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+54));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1129,7 +1129,7 @@ function runTrack(num,num2){
 					},480)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_55.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+55));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+55));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1140,7 +1140,7 @@ function runTrack(num,num2){
 					},560)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_56.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+56));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+56));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1180,7 +1180,7 @@ function runTrack(num,num2){
 
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_49.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+49));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+49));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1191,7 +1191,7 @@ function runTrack(num,num2){
 					},80)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_50.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+50));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+50));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1202,7 +1202,7 @@ function runTrack(num,num2){
 					},160)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_51.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+51));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+51));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1213,7 +1213,7 @@ function runTrack(num,num2){
 					},240)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_52.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+52));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+52));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1224,7 +1224,7 @@ function runTrack(num,num2){
 					},320)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_53.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+53));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+53));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1235,7 +1235,7 @@ function runTrack(num,num2){
 					},400)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_54.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+54));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+54));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1246,7 +1246,7 @@ function runTrack(num,num2){
 					},480)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_55.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+55));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+55));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1257,7 +1257,7 @@ function runTrack(num,num2){
 					},560)
 					setTimeout(function(){
 						$('#track_bg').attr("src" , "../assets/images/tinyfier/bg_track_56.png");
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+56));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+56));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
