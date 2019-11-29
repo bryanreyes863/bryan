@@ -687,16 +687,16 @@ function loadingComplete(){
 
 	
 
-	dog1_name = new createjs.Text("MABOY","20px Arial","#fefefe");
-	dog2_name = new createjs.Text("COWBOY", "20px Arial", "#fefefe");
-	dog3_name = new createjs.Text("BUNGAL", "20px Arial", "#fefefe");
-	dog4_name = new createjs.Text("ABDUL", "20px Arial", "#fefefe");
-	dog5_name = new createjs.Text("LAPUK", "20px Arial", "#fefefe");
-	dog6_name = new createjs.Text("AGNATS", "20px Arial", "#fefefe");
+	dog1_name = new createjs.Text("콜호","20px Arial","#fefefe");
+	dog2_name = new createjs.Text("민호", "20px Arial", "#fefefe");
+	dog3_name = new createjs.Text("정", "20px Arial", "#fefefe");
+	dog4_name = new createjs.Text("한울", "20px Arial", "#fefefe");
+	dog5_name = new createjs.Text("시아버지", "20px Arial", "#fefefe");
+	dog6_name = new createjs.Text("혼합", "20px Arial", "#fefefe");
 
-	round = new createjs.Text("ROUND", "40px Bold", "#ffbb33");
+	round = new createjs.Text("라운드", "40px Bold", "#ffbb33");
 	count = new createjs.Text("00", "40px Bold", "#ffffff");
-	time_count = new createjs.Text("TIME", "40px Bold", "#ffbb33");
+	time_count = new createjs.Text("시각", "40px Bold", "#ffbb33");
 	count_down = new createjs.Text("00:00", "50px Bold", "#ffffff");
 
 	line = new createjs.Bitmap(loader.getResult("white"));
@@ -720,12 +720,12 @@ function loadingComplete(){
 	flag5 = new createjs.Bitmap(loader.getResult("flag5"));
 	flag6 = new createjs.Bitmap(loader.getResult("flag6"));
 
-	win_name1 = new createjs.Text("MABOY","40px bold","#fefefe");
-	win_name2 = new createjs.Text("COWBOY","40px bold","#fefefe");
-	win_name3 = new createjs.Text("BUNGAL","40px bold","#fefefe");
-	win_name4 = new createjs.Text("ABDUL","40px bold","#fefefe");
-	win_name5 = new createjs.Text("LAPUK","40px bold","#fefefe");
-	win_name6 = new createjs.Text("AGNATS","40px bold","#fefefe");
+	win_name1 = new createjs.Text("콜호","40px bold","#fefefe");
+	win_name2 = new createjs.Text("민호","40px bold","#fefefe");
+	win_name3 = new createjs.Text("정","40px bold","#fefefe");
+	win_name4 = new createjs.Text("한울","40px bold","#fefefe");
+	win_name5 = new createjs.Text("시아버지","40px bold","#fefefe");
+	win_name6 = new createjs.Text("혼합","40px bold","#fefefe");
 
 	ranks[0]['name'] = dog1_rank;
 	ranks[1]['name'] = dog2_rank;
@@ -814,8 +814,8 @@ function resize(){
 		time_bet.y = windowW / 55;
 
 		round.scaleX = round.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		round.x = $('#track_bg').width() / 1.17;
-		round.y =  windowW / 30;
+		round.x = $('#track_bg').width() / 1.16;
+		round.y =  windowW / 32;
 
 		count.scaleX = count.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
 		count.x = $('#track_bg').width() / 1.14;
@@ -823,11 +823,11 @@ function resize(){
 
 		time_count.scaleX = time_count.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
 		time_count.x = $('#track_bg').width() / 1.15;
-		time_count.y =  windowW / 13;
+		time_count.y =  windowW / 12;
 
 		count_down.scaleX = count_down.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
 		count_down.x = $('#track_bg').width() / 1.16;
-		count_down.y =  windowW / 10;
+		count_down.y =  windowW / 9.5;
 
 		panel_arrival.scaleX = panel_arrival.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		panel_arrival.x =  $('#track_bg').width() * 2;
@@ -899,7 +899,7 @@ function resize(){
 		dog3_rank.x = $('#track_bg').width() / 2.7;
 		dog3_rank.y = windowW / 17;
 		dog3_name.scaleX = dog3_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		dog3_name.x = dog3_rank.x;
+		dog3_name.x = dog3_rank.x + 20;
 		dog3_name.y = dog3_rank.y;
 
 		dog4_rank.scaleX = dog4_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
@@ -913,7 +913,7 @@ function resize(){
 		dog5_rank.x = $('#track_bg').width() / 1.63;
 		dog5_rank.y = windowW / 17;
 		dog5_name.scaleX = dog5_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		dog5_name.x = dog5_rank.x + 15;
+		dog5_name.x = dog5_rank.x + 2;
 		dog5_name.y = dog5_rank.y;
 
 		dog6_rank.scaleX = dog6_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
@@ -989,28 +989,28 @@ function getRank(){
 				.to({x: ($('#track_bg').width() / 1.38)}, 50, createjs.Ease.linear)
 
 				createjs.Tween.get(ranks[i]['dog_name'])
-				.to({x: ($('#track_bg').width() / 1.38)}, 50, createjs.Ease.linear)
+				.to({x: ($('#track_bg').width() / 1.35)}, 50, createjs.Ease.linear)
 
 			} else if (innerpos[1] == ranks[i]['position']) {
 				createjs.Tween.get(ranks[i]['name'])
 				.to({x: ($('#track_bg').width() / 1.63)}, 50, createjs.Ease.linear)
 
 				createjs.Tween.get(ranks[i]['dog_name'])
-				.to({x: ($('#track_bg').width() / 1.63)}, 50, createjs.Ease.linear)
+				.to({x: ($('#track_bg').width() / 1.59)}, 50, createjs.Ease.linear)
 
 			} else if (innerpos[2] == ranks[i]['position']) {
 				createjs.Tween.get(ranks[i]['name'])
 				.to({x: ($('#track_bg').width() / 2.01)}, 50, createjs.Ease.linear)
 
 				createjs.Tween.get(ranks[i]['dog_name'])
-				.to({x: ($('#track_bg').width() / 2.01)}, 50, createjs.Ease.linear)
+				.to({x: ($('#track_bg').width() / 1.95)}, 50, createjs.Ease.linear)
 
 			} else if (innerpos[3] == ranks[i]['position']) {
 				createjs.Tween.get(ranks[i]['name'])
 				.to({x: ($('#track_bg').width() / 2.7)}, 50, createjs.Ease.linear)
 
 				createjs.Tween.get(ranks[i]['dog_name'])
-				.to({x: ($('#track_bg').width() / 2.7)}, 50, createjs.Ease.linear)
+				.to({x: ($('#track_bg').width() / 2.6)}, 50, createjs.Ease.linear)
 
 			} else if (innerpos[4] == ranks[i]['position']) {
 				createjs.Tween.get(ranks[i]['name'])
@@ -1024,7 +1024,7 @@ function getRank(){
 				.to({x: ($('#track_bg').width() / 7.5)}, 50, createjs.Ease.linear)
 
 				createjs.Tween.get(ranks[i]['dog_name'])
-				.to({x: ($('#track_bg').width() / 7.5)}, 50, createjs.Ease.linear)
+				.to({x: ($('#track_bg').width() / 6.9)}, 50, createjs.Ease.linear)
 
 			}
 

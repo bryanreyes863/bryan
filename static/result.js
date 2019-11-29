@@ -107,12 +107,35 @@ maniFest = [
 
 loader = new createjs.LoadQueue(false);
 loader.on('fileload' , handleFile);
+loader.on('progress', handleProgress, this);
 loader.addEventListener("complete" , loadingComplete);
 loader.loadManifest(maniFest,true);
 
 
 window.addEventListener("resize" , resize);
 
+function handleProgress(){
+	total = Math.round(loader.progress / 1 * 100);
+
+	if(total == 100){
+		setInterval(function(){
+
+			socket.emit('newVisitors');
+			$('.loading_animation_con').animate({
+				'opacity' : '0'
+			},100);
+
+			$('#table_bg').animate({
+				'opacity' : '1'
+			},1000);
+			$('#tableCanvas').animate({
+				'opacity' : '1'
+			},1000)
+
+		},2000);
+	}
+	$('#percent').html(total+'%');
+}
 
 function handleFile(event){
 	assets.push(event);
@@ -145,12 +168,12 @@ function loadingComplete(){
 
 	tableres = new createjs.Bitmap(loader.getResult("table"));
 
-	dogs_text = new createjs.Text("DOG-SEQUENCE", "bold 15px Comic Sans", "#fefefe");
+	dogs_text = new createjs.Text("개 순서", "bold 15px Comic Sans", "#fefefe");
 	round_count = new createjs.Text("00", "20px Arial", "#fefefe");
-	rounds = new createjs.Text("ROUNDS", "bold 15px Comic Sans", "#fefefe");
-	first = new createjs.Text("1st", "bold 40px Impact", "#ffbb33");
-	second = new createjs.Text("2nd", "bold 40px Impact", "#ffbb33");
-	third = new createjs.Text("3rd", "bold 40px Impact", "#ffbb33");
+	rounds = new createjs.Text("라운드", "bold 15px Comic Sans", "#fefefe");
+	first = new createjs.Text("1 위", "bold 38px Impact", "#ffbb33");
+	second = new createjs.Text("2 위", "bold 38px Impact", "#ffbb33");
+	third = new createjs.Text("3 위", "bold 38px Impact", "#ffbb33");
 
 
 	stage.addChild(tableres,first,second,third,rounds,round_count,res_dog_1,res_dog_2,res_dog_3,res_dog_4,res_dog_5,res_dog_6,dog_place1,dog_place2,dog_place3,dog_place4,dog_place5,dog_place6,dogs_text,object_con);
@@ -267,7 +290,7 @@ function resize(){
 
 	dogs_text.scaleX = (windowW - (windowW / 20)) / bg.image.height * 1.5;
 	dogs_text.scaleY = (windowW - (windowW / 20)) / bg.image.height * 1.8;
-	dogs_text.x = $('#table_bg').width() / 5.5;//position
+	dogs_text.x = $('#table_bg').width() / 4.5;//position
 	dogs_text.y = windowW / 50;
 
 	first.scaleX = (windowW - (windowW / 20)) / bg.image.height * 1.5;
