@@ -29,6 +29,7 @@ var dog_place_width = [7,5.4,4.4,3.7,3.2,2.82];
 
 var dog_place_arr = [11,4.98,3.1,2.3,1.81,1.5];
 
+var shouldStart = false;
 
 maniFest = [
 	{
@@ -118,7 +119,7 @@ function handleProgress(){
 	total = Math.round(loader.progress / 1 * 100);
 
 	if(total == 100){
-		setInterval(function(){
+		setTimeout(function(){
 
 			socket.emit('newVisitors');
 			$('.loading_animation_con').animate({
@@ -132,7 +133,7 @@ function handleProgress(){
 				'opacity' : '1'
 			},1000)
 
-		},2000);
+		},1000);
 	}
 	$('#percent').html(total+'%');
 }

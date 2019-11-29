@@ -587,7 +587,6 @@ io.on('connection' , function(socket){
 
 	socket.on('modify_res',function(data){
 
-		console.log(data.win_res4)
 			result_container[0]['win_res'] = data.win_res1;
 			result_container['speed1'] = data.speed1;
 
@@ -606,12 +605,12 @@ io.on('connection' , function(socket){
 			result_container[5]['win_res'] = data.win_res6;
 			result_container[5]['speed6'] = data.speed6;
 
-			console.log(data.speed1)
-			console.log(data.speed2)
-			console.log(data.speed3)
-			console.log(data.speed4)
-			console.log(data.speed5)
-			console.log(data.speed6)
+			// console.log(data.speed1)
+			// console.log(data.speed2)
+			// console.log(data.speed3)
+			// console.log(data.speed4)
+			// console.log(data.speed5)
+			// console.log(data.speed6)
 	})
 
 		socket.on('newVisitors', function(data){
@@ -631,7 +630,6 @@ io.on('connection' , function(socket){
 
 
 	socket.on('LoadMoreResult',function(data){
-		console.log(data)
 		socketid = socket.id;
 
 		MongoClient.connect(url, { userNewUrlParse : true}, function(err,db){
