@@ -36,7 +36,7 @@
 		
 		<div class="button-holder" style="margin: auto;">
 			
-			<button class="btn btn-success">결과</button>
+			<button class="btn btn-success">무작위</button>
 
 		</div>
 
@@ -57,10 +57,7 @@
 
 	var socket = io();
 
-
-
-
-	var result = [350,500,650,800,950]
+	var result = [200,350,500,650,950]
 
 
 	function shuffle(arra1) {
@@ -90,240 +87,457 @@
 		return (Math.random() * -8) + -5;
 	}
 
-	function getWinner(){
-		return Math.floor(Math.random() * 3);
-	}
+	
+	$('#flag1').click(function(){
+		$('#res-flag1').show();
+		$('#res-flag2').hide();
+		$('#res-flag3').hide();
+		$('#res-flag4').hide();
+		$('#res-flag5').hide();
+		$('#res-flag6').hide();
 
-	$('.btn').click(function(){
+		shuffle(result);
 
-		var winner = getWinner();
+		var res2 = result[0];
+		var res3 = result[1];
+		var res4 = result[2];
+		var res5 = result[3];
+		var res6 = result[4];
 
-		if (winner == 0) {
+		var type2;
+		var type3;
+		var type4;
+		var type5;
+		var type6;
 
-			$('#res-flag4').show();
-			$('#res-flag2').hide();
-			$('#res-flag3').hide();
-			$('#res-flag1').hide();
-			$('#res-flag5').hide();
-			$('#res-flag6').hide();
+		if (res2 <= 500) {
 
-			shuffle(result);
-
-			var res2 = result[0];
-			var res3 = result[1];
-			var res4 = result[2];
-			var res5 = result[3];
-			var res6 = result[4];
-
-			var type2;
-			var type3;
-			var type4;
-			var type5;
-			var type6;
-
-			if (res2 <= 500) {
-
-				type2 = getSureWin();
-			} else {
-				type2 = getSureLose();
-			}
-
-			if (res3 <= 500) {
-
-				type3 = getSureWin();
-			} else {
-				type3 = getSureLose();
-			}
-
-			if (res4 <= 500) {
-
-				type4 = getSureWin();
-			} else {
-				type4 = getSureLose();
-			}
-
-			if (res5 <= 500) {
-			
-				type5 = getSureWin();
-			} else {
-				type5 = getSureLose();
-			}
-
-			if (res6 <= 500) {
-
-				type6 = getSureWin();
-			} else {
-				type6 = getSureLose();
-			}
-
-			socket.emit('modify_res',
-				{
-					'win_res4' : getSureWin(),
-					'speed4' : 200,
-					'win_res2' : type2,
-					'speed2' : res2,
-					'win_res3' : type3,
-					'speed3' : res3,
-					'win_res1' : type4,
-					'speed1' : res4,
-					'win_res5' : type5,
-					'speed5' : res5,
-					'win_res6' : type6,
-					'speed6' : res6,
-			})
-		}else if(winner == 1){
-			$('#res-flag5').show();
-			$('#res-flag2').hide();
-			$('#res-flag3').hide();
-			$('#res-flag4').hide();
-			$('#res-flag1').hide();
-			$('#res-flag6').hide();
-
-			shuffle(result);
-
-			var res2 = result[0];
-			var res3 = result[1];
-			var res4 = result[2];
-			var res5 = result[3];
-			var res6 = result[4];
-
-
-			var type2;
-			var type3;
-			var type4;
-			var type5;
-			var type6;
-
-			if (res2 <= 500) {
-
-				type2 = getSureWin();
-			} else {
-				type2 = getSureLose();
-			}
-
-			if (res3 <= 500) {
-
-				type3 = getSureWin();
-			} else {
-				type3 = getSureLose();
-			}
-
-			if (res4 <= 500) {
-
-				type4 = getSureWin();
-			} else {
-				type4 = getSureLose();
-			}
-
-			if (res5 <= 500) {
-
-				type5 = getSureWin();
-			} else {
-				type5 = getSureLose();
-			}
-
-			if (res6 <= 500) {
-
-				type6 = getSureWin();
-			} else {
-				type6 = getSureLose();
-			}
-
-			socket.emit('modify_res',
-				{
-					'win_res5' : getSureWin(),
-					'speed5' : 200,
-					'win_res2' : type2,
-					'speed2' : res2,
-					'win_res3' : type3,
-					'speed3' : res3,
-					'win_res4' : type4,
-					'speed4' : res4,
-					'win_res1' : type5,
-					'speed1' : res5,
-					'win_res6' : type6,
-					'speed6' : res6,
-			})
-
-		}else if(winner == 2){
-
-			$('#res-flag6').show();
-			$('#res-flag2').hide();
-			$('#res-flag3').hide();
-			$('#res-flag4').hide();
-			$('#res-flag5').hide();
-			$('#res-flag1').hide();
-
-			shuffle(result);
-
-			var res2 = result[0];
-			var res3 = result[1];
-			var res4 = result[2];
-			var res5 = result[3];
-			var res6 = result[4];
-
-
-			var type2;
-			var type3;
-			var type4;
-			var type5;
-			var type6;
-
-
-			if (res2 <= 500) {
-
-				type2 = getSureWin();
-			} else {
-				type2 = getSureLose();
-			}
-
-			if (res3 <= 500) {
-
-				type3 = getSureWin();
-			} else {
-				type3 = getSureLose();
-			}
-
-			if (res4 <= 500) {
-
-				type4 = getSureWin();
-			} else {
-				type4 = getSureLose();
-			}
-
-			if (res5 <= 500) {
-
-				type5 = getSureWin();
-			} else {
-				type5 = getSureLose();
-			}
-
-			if (res6 <= 500) {
-
-				type6 = getSureWin();
-			} else {
-				type6 = getSureLose();
-			}
-
-			socket.emit('modify_res',
-				{
-					'win_res6' : getSureWin(),
-					'speed6' : 200,
-					'win_res2' : type2,
-					'speed2' : res2,
-					'win_res3' : type3,
-					'speed3' : res3,
-					'win_res4' : type4,
-					'speed4' : res4,
-					'win_res5' : type5,
-					'speed5' : res5,
-					'win_res1' : type6,
-					'speed1' : res6,
-			})
-
+			type2 = getSureWin();
+		} else {
+			type2 = getSureLose();
 		}
+
+		if (res3 <= 500) {
+
+			type3 = getSureWin();
+		} else {
+			type3 = getSureLose();
+		}
+
+		if (res4 <= 500) {
+
+			type4 = getSureWin();
+		} else {
+			type4 = getSureLose();
+		}
+
+		if (res5 <= 500) {
+
+			type5 = getSureWin();
+		} else {
+			type5 = getSureLose();
+		}
+
+		if (res6 <= 500) {
+
+			type6 = getSureWin();
+		} else {
+			type6 = getSureLose();
+		}
+
+		socket.emit('modify_res',
+			{
+				'win_res1' : getSureWin(),
+				'speed1' : 800,
+				'win_res2' : type2,
+				'speed2' : res2,
+				'win_res3' : type3,
+				'speed3' : res3,
+				'win_res4' : type4,
+				'speed4' : res4,
+				'win_res5' : type5,
+				'speed5' : res5,
+				'win_res6' : type6,
+				'speed6' : res6,
+		})
+
+
 	})
 
+	$('#flag2').click(function(){
+
+		$('#res-flag2').show();
+		$('#res-flag1').hide();
+		$('#res-flag3').hide();
+		$('#res-flag4').hide();
+		$('#res-flag5').hide();
+		$('#res-flag6').hide();
+
+		shuffle(result);
+
+		var res2 = result[0];
+		var res3 = result[1];
+		var res4 = result[2];
+		var res5 = result[3];
+		var res6 = result[4];
+
+		var type2;
+		var type3;
+		var type4;
+		var type5;
+		var type6;
+
+		if (res2 <= 500) {
+
+			type2 = getSureWin();
+		} else {
+			type2 = getSureLose();
+		}
+
+		if (res3 <= 500) {
+
+			type3 = getSureWin();
+		} else {
+			type3 = getSureLose();
+		}
+
+		if (res4 <= 500) {
+
+			type4 = getSureWin();
+		} else {
+			type4 = getSureLose();
+		}
+
+		if (res5 <= 500) {
+
+			type5 = getSureWin();
+		} else {
+			type5 = getSureLose();
+		}
+
+		if (res6 <= 500) {
+
+			type6 = getSureWin();
+		} else {
+			type6 = getSureLose();
+		}
+
+		socket.emit('modify_res',
+			{
+				'win_res2' : getSureWin(),
+				'speed2' : 800,
+				'win_res1' : type2,
+				'speed1' : res2,
+				'win_res3' : type3,
+				'speed3' : res3,
+				'win_res4' : type4,
+				'speed4' : res4,
+				'win_res5' : type5,
+				'speed5' : res5,
+				'win_res6' : type6,
+				'speed6' : res6,
+		})
+
+	})
+	$('#flag3').click(function(){
+
+		$('#res-flag3').show();
+		$('#res-flag2').hide();
+		$('#res-flag1').hide();
+		$('#res-flag4').hide();
+		$('#res-flag5').hide();
+		$('#res-flag6').hide();
+
+		shuffle(result);
+
+		var res2 = result[0];
+		var res3 = result[1];
+		var res4 = result[2];
+		var res5 = result[3];
+		var res6 = result[4];
+
+		var type2;
+		var type3;
+		var type4;
+		var type5;
+		var type6;
+
+		if (res2 <= 500) {
+
+			type2 = getSureWin();
+		} else {
+			type2 = getSureLose();
+		}
+
+		if (res3 <= 500) {
+
+			type3 = getSureWin();
+		} else {
+			type3 = getSureLose();
+		}
+
+		if (res4 <= 500) {
+
+			type4 = getSureWin();
+		} else {
+			type4 = getSureLose();
+		}
+
+		if (res5 <= 500) {
+
+			type5 = getSureWin();
+		} else {
+			type5 = getSureLose();
+		}
+
+		if (res6 <= 500) {
+
+			type6 = getSureWin();
+		} else {
+			type6 = getSureLose();
+		}
+
+		socket.emit('modify_res',
+			{
+				'win_res3' : getSureWin(),
+				'speed3' : 800,
+				'win_res2' : type2,
+				'speed2' : res2,
+				'win_res1' : type3,
+				'speed1' : res3,
+				'win_res4' : type4,
+				'speed4' : res4,
+				'win_res5' : type5,
+				'speed5' : res5,
+				'win_res6' : type6,
+				'speed6' : res6,
+		})
+	})
+	$('#flag4').click(function(){
+
+		$('#res-flag4').show();
+		$('#res-flag2').hide();
+		$('#res-flag3').hide();
+		$('#res-flag1').hide();
+		$('#res-flag5').hide();
+		$('#res-flag6').hide();
+
+		shuffle(result);
+
+		var res2 = result[0];
+		var res3 = result[1];
+		var res4 = result[2];
+		var res5 = result[3];
+		var res6 = result[4];
+
+		var type2;
+		var type3;
+		var type4;
+		var type5;
+		var type6;
+
+		if (res2 <= 500) {
+
+			type2 = getSureWin();
+		} else {
+			type2 = getSureLose();
+		}
+
+		if (res3 <= 500) {
+
+			type3 = getSureWin();
+		} else {
+			type3 = getSureLose();
+		}
+
+		if (res4 <= 500) {
+
+			type4 = getSureWin();
+		} else {
+			type4 = getSureLose();
+		}
+
+		if (res5 <= 500) {
+
+			type5 = getSureWin();
+		} else {
+			type5 = getSureLose();
+		}
+
+		if (res6 <= 500) {
+
+			type6 = getSureWin();
+		} else {
+			type6 = getSureLose();
+		}
+
+		socket.emit('modify_res',
+			{
+				'win_res4' : getSureWin(),
+				'speed4' : 800,
+				'win_res2' : type2,
+				'speed2' : res2,
+				'win_res3' : type3,
+				'speed3' : res3,
+				'win_res1' : type4,
+				'speed1' : res4,
+				'win_res5' : type5,
+				'speed5' : res5,
+				'win_res6' : type6,
+				'speed6' : res6,
+		})
+	})
+	$('#flag5').click(function(){
+
+		$('#res-flag5').show();
+		$('#res-flag2').hide();
+		$('#res-flag3').hide();
+		$('#res-flag4').hide();
+		$('#res-flag1').hide();
+		$('#res-flag6').hide();
+
+		shuffle(result);
+
+		var res2 = result[0];
+		var res3 = result[1];
+		var res4 = result[2];
+		var res5 = result[3];
+		var res6 = result[4];
+
+
+		var type2;
+		var type3;
+		var type4;
+		var type5;
+		var type6;
+
+		if (res2 <= 500) {
+
+			type2 = getSureWin();
+		} else {
+			type2 = getSureLose();
+		}
+
+		if (res3 <= 500) {
+
+			type3 = getSureWin();
+		} else {
+			type3 = getSureLose();
+		}
+
+		if (res4 <= 500) {
+
+			type4 = getSureWin();
+		} else {
+			type4 = getSureLose();
+		}
+
+		if (res5 <= 500) {
+
+			type5 = getSureWin();
+		} else {
+			type5 = getSureLose();
+		}
+
+		if (res6 <= 500) {
+
+			type6 = getSureWin();
+		} else {
+			type6 = getSureLose();
+		}
+
+		socket.emit('modify_res',
+			{
+				'win_res5' : getSureWin(),
+				'speed5' : 800,
+				'win_res2' : type2,
+				'speed2' : res2,
+				'win_res3' : type3,
+				'speed3' : res3,
+				'win_res4' : type4,
+				'speed4' : res4,
+				'win_res1' : type5,
+				'speed1' : res5,
+				'win_res6' : type6,
+				'speed6' : res6,
+		})
+	})
+	$('#flag6').click(function(){
+
+		$('#res-flag6').show();
+		$('#res-flag2').hide();
+		$('#res-flag3').hide();
+		$('#res-flag4').hide();
+		$('#res-flag5').hide();
+		$('#res-flag1').hide();
+
+		shuffle(result);
+
+		var res2 = result[0];
+		var res3 = result[1];
+		var res4 = result[2];
+		var res5 = result[3];
+		var res6 = result[4];
+
+
+		var type2;
+		var type3;
+		var type4;
+		var type5;
+		var type6;
+
+
+		if (res2 <= 500) {
+
+			type2 = getSureWin();
+		} else {
+			type2 = getSureLose();
+		}
+
+		if (res3 <= 500) {
+
+			type3 = getSureWin();
+		} else {
+			type3 = getSureLose();
+		}
+
+		if (res4 <= 500) {
+
+			type4 = getSureWin();
+		} else {
+			type4 = getSureLose();
+		}
+
+		if (res5 <= 500) {
+
+			type5 = getSureWin();
+		} else {
+			type5 = getSureLose();
+		}
+
+		if (res6 <= 500) {
+
+			type6 = getSureWin();
+		} else {
+			type6 = getSureLose();
+		}
+
+		socket.emit('modify_res',
+			{
+				'win_res6' : getSureWin(),
+				'speed6' : 800,
+				'win_res2' : type2,
+				'speed2' : res2,
+				'win_res3' : type3,
+				'speed3' : res3,
+				'win_res4' : type4,
+				'speed4' : res4,
+				'win_res5' : type5,
+				'speed5' : res5,
+				'win_res1' : type6,
+				'speed1' : res6,
+		})
+	})
 
 </script>
 </html>
