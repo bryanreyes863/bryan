@@ -169,7 +169,7 @@ function loadingComplete(){
 
 	tableres = new createjs.Bitmap(loader.getResult("table"));
 
-	dogs_text = new createjs.Text("개 순서", "bold 15px Comic Sans", "#fefefe");
+	dogs_text = new createjs.Text("순위(1~6)", "bold 15px Comic Sans", "#fefefe");
 	round_count = new createjs.Text("00", "20px Arial", "#fefefe");
 	rounds = new createjs.Text("라운드", "bold 15px Comic Sans", "#fefefe");
 	first = new createjs.Text("1 위", "bold 38px Impact", "#ffbb33");

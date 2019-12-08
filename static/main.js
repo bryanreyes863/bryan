@@ -696,7 +696,7 @@ function loadingComplete(){
 
 	round = new createjs.Text("라운드", "40px Bold", "#ffbb33");
 	count = new createjs.Text("00", "40px Bold", "#ffffff");
-	time_count = new createjs.Text("시각", "40px Bold", "#ffbb33");
+	time_count = new createjs.Text("시간", "40px Bold", "#ffbb33");
 	count_down = new createjs.Text("00:00", "50px Bold", "#ffffff");
 
 	line = new createjs.Bitmap(loader.getResult("white"));

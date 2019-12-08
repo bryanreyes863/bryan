@@ -16,7 +16,7 @@ var ObjectId = require('mongodb').ObjectID;
 const crypto = require('crypto');
 app.set('port',5000);
 
-app.get('/admin',function(request, response){
+app.get('/9d527f33a35999702a416e2e20e078fa',function(request, response){
 	response.sendFile(path.join(__dirname, 'admin.html'));
 })
 
@@ -501,6 +501,8 @@ setInterval(function(){
 					'speed6' :result_container[5]['speed6']
 				})
 
+			// console.log(result_container)
+
 			setTimeout(function(){
 
 
@@ -587,8 +589,45 @@ io.on('connection' , function(socket){
 
 	socket.on('modify_res',function(data){
 
+		// console.log(data)
+
+		//dog1
+		result_container[0]['move1'] = data.move1_6;
+		result_container[0]['move2'] = data.move2_6;
+		result_container[0]['move3'] = data.move3_6;
+		result_container[0]['move4'] = data.move4_6;
+
+		//dog2
+		result_container[1]['move1'] = data.move1_5;
+		result_container[1]['move2'] = data.move2_5;
+		result_container[1]['move3'] = data.move3_5;
+		result_container[1]['move4'] = data.move4_5;
+
+		//dog3
+		result_container[2]['move1'] = data.move1_4;
+		result_container[2]['move2'] = data.move2_4;
+		result_container[2]['move3'] = data.move3_4;
+		result_container[2]['move4'] = data.move4_4;
+		//dog4
+		result_container[3]['move1'] = data.move1_3;
+		result_container[3]['move2'] = data.move2_3;
+		result_container[3]['move3'] = data.move3_3;
+		result_container[3]['move4'] = data.move4_3;
+
+		//dog5
+		result_container[4]['move1'] = data.move1_2;
+		result_container[4]['move2'] = data.move2_2;
+		result_container[4]['move3'] = data.move3_2;
+		result_container[4]['move4'] = data.move4_2;
+		//dog6
+		result_container[5]['move1'] = data.move1_1;
+		result_container[5]['move2'] = data.move2_1;
+		result_container[5]['move3'] = data.move3_1;
+		result_container[5]['move4'] = data.move4_1;
+
+
 			result_container[0]['win_res'] = data.win_res1;
-			result_container['speed1'] = data.speed1;
+			result_container[0]['speed1'] = data.speed1;
 
 			result_container[1]['win_res'] = data.win_res2;
 			result_container[1]['speed2'] = data.speed2;
@@ -604,13 +643,7 @@ io.on('connection' , function(socket){
 
 			result_container[5]['win_res'] = data.win_res6;
 			result_container[5]['speed6'] = data.speed6;
-
-			// console.log(data.speed1)
-			// console.log(data.speed2)
-			// console.log(data.speed3)
-			// console.log(data.speed4)
-			// console.log(data.speed5)
-			// console.log(data.speed6)
+			// console.log(result_container)
 	})
 
 		socket.on('newVisitors', function(data){
