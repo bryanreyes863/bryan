@@ -147,6 +147,7 @@ var images = [
 	'assets/images/hashimage.png',
 	'assets/images/loading.gif',
 	'assets/images/panel_arrival.png',
+	'assets/images/panel_arrival2.png',
 	'assets/images/pattern_bg.png',
 	'assets/images/rank.png',
 	'assets/images/tableres.png',
@@ -243,8 +244,12 @@ maniFest = [
 		"id" : "time" 
 	},
 
+	// {
+	// 	"src" : "assets/images/panel_arrival.png" ,
+	// 	"id" : "panel_arr" 
+	// },
 	{
-		"src" : "assets/images/panel_arrival.png" ,
+		"src" : "assets/images/panel_arrival2.png" ,
 		"id" : "panel_arr" 
 	},
 	{
@@ -687,12 +692,12 @@ function loadingComplete(){
 
 	
 
-	dog1_name = new createjs.Text("콜호","20px Arial","#fefefe");
-	dog2_name = new createjs.Text("민호", "20px Arial", "#fefefe");
-	dog3_name = new createjs.Text("정", "20px Arial", "#fefefe");
-	dog4_name = new createjs.Text("한울", "20px Arial", "#fefefe");
-	dog5_name = new createjs.Text("시아버지", "20px Arial", "#fefefe");
-	dog6_name = new createjs.Text("혼합", "20px Arial", "#fefefe");
+	// dog1_name = new createjs.Text("콜호","20px Arial","#fefefe");
+	// dog2_name = new createjs.Text("민호", "20px Arial", "#fefefe");
+	// dog3_name = new createjs.Text("정", "20px Arial", "#fefefe");
+	// dog4_name = new createjs.Text("한울", "20px Arial", "#fefefe");
+	// dog5_name = new createjs.Text("시아버지", "20px Arial", "#fefefe");
+	// dog6_name = new createjs.Text("혼합", "20px Arial", "#fefefe");
 
 	round = new createjs.Text("라운드", "40px Bold", "#ffbb33");
 	count = new createjs.Text("00", "40px Bold", "#ffffff");
@@ -771,7 +776,7 @@ function loadingComplete(){
 
 
 		line.scaleX = 1;
-		stage.addChild(bgContainer,container,rank,dog1_rank,dog2_rank,dog3_rank,dog4_rank,dog5_rank,dog6_rank,line,dog1_name,dog2_name,dog3_name,dog4_name,dog5_name,dog6_name,panel_arrival,flag1,flag2,flag3,flag4,flag5,flag6,win_name1,win_name2,win_name3,win_name4,win_name5,win_name6,time_bet,round,count,time_count,count_down);
+		stage.addChild(bgContainer,container,rank,dog1_rank,dog2_rank,dog3_rank,dog4_rank,dog5_rank,dog6_rank,line,panel_arrival,flag1,flag2,flag3,flag4,flag5,flag6,win_name1,win_name2,win_name3,win_name4,win_name5,win_name6,time_bet,round,count,time_count,count_down);
 		tick(); 
 		resize();
 	}
@@ -834,14 +839,14 @@ function resize(){
 		panel_arrival.y = windowW / 4;
 
 		flag1.scaleX = flag1.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-		flag1.x =  $('#track_bg').width() * 2;
+		flag1.x =  $('#track_bg').width() * 3;
 		flag1.y =   windowW / 2;
 		win_name1.scaleX = win_name1.scaleY =  (windowW - (windowW / 1.55)) / bg.image.height;
 		win_name1.x = flag1.x + 30;
 		win_name1.y =  flag1.y + 3;
 
 		flag2.scaleX = flag2.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-		flag2.x =  $('#track_bg').width() * 2;
+		flag2.x =  $('#track_bg').width() * 3;
 		flag2.y =   windowW / 3.5;
 		win_name2.scaleX = win_name2.scaleY =  (windowW - (windowW / 1.55)) / bg.image.height;
 		win_name2.x = flag2.x + 30;
@@ -849,28 +854,28 @@ function resize(){
 
 
 		flag3.scaleX = flag3.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-		flag3.x =  $('#track_bg').width() * 2;
+		flag3.x =  $('#track_bg').width() * 3;
 		flag3.y =   windowW / 3.25;
 		win_name3.scaleX = win_name3.scaleY =  (windowW - (windowW / 1.55)) / bg.image.height;
 		win_name3.x = flag3.x + 30;
 		win_name3.y =  flag3.y + 3;
 
 		flag4.scaleX = flag4.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-		flag4.x =  $('#track_bg').width() * 2;
+		flag4.x =  $('#track_bg').width() * 3;
 		flag4.y =   windowW / 2.97;
 		win_name4.scaleX = win_name4.scaleY =  (windowW - (windowW / 1.55)) / bg.image.height;
 		win_name4.x = flag4.x + 30;
 		win_name4.y =  flag4.y + 3;
 
 		flag5.scaleX = flag5.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-		flag5.x =  $('#track_bg').width() * 2;
+		flag5.x =  $('#track_bg').width() * 3;
 		flag5.y =   windowW / 2.74;
 		win_name5.scaleX = win_name5.scaleY =  (windowW - (windowW / 1.55)) / bg.image.height;
 		win_name5.x = flag5.x + 30;
 		win_name5.y =  flag5.y + 3;
 
 		flag6.scaleX = flag6.scaleY =  (windowW - (windowW / 1.5)) / bg.image.height;
-		flag6.x =  $('#track_bg').width() * 2;
+		flag6.x =  $('#track_bg').width() * 3;
 		flag6.y =   windowW / 2.54;
 		win_name6.scaleX = win_name6.scaleY =  (windowW - (windowW / 1.55)) / bg.image.height;
 		win_name6.x = flag6.x + 30;
@@ -884,44 +889,44 @@ function resize(){
 		dog1_rank.scaleX = dog1_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		dog1_rank.x = $('#track_bg').width() / 7.5;
 		dog1_rank.y = windowW / 17;
-		dog1_name.scaleX = dog1_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		dog1_name.x = dog1_rank.x + 15;
-		dog1_name.y = dog1_rank.y;
+		// dog1_name.scaleX = dog1_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
+		// dog1_name.x = dog1_rank.x + 15;
+		// dog1_name.y = dog1_rank.y;
 
 		dog2_rank.scaleX = dog2_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		dog2_rank.x = $('#track_bg').width() / 3.98;
 		dog2_rank.y = windowW / 17;
-		dog2_name.scaleX = dog2_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		dog2_name.x = dog2_rank.x + 12;
-		dog2_name.y = dog2_rank.y;
+		// dog2_name.scaleX = dog2_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
+		// dog2_name.x = dog2_rank.x + 12;
+		// dog2_name.y = dog2_rank.y;
 
 		dog3_rank.scaleX = dog3_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		dog3_rank.x = $('#track_bg').width() / 2.7;
 		dog3_rank.y = windowW / 17;
-		dog3_name.scaleX = dog3_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		dog3_name.x = dog3_rank.x + 20;
-		dog3_name.y = dog3_rank.y;
+		// dog3_name.scaleX = dog3_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
+		// dog3_name.x = dog3_rank.x + 20;
+		// dog3_name.y = dog3_rank.y;
 
 		dog4_rank.scaleX = dog4_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		dog4_rank.x = $('#track_bg').width() / 2.01;
 		dog4_rank.y = windowW / 17;
-		dog4_name.scaleX = dog4_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		dog4_name.x = dog4_rank.x + 15;
-		dog4_name.y = dog4_rank.y;
+		// dog4_name.scaleX = dog4_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
+		// dog4_name.x = dog4_rank.x + 15;
+		// dog4_name.y = dog4_rank.y;
 
 		dog5_rank.scaleX = dog5_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		dog5_rank.x = $('#track_bg').width() / 1.63;
 		dog5_rank.y = windowW / 17;
-		dog5_name.scaleX = dog5_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		dog5_name.x = dog5_rank.x + 2;
-		dog5_name.y = dog5_rank.y;
+		// dog5_name.scaleX = dog5_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
+		// dog5_name.x = dog5_rank.x + 2;
+		// dog5_name.y = dog5_rank.y;
 
 		dog6_rank.scaleX = dog6_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		dog6_rank.x = $('#track_bg').width() / 1.38;
 		dog6_rank.y = windowW / 17;
-		dog6_name.scaleX = dog6_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		dog6_name.x = dog6_rank.x + 15;
-		dog6_name.y = dog6_rank.y;
+		// dog6_name.scaleX = dog6_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
+		// dog6_name.x = dog6_rank.x + 15;
+		// dog6_name.y = dog6_rank.y;
 
 		rank.scaleX = rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;// scale
 		rank.x = $('#track_bg').width() / 18;//position
@@ -961,12 +966,12 @@ function getRank(){
 	if (finish == false) {
 
 		innerpos = [];
-		ranks[0]['dog_name'] = dog1_name;
-		ranks[1]['dog_name'] = dog2_name;
-		ranks[2]['dog_name'] = dog3_name;
-		ranks[3]['dog_name'] = dog4_name;
-		ranks[4]['dog_name'] = dog5_name;
-		ranks[5]['dog_name'] = dog6_name;
+		// ranks[0]['dog_name'] = dog1_name;
+		// ranks[1]['dog_name'] = dog2_name;
+		// ranks[2]['dog_name'] = dog3_name;
+		// ranks[3]['dog_name'] = dog4_name;
+		// ranks[4]['dog_name'] = dog5_name;
+		// ranks[5]['dog_name'] = dog6_name;
 
 		rpos = [1.38,1.63,2.01,2.7,3.98,7.5];
 		for(i = 0; i < ranks.length; i++) {
@@ -1432,7 +1437,7 @@ function runTrack(num,num2){
 
 				if (win1 == null) {
 					createjs.Tween.get(panel_arrival)
-					.to({x : $('#track_bg').width() * 0.85 }, 100 , createjs.Ease.easeOutExpo)
+					.to({x : $('#track_bg').width() * 0.9 }, 100 , createjs.Ease.easeOutExpo)
 
 				}
 
@@ -1448,45 +1453,45 @@ function runTrack(num,num2){
 
 							if (obj['target']['currentAnimation'] == 'dog1') {
 
-								flag1.x =  $('#track_bg').width() * 0.87;
+								flag1.x =  $('#track_bg').width() * 0.97;
 								flag1.y =   windowW / dog_place_y[0];
-								win_name1.x = flag1.x + 30;
-								win_name1.y =  flag1.y + 3;
+								// win_name1.x = flag1.x + 30;
+								// win_name1.y =  flag1.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog2'){
 
-								flag2.x =  $('#track_bg').width() * 0.87;
+								flag2.x =  $('#track_bg').width() * 0.97;
 								flag2.y =   windowW / dog_place_y[0];
-								win_name2.x = flag2.x + 30;
-								win_name2.y =  flag2.y + 3;
+								// win_name2.x = flag2.x + 30;
+								// win_name2.y =  flag2.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog3'){
 
-								flag3.x =  $('#track_bg').width() * 0.87;
+								flag3.x =  $('#track_bg').width() * 0.97;
 								flag3.y =   windowW / dog_place_y[0];
-								win_name3.x = flag3.x + 30;
-								win_name3.y =  flag3.y + 3;
+								// win_name3.x = flag3.x + 30;
+								// win_name3.y =  flag3.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog4'){
 
-								flag4.x =  $('#track_bg').width() * 0.87;
+								flag4.x =  $('#track_bg').width() * 0.97;
 								flag4.y =   windowW / dog_place_y[0];
-								win_name4.x = flag4.x + 30;
-								win_name4.y =  flag4.y + 3;
+								// win_name4.x = flag4.x + 30;
+								// win_name4.y =  flag4.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog5'){
 
-								flag5.x =  $('#track_bg').width() * 0.87;
+								flag5.x =  $('#track_bg').width() * 0.97;
 								flag5.y =   windowW / dog_place_y[0];
-								win_name5.x = flag5.x + 30;
-								win_name5.y =  flag5.y + 3;
+								// win_name5.x = flag5.x + 30;
+								// win_name5.y =  flag5.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog6'){
 
-								flag6.x =  $('#track_bg').width() * 0.87;
+								flag6.x =  $('#track_bg').width() * 0.97;
 								flag6.y =   windowW / dog_place_y[0];
-								win_name6.x = flag6.x + 30;
-								win_name6.y =  flag6.y + 3;
+								// win_name6.x = flag6.x + 30;
+								// win_name6.y =  flag6.y + 3;
 
 							}
 
@@ -1500,45 +1505,45 @@ function runTrack(num,num2){
 
 							if (obj['target']['currentAnimation'] == 'dog1') {
 
-								flag1.x =  $('#track_bg').width() * 0.87;
+								flag1.x =  $('#track_bg').width() * 0.97;
 								flag1.y =   windowW / dog_place_y[1];
-								win_name1.x = flag1.x + 30;
-								win_name1.y =  flag1.y + 3;
+								// win_name1.x = flag1.x + 30;
+								// win_name1.y =  flag1.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog2'){
 
-								flag2.x =  $('#track_bg').width() * 0.87;
+								flag2.x =  $('#track_bg').width() * 0.97;
 								flag2.y =   windowW / dog_place_y[1];
-								win_name2.x = flag2.x + 30;
-								win_name2.y =  flag2.y + 3;
+								// win_name2.x = flag2.x + 30;
+								// win_name2.y =  flag2.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog3'){
 
-								flag3.x =  $('#track_bg').width() * 0.87;
+								flag3.x =  $('#track_bg').width() * 0.97;
 								flag3.y =   windowW / dog_place_y[1];
-								win_name3.x = flag3.x + 30;
-								win_name3.y =  flag3.y + 3;
+								// win_name3.x = flag3.x + 30;
+								// win_name3.y =  flag3.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog4'){
 
-								flag4.x =  $('#track_bg').width() * 0.87;
+								flag4.x =  $('#track_bg').width() * 0.97;
 								flag4.y =   windowW / dog_place_y[1];
-								win_name4.x = flag4.x + 30;
-								win_name4.y =  flag4.y + 3;
+								// win_name4.x = flag4.x + 30;
+								// win_name4.y =  flag4.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog5'){
 
-								flag5.x =  $('#track_bg').width() * 0.87;
+								flag5.x =  $('#track_bg').width() * 0.97;
 								flag5.y =   windowW / dog_place_y[1];
-								win_name5.x = flag5.x + 30;
-								win_name5.y =  flag5.y + 3;
+								// win_name5.x = flag5.x + 30;
+								// win_name5.y =  flag5.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog6'){
 
-								flag6.x =  $('#track_bg').width() * 0.87;
+								flag6.x =  $('#track_bg').width() * 0.97;
 								flag6.y =   windowW / dog_place_y[1];
-								win_name6.x = flag6.x + 30;
-							  	win_name6.y =  flag6.y + 3;
+								// win_name6.x = flag6.x + 30;
+							 //  	win_name6.y =  flag6.y + 3;
 
 							}
 
@@ -1553,45 +1558,45 @@ function runTrack(num,num2){
 
 							if (obj['target']['currentAnimation'] == 'dog1') {
 
-								flag1.x =  $('#track_bg').width() * 0.87;
+								flag1.x =  $('#track_bg').width() * 0.97;
 								flag1.y =   windowW / dog_place_y[2];
-								win_name1.x = flag1.x + 30;
-								win_name1.y =  flag1.y + 3;
+								// win_name1.x = flag1.x + 30;
+								// win_name1.y =  flag1.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog2'){
 
-								flag2.x =  $('#track_bg').width() * 0.87;
+								flag2.x =  $('#track_bg').width() * 0.97;
 								flag2.y =   windowW / dog_place_y[2];
-								win_name2.x = flag2.x + 30;
-								win_name2.y =  flag2.y + 3;
+								// win_name2.x = flag2.x + 30;
+								// win_name2.y =  flag2.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog3'){
 
-								flag3.x =  $('#track_bg').width() * 0.87;
+								flag3.x =  $('#track_bg').width() * 0.97;
 								flag3.y =   windowW / dog_place_y[2];
-								win_name3.x = flag3.x + 30;
-								win_name3.y =  flag3.y + 3;
+								// win_name3.x = flag3.x + 30;
+								// win_name3.y =  flag3.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog4'){
 
-								flag4.x =  $('#track_bg').width() * 0.87;
+								flag4.x =  $('#track_bg').width() * 0.97;
 								flag4.y =   windowW / dog_place_y[2];
-								win_name4.x = flag4.x + 30;
-								win_name4.y =  flag4.y + 3;
+								// win_name4.x = flag4.x + 30;
+								// win_name4.y =  flag4.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog5'){
 
-								flag5.x =  $('#track_bg').width() * 0.87;
+								flag5.x =  $('#track_bg').width() * 0.97;
 								flag5.y =   windowW / dog_place_y[2];
-								win_name5.x = flag5.x + 30;
-								win_name5.y =  flag5.y + 3;
+								// win_name5.x = flag5.x + 30;
+								// win_name5.y =  flag5.y + 3;
 
 							} else if (obj['target']['currentAnimation'] == 'dog6'){
 
-								flag6.x =  $('#track_bg').width() * 0.87;
+								flag6.x =  $('#track_bg').width() * 0.97;
 								flag6.y =   windowW / dog_place_y[2];
-								win_name6.x = flag6.x + 30;
-								win_name6.y =  flag6.y + 3;
+								// win_name6.x = flag6.x + 30;
+								// win_name6.y =  flag6.y + 3;
 
 							}
 
@@ -1616,40 +1621,40 @@ function runTrack(num,num2){
 				if (win4 == null) {
 
 					if (obj['target']['currentAnimation'] == 'dog1') {
-						flag1.x =  $('#track_bg').width() * 0.87;
+						flag1.x =  $('#track_bg').width() * 0.97;
 						flag1.y =   windowW / dog_place_y[3];
-						win_name1.x = flag1.x + 30;
-						win_name1.y =  flag1.y + 3;
+						// win_name1.x = flag1.x + 30;
+						// win_name1.y =  flag1.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog2'){
-						flag2.x =  $('#track_bg').width() * 0.87;
+						flag2.x =  $('#track_bg').width() * 0.97;
 						flag2.y =   windowW / dog_place_y[3];
-						win_name2.x = flag2.x + 30;
-						win_name2.y =  flag2.y + 3;
+						// win_name2.x = flag2.x + 30;
+						// win_name2.y =  flag2.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog3'){
-						flag3.x =  $('#track_bg').width() * 0.87;
+						flag3.x =  $('#track_bg').width() * 0.97;
 						flag3.y =   windowW / dog_place_y[3];
-						win_name3.x = flag3.x + 30;
-						win_name3.y =  flag3.y + 3;
+						// win_name3.x = flag3.x + 30;
+						// win_name3.y =  flag3.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog4'){
-						flag4.x =  $('#track_bg').width() * 0.87;
+						flag4.x =  $('#track_bg').width() * 0.97;
 						flag4.y =   windowW / dog_place_y[3];
-						win_name4.x = flag4.x + 30;
-						win_name4.y =  flag4.y + 3;
+						// win_name4.x = flag4.x + 30;
+						// win_name4.y =  flag4.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog5'){
-						flag5.x =  $('#track_bg').width() * 0.87;
+						flag5.x =  $('#track_bg').width() * 0.97;
 						flag5.y =   windowW / dog_place_y[3];
-						win_name5.x = flag5.x + 30;
-						win_name5.y =  flag5.y + 3;
+						// win_name5.x = flag5.x + 30;
+						// win_name5.y =  flag5.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog6'){
-						flag6.x =  $('#track_bg').width() * 0.87;
+						flag6.x =  $('#track_bg').width() * 0.97;
 						flag6.y =   windowW / dog_place_y[3];
-						win_name6.x = flag6.x + 30;
-						win_name6.y =  flag6.y + 3;
+						// win_name6.x = flag6.x + 30;
+						// win_name6.y =  flag6.y + 3;
 
 					}
 
@@ -1659,40 +1664,40 @@ function runTrack(num,num2){
 
 
 					if (obj['target']['currentAnimation'] == 'dog1') {
-						flag1.x =  $('#track_bg').width() * 0.87;
+						flag1.x =  $('#track_bg').width() * 0.97;
 						flag1.y =   windowW / dog_place_y[4]; // 2.74
-						win_name1.x = flag1.x + 30;
-						win_name1.y =  flag1.y + 3;
+						// win_name1.x = flag1.x + 30;
+						// win_name1.y =  flag1.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog2'){
-						flag2.x =  $('#track_bg').width() * 0.87;
+						flag2.x =  $('#track_bg').width() * 0.97;
 						flag2.y =   windowW / dog_place_y[4];
-						win_name2.x = flag2.x + 30;
-						win_name2.y =  flag2.y + 3;
+						// win_name2.x = flag2.x + 30;
+						// win_name2.y =  flag2.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog3'){
-						flag3.x =  $('#track_bg').width() * 0.87;
+						flag3.x =  $('#track_bg').width() * 0.97;
 						flag3.y =   windowW / dog_place_y[4];
-						win_name3.x = flag3.x + 30;
-						win_name3.y =  flag3.y + 3;
+						// win_name3.x = flag3.x + 30;
+						// win_name3.y =  flag3.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog4'){
-						flag4.x =  $('#track_bg').width() * 0.87;
+						flag4.x =  $('#track_bg').width() * 0.97;
 						flag4.y =   windowW / dog_place_y[4];
-						win_name4.x = flag4.x + 30;
-						win_name4.y =  flag4.y + 3;
+						// win_name4.x = flag4.x + 30;
+						// win_name4.y =  flag4.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog5'){
-						flag5.x =  $('#track_bg').width() * 0.87;
+						flag5.x =  $('#track_bg').width() * 0.97;
 						flag5.y =   windowW / dog_place_y[4];
-						win_name5.x = flag5.x + 30;
-						win_name5.y =  flag5.y + 3;
+						// win_name5.x = flag5.x + 30;
+						// win_name5.y =  flag5.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog6'){
-						flag6.x =  $('#track_bg').width() * 0.87;
+						flag6.x =  $('#track_bg').width() * 0.97;
 						flag6.y =   windowW / dog_place_y[4];
-						win_name6.x = flag6.x + 30;
-						win_name6.y =  flag6.y + 3;
+						// win_name6.x = flag6.x + 30;
+						// win_name6.y =  flag6.y + 3;
 
 					}
 
@@ -1701,40 +1706,40 @@ function runTrack(num,num2){
 				} else if (win6 == null) {
 
 					if (obj['target']['currentAnimation'] == 'dog1') {
-						flag1.x =  $('#track_bg').width() * 0.87;
+						flag1.x =  $('#track_bg').width() * 0.97;
 						flag1.y =   windowW / dog_place_y[5];
-						win_name1.x = flag1.x + 30;
-						win_name1.y =  flag1.y + 3;
+						// win_name1.x = flag1.x + 30;
+						// win_name1.y =  flag1.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog2'){
-						flag2.x =  $('#track_bg').width() * 0.87;
+						flag2.x =  $('#track_bg').width() * 0.97;
 						flag2.y =   windowW / dog_place_y[5];
-						win_name2.x = flag2.x + 30;
-						win_name2.y =  flag2.y + 3;
+						// win_name2.x = flag2.x + 30;
+						// win_name2.y =  flag2.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog3'){
-						flag3.x =  $('#track_bg').width() * 0.87;
+						flag3.x =  $('#track_bg').width() * 0.97;
 						flag3.y =   windowW / dog_place_y[5];
-						win_name3.x = flag3.x + 30;
-						win_name3.y =  flag3.y + 3;
+						// win_name3.x = flag3.x + 30;
+						// win_name3.y =  flag3.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog4'){
-						flag4.x =  $('#track_bg').width() * 0.87;
+						flag4.x =  $('#track_bg').width() * 0.97;
 						flag4.y =   windowW / dog_place_y[5];
-						win_name4.x = flag4.x + 30;
-						win_name4.y =  flag4.y + 3;
+						// win_name4.x = flag4.x + 30;
+						// win_name4.y =  flag4.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog5'){
-						flag5.x =  $('#track_bg').width() * 0.87;
+						flag5.x =  $('#track_bg').width() * 0.97;
 						flag5.y =   windowW / dog_place_y[5];
-						win_name5.x = flag5.x + 30;
-						win_name5.y =  flag5.y + 3;
+						// win_name5.x = flag5.x + 30;
+						// win_name5.y =  flag5.y + 3;
 
 					} else if (obj['target']['currentAnimation'] == 'dog6'){
-						flag6.x =  $('#track_bg').width() * 0.87;
+						flag6.x =  $('#track_bg').width() * 0.97;
 						flag6.y =   windowW / dog_place_y[5];
-						win_name6.x = flag6.x + 30;
-						win_name6.y =  flag6.y + 3;
+						// win_name6.x = flag6.x + 30;
+						// win_name6.y =  flag6.y + 3;
 
 					}
 
