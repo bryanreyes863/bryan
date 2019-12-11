@@ -48,7 +48,6 @@ server.listen(server_port , server_ip_address , function(){
 
 app.use(express.static('./'));
 
-
 //var section
 
 var result_container = [
