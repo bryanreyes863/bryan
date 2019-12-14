@@ -53,114 +53,6 @@ var count_down;
 var dog_place_y = [3.93,3.55,3.25,2.97,2.74,2.54];
 
 var shouldStart = false;
-// var screen_name1;
-// var screen_name2;
-// var screen_name3;
-// var screen_name4;
-// var screen_name5;
-// var screen_name6;
-
-// var namesss = ["skustaklee","kingbadger","abdul","Aginaya","Agimat","Alakdanesa","Alamid","Asero","Bagwis","Batang X","Batang Z","Maria Ozawa","Bryan","Tubul","kupal","tangina","malupit","shivalManyan","loooonie","mr.PEPE","RATBU","SHIVAL","DAWNLUD ANYA ?"];
-
-// A first approximation
-var images = [
-	'assets/images/tinyfier/bg_track_0.png',
-	'assets/images/tinyfier/bg_track_1.png',
-	'assets/images/tinyfier/bg_track_2.png',
-	'assets/images/tinyfier/bg_track_3.png',
-	'assets/images/tinyfier/bg_track_4.png',
-	'assets/images/tinyfier/bg_track_5.png',
-	'assets/images/tinyfier/bg_track_6.png',
-	'assets/images/tinyfier/bg_track_7.png',
-	'assets/images/tinyfier/bg_track_8.png',
-	'assets/images/tinyfier/bg_track_9.png',
-	'assets/images/tinyfier/bg_track_10.png',
-	'assets/images/tinyfier/bg_track_11.png',
-	'assets/images/tinyfier/bg_track_12.png',
-	'assets/images/tinyfier/bg_track_13.png',
-	'assets/images/tinyfier/bg_track_14.png',
-	'assets/images/tinyfier/bg_track_15.png',
-	'assets/images/tinyfier/bg_track_16.png',
-	'assets/images/tinyfier/bg_track_17.png',
-	'assets/images/tinyfier/bg_track_18.png',
-	'assets/images/tinyfier/bg_track_19.png',
-	'assets/images/tinyfier/bg_track_20.png',
-	'assets/images/tinyfier/bg_track_21.png',
-	'assets/images/tinyfier/bg_track_22.png',
-	'assets/images/tinyfier/bg_track_23.png',
-	'assets/images/tinyfier/bg_track_24.png',
-	'assets/images/tinyfier/bg_track_25.png',
-	'assets/images/tinyfier/bg_track_26.png',
-	'assets/images/tinyfier/bg_track_27.png',
-	'assets/images/tinyfier/bg_track_28.png',
-	'assets/images/tinyfier/bg_track_29.png',
-	'assets/images/tinyfier/bg_track_30.png',
-	'assets/images/tinyfier/bg_track_31.png',
-	'assets/images/tinyfier/bg_track_32.png',
-	'assets/images/tinyfier/bg_track_33.png',
-	'assets/images/tinyfier/bg_track_34.png',
-	'assets/images/tinyfier/bg_track_35.png',
-	'assets/images/tinyfier/bg_track_36.png',
-	'assets/images/tinyfier/bg_track_37.png',
-	'assets/images/tinyfier/bg_track_38.png',
-	'assets/images/tinyfier/bg_track_39.png',
-	'assets/images/tinyfier/bg_track_40.png',
-	'assets/images/tinyfier/bg_track_41.png',
-	'assets/images/tinyfier/bg_track_42.png',
-	'assets/images/tinyfier/bg_track_43.png',
-	'assets/images/tinyfier/bg_track_44.png',
-	'assets/images/tinyfier/bg_track_45.png',
-	'assets/images/tinyfier/bg_track_46.png',
-	'assets/images/tinyfier/bg_track_47.png',
-	'assets/images/tinyfier/bg_track_48.png',
-	'assets/images/tinyfier/bg_track_48.png',
-	'assets/images/tinyfier/bg_track_50.png',
-	'assets/images/tinyfier/bg_track_51.png',
-	'assets/images/tinyfier/bg_track_52.png',
-	'assets/images/tinyfier/bg_track_53.png',
-	'assets/images/tinyfier/bg_track_54.png',
-	'assets/images/tinyfier/bg_track_55.png',
-	'assets/images/tinyfier/bg_track_56.png',
-	'assets/images/bg_table.jpg',
-	'assets/images/bg_track_0.png',
-	'assets/images/bib_gui_1.png',
-	'assets/images/bib_gui_2.png',
-	'assets/images/bib_gui_3.png',
-	'assets/images/bib_gui_4.png',
-	'assets/images/bib_gui_5.png',
-	'assets/images/bib_gui_6.png',
-	'assets/images/bib_gui_1.png',
-	'assets/images/dog1.png',
-	'assets/images/dog2.png',
-	'assets/images/dog3.png',
-	'assets/images/dog4.png',
-	'assets/images/dog5.png',
-	'assets/images/dog6.png',
-	'assets/images/DOGLOADING.png',
-	'assets/images/error-img.png',
-	'assets/images/flags1.png',
-	'assets/images/flags2.png',
-	'assets/images/flags3.png',
-	'assets/images/flags4.png',
-	'assets/images/flags5.png',
-	'assets/images/flags6.png',
-	'assets/images/hashimage.png',
-	'assets/images/loading.gif',
-	'assets/images/panel_arrival.png',
-	'assets/images/panel_arrival2.png',
-	'assets/images/pattern_bg.png',
-	'assets/images/rank.png',
-	'assets/images/tableres.png',
-	'assets/images/time-bet.png',
-	'assets/images/white.png',
-	'assets/images/white.png',
-	'assets/images/white.png'
-],
-    preload = new Image();
-// Since you're using jQuery...
-$.each(images, function(index, value) {
-    preload.src = value;     // Changing the src requests the corresponding file
-});
 
 var ranks = [
 	{
@@ -244,10 +136,6 @@ maniFest = [
 		"id" : "time" 
 	},
 
-	// {
-	// 	"src" : "assets/images/panel_arrival.png" ,
-	// 	"id" : "panel_arr" 
-	// },
 	{
 		"src" : "assets/images/panel_arrival2.png" ,
 		"id" : "panel_arr" 
@@ -323,298 +211,298 @@ maniFest = [
 	{
 		"src" : "assets/images/tinyfier/bg_track_0.png" ,
 		"id" : "bgTrack_0" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_1.png" ,
-		"id" : "bgTrack_1" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_2.png" ,
-		"id" : "bgTrack_2" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_3.png" ,
-		"id" : "bgTrack_3" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_4.png" ,
-		"id" : "bgTrack_4" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_5.png" ,
-		"id" : "bgTrack_5" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_6.png" ,
-		"id" : "bgTrack_6" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_7.png" ,
-		"id" : "bgTrack_7" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_8.png" ,
-		"id" : "bgTrack_8" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_9.png" ,
-		"id" : "bgTrack_9" 
-	},
-
-	
-	{
-		"src" : "assets/images/tinyfier/bg_track_10.png" ,
-		"id" : "bgTrack_10" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_11.png" ,
-		"id" : "bgTrack_11" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_12.png" ,
-		"id" : "bgTrack_12" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_13.png" ,
-		"id" : "bgTrack_13" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_14.png" ,
-		"id" : "bgTrack_14" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_15.png" ,
-		"id" : "bgTrack_15" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_16.png" ,
-		"id" : "bgTrack_16" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_17.png" ,
-		"id" : "bgTrack_17" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_18.png" ,
-		"id" : "bgTrack_18" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_19.png" ,
-		"id" : "bgTrack_19" 
-	},
-
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_20.png" ,
-		"id" : "bgTrack_20" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_21.png" ,
-		"id" : "bgTrack_21" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_22.png" ,
-		"id" : "bgTrack_22" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_23.png" ,
-		"id" : "bgTrack_23" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_24.png" ,
-		"id" : "bgTrack_24" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_25.png" ,
-		"id" : "bgTrack_25" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_26.png" ,
-		"id" : "bgTrack_26" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_27.png" ,
-		"id" : "bgTrack_27" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_28.png" ,
-		"id" : "bgTrack_28" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_29.png" ,
-		"id" : "bgTrack_29" 
-	},
-
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_30.png" ,
-		"id" : "bgTrack_30" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_31.png" ,
-		"id" : "bgTrack_31" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_32.png" ,
-		"id" : "bgTrack_32" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_33.png" ,
-		"id" : "bgTrack_33" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_34.png" ,
-		"id" : "bgTrack_34" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_35.png" ,
-		"id" : "bgTrack_35" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_36.png" ,
-		"id" : "bgTrack_36" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_37.png" ,
-		"id" : "bgTrack_37" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_38.png" ,
-		"id" : "bgTrack_38" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_39.png" ,
-		"id" : "bgTrack_39" 
-	},
-
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_40.png" ,
-		"id" : "bgTrack_40" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_41.png" ,
-		"id" : "bgTrack_41" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_42.png" ,
-		"id" : "bgTrack_42" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_43.png" ,
-		"id" : "bgTrack_43" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_44.png" ,
-		"id" : "bgTrack_44" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_45.png" ,
-		"id" : "bgTrack_45" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_46.png" ,
-		"id" : "bgTrack_46" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_47.png" ,
-		"id" : "bgTrack_47" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_48.png" ,
-		"id" : "bgTrack_48" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_49.png" ,
-		"id" : "bgTrack_49" 
-	},
-
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_50.png" ,
-		"id" : "bgTrack_50" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_51.png" ,
-		"id" : "bgTrack_51" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_52.png" ,
-		"id" : "bgTrack_52" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_53.png" ,
-		"id" : "bgTrack_53" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_54.png" ,
-		"id" : "bgTrack_54" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_55.png" ,
-		"id" : "bgTrack_55" 
-	},
-
-	{
-		"src" : "assets/images/tinyfier/bg_track_56.png" ,
-		"id" : "bgTrack_56" 
 	}
 
 ]
 
-// maniFest2 = [
+maniFest2 = [
+
+{
+	"src" : "assets/images/tinyfier/bg_track_1.png" ,
+	"id" : "bgTrack_1" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_2.png" ,
+	"id" : "bgTrack_2" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_3.png" ,
+	"id" : "bgTrack_3" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_4.png" ,
+	"id" : "bgTrack_4" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_5.png" ,
+	"id" : "bgTrack_5" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_6.png" ,
+	"id" : "bgTrack_6" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_7.png" ,
+	"id" : "bgTrack_7" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_8.png" ,
+	"id" : "bgTrack_8" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_9.png" ,
+	"id" : "bgTrack_9" 
+},
+
+
+{
+	"src" : "assets/images/tinyfier/bg_track_10.png" ,
+	"id" : "bgTrack_10" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_11.png" ,
+	"id" : "bgTrack_11" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_12.png" ,
+	"id" : "bgTrack_12" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_13.png" ,
+	"id" : "bgTrack_13" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_14.png" ,
+	"id" : "bgTrack_14" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_15.png" ,
+	"id" : "bgTrack_15" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_16.png" ,
+	"id" : "bgTrack_16" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_17.png" ,
+	"id" : "bgTrack_17" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_18.png" ,
+	"id" : "bgTrack_18" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_19.png" ,
+	"id" : "bgTrack_19" 
+},
+
+
+{
+	"src" : "assets/images/tinyfier/bg_track_20.png" ,
+	"id" : "bgTrack_20" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_21.png" ,
+	"id" : "bgTrack_21" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_22.png" ,
+	"id" : "bgTrack_22" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_23.png" ,
+	"id" : "bgTrack_23" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_24.png" ,
+	"id" : "bgTrack_24" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_25.png" ,
+	"id" : "bgTrack_25" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_26.png" ,
+	"id" : "bgTrack_26" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_27.png" ,
+	"id" : "bgTrack_27" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_28.png" ,
+	"id" : "bgTrack_28" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_29.png" ,
+	"id" : "bgTrack_29" 
+},
+
+
+{
+	"src" : "assets/images/tinyfier/bg_track_30.png" ,
+	"id" : "bgTrack_30" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_31.png" ,
+	"id" : "bgTrack_31" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_32.png" ,
+	"id" : "bgTrack_32" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_33.png" ,
+	"id" : "bgTrack_33" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_34.png" ,
+	"id" : "bgTrack_34" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_35.png" ,
+	"id" : "bgTrack_35" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_36.png" ,
+	"id" : "bgTrack_36" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_37.png" ,
+	"id" : "bgTrack_37" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_38.png" ,
+	"id" : "bgTrack_38" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_39.png" ,
+	"id" : "bgTrack_39" 
+},
+
+
+{
+	"src" : "assets/images/tinyfier/bg_track_40.png" ,
+	"id" : "bgTrack_40" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_41.png" ,
+	"id" : "bgTrack_41" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_42.png" ,
+	"id" : "bgTrack_42" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_43.png" ,
+	"id" : "bgTrack_43" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_44.png" ,
+	"id" : "bgTrack_44" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_45.png" ,
+	"id" : "bgTrack_45" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_46.png" ,
+	"id" : "bgTrack_46" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_47.png" ,
+	"id" : "bgTrack_47" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_48.png" ,
+	"id" : "bgTrack_48" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_49.png" ,
+	"id" : "bgTrack_49" 
+},
+
+
+{
+	"src" : "assets/images/tinyfier/bg_track_50.png" ,
+	"id" : "bgTrack_50" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_51.png" ,
+	"id" : "bgTrack_51" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_52.png" ,
+	"id" : "bgTrack_52" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_53.png" ,
+	"id" : "bgTrack_53" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_54.png" ,
+	"id" : "bgTrack_54" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_55.png" ,
+	"id" : "bgTrack_55" 
+},
+
+{
+	"src" : "assets/images/tinyfier/bg_track_56.png" ,
+	"id" : "bgTrack_56" 
+}
 	
-// ]
+]
 
 
 
@@ -625,8 +513,8 @@ loader.addEventListener("complete" , loadingComplete);
 
 loader.loadManifest(maniFest,true);
 
-// loader2 = new createjs.LoadQueue(false);
-// loader2.loadManifest(maniFest2,true);
+loader2 = new createjs.LoadQueue(false);
+loader2.loadManifest(maniFest2,true);
 
 
 window.addEventListener("resize" , resize);
@@ -661,15 +549,6 @@ function handleProgress() {
     // $('.loader p').html(Math.round(loader.progress / 1 * 100) + "%")
 }
 
-
-// function getRandomName(name){
-// 	// console.log(name[0])
-//   var num = Math.floor(Math.random() * name.length);
-//   // console.log(num)
-//   // console.log(name[num])
-//   return name[num];
-// }
-
 function handleFile(event){
 	assets.push(event);
 }
@@ -680,14 +559,6 @@ function loadingComplete(){
 	stage.canvas.width = $('#track_bg').width();
 	stage.canvas.height =  window.innerHeight - 50;
 
-	// screen_name1 = getRandomName(namesss)
-	// screen_name2 = getRandomName(namesss)
-	// screen_name3 = getRandomName(namesss)
-	// screen_name4 = getRandomName(namesss)
-	// screen_name5 = getRandomName(namesss)
-	// screen_name6 = getRandomName(namesss)
-
-	// num = 2;
 	imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_0"));
 
 	
@@ -762,11 +633,6 @@ function loadingComplete(){
 		dog5obj = new createjs.Sprite(spriteSheet , "dog5");
 		dog6obj = new createjs.Sprite(spriteSheet , "dog6");
 
-		// dog2obj.alpha = 0;
-		// dog3obj.alpha = 0;
-		// dog4obj.alpha = 0;
-		// dog5obj.alpha = 0;
-		// dog6obj.alpha = 0;
 		dog_arr[0]['name'] = dog1obj; 
 		dog_arr[1]['name'] = dog2obj; 
 		dog_arr[2]['name'] = dog3obj; 
@@ -1166,7 +1032,7 @@ function runTrack(num,num2){
 
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+49));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+49));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1177,7 +1043,7 @@ function runTrack(num,num2){
 					},80)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+50));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+50));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1188,7 +1054,7 @@ function runTrack(num,num2){
 					},160)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+51));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+51));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1199,7 +1065,7 @@ function runTrack(num,num2){
 					},240)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+52));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+52));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1210,7 +1076,7 @@ function runTrack(num,num2){
 					},320)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+53));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+53));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1221,7 +1087,7 @@ function runTrack(num,num2){
 					},400)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+54));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+54));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1232,7 +1098,7 @@ function runTrack(num,num2){
 					},480)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+55));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+55));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1243,7 +1109,7 @@ function runTrack(num,num2){
 					},560)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+56));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+56));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1283,7 +1149,7 @@ function runTrack(num,num2){
 
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+49));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+49));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1294,7 +1160,7 @@ function runTrack(num,num2){
 					},80)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+50));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+50));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1305,7 +1171,7 @@ function runTrack(num,num2){
 					},160)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+51));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+51));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1316,7 +1182,7 @@ function runTrack(num,num2){
 					},240)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+52));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+52));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1327,7 +1193,7 @@ function runTrack(num,num2){
 					},320)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+53));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+53));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1338,7 +1204,7 @@ function runTrack(num,num2){
 					},400)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+54));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+54));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1349,7 +1215,7 @@ function runTrack(num,num2){
 					},480)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+55));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+55));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1360,7 +1226,7 @@ function runTrack(num,num2){
 					},560)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+56));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+56));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1380,18 +1246,11 @@ function runTrack(num,num2){
 	}
 }
 
-
-// window.mobilecheck = function() {
-//   var check = false;
-//   (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
-//   return check;
-// };
-
 	function changeTrack(num,num2) {
 		// console.log(num)
 		// if (shouldStart) {
 			// if (num == 22) {
-				imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+num));
+				imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+num));
 				bgContainer.removeAllChildren();
 				bgContainer.addChild(imageBackground);
 
@@ -1411,7 +1270,7 @@ function runTrack(num,num2){
 		// console.log(num2)
 		// if (shouldStart) {
 			
-			imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+num2));
+			imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+num2));
 			bgContainer.removeAllChildren();
 			bgContainer.addChild(imageBackground);
 
