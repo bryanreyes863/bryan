@@ -211,298 +211,181 @@ maniFest = [
 	{
 		"src" : "assets/images/tinyfier/bg_track_0.png" ,
 		"id" : "bgTrack_0" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_1.png" ,
+		"id" : "bgTrack_1" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_2.png" ,
+		"id" : "bgTrack_2" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_3.png" ,
+		"id" : "bgTrack_3" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_4.png" ,
+		"id" : "bgTrack_4" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_5.png" ,
+		"id" : "bgTrack_5" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_6.png" ,
+		"id" : "bgTrack_6" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_7.png" ,
+		"id" : "bgTrack_7" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_8.png" ,
+		"id" : "bgTrack_8" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_9.png" ,
+		"id" : "bgTrack_9" 
+	},
+
+	
+	{
+		"src" : "assets/images/tinyfier/bg_track_10.png" ,
+		"id" : "bgTrack_10" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_11.png" ,
+		"id" : "bgTrack_11" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_12.png" ,
+		"id" : "bgTrack_12" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_13.png" ,
+		"id" : "bgTrack_13" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_14.png" ,
+		"id" : "bgTrack_14" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_15.png" ,
+		"id" : "bgTrack_15" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_16.png" ,
+		"id" : "bgTrack_16" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_17.png" ,
+		"id" : "bgTrack_17" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_18.png" ,
+		"id" : "bgTrack_18" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_19.png" ,
+		"id" : "bgTrack_19" 
+	},
+
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_20.png" ,
+		"id" : "bgTrack_20" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_21.png" ,
+		"id" : "bgTrack_21" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_22.png" ,
+		"id" : "bgTrack_22" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_23.png" ,
+		"id" : "bgTrack_23" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_24.png" ,
+		"id" : "bgTrack_24" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_25.png" ,
+		"id" : "bgTrack_25" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_26.png" ,
+		"id" : "bgTrack_26" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_27.png" ,
+		"id" : "bgTrack_27" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_28.png" ,
+		"id" : "bgTrack_28" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_29.png" ,
+		"id" : "bgTrack_29" 
+	},
+
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_30.png" ,
+		"id" : "bgTrack_30" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_31.png" ,
+		"id" : "bgTrack_31" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_32.png" ,
+		"id" : "bgTrack_32" 
+	},
+
+	{
+		"src" : "assets/images/tinyfier/bg_track_33.png" ,
+		"id" : "bgTrack_33" 
 	}
 
 ]
 
-maniFest2 = [
-
-{
-	"src" : "assets/images/tinyfier/bg_track_1.png" ,
-	"id" : "bgTrack_1" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_2.png" ,
-	"id" : "bgTrack_2" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_3.png" ,
-	"id" : "bgTrack_3" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_4.png" ,
-	"id" : "bgTrack_4" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_5.png" ,
-	"id" : "bgTrack_5" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_6.png" ,
-	"id" : "bgTrack_6" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_7.png" ,
-	"id" : "bgTrack_7" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_8.png" ,
-	"id" : "bgTrack_8" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_9.png" ,
-	"id" : "bgTrack_9" 
-},
-
-
-{
-	"src" : "assets/images/tinyfier/bg_track_10.png" ,
-	"id" : "bgTrack_10" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_11.png" ,
-	"id" : "bgTrack_11" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_12.png" ,
-	"id" : "bgTrack_12" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_13.png" ,
-	"id" : "bgTrack_13" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_14.png" ,
-	"id" : "bgTrack_14" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_15.png" ,
-	"id" : "bgTrack_15" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_16.png" ,
-	"id" : "bgTrack_16" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_17.png" ,
-	"id" : "bgTrack_17" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_18.png" ,
-	"id" : "bgTrack_18" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_19.png" ,
-	"id" : "bgTrack_19" 
-},
-
-
-{
-	"src" : "assets/images/tinyfier/bg_track_20.png" ,
-	"id" : "bgTrack_20" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_21.png" ,
-	"id" : "bgTrack_21" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_22.png" ,
-	"id" : "bgTrack_22" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_23.png" ,
-	"id" : "bgTrack_23" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_24.png" ,
-	"id" : "bgTrack_24" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_25.png" ,
-	"id" : "bgTrack_25" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_26.png" ,
-	"id" : "bgTrack_26" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_27.png" ,
-	"id" : "bgTrack_27" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_28.png" ,
-	"id" : "bgTrack_28" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_29.png" ,
-	"id" : "bgTrack_29" 
-},
-
-
-{
-	"src" : "assets/images/tinyfier/bg_track_30.png" ,
-	"id" : "bgTrack_30" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_31.png" ,
-	"id" : "bgTrack_31" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_32.png" ,
-	"id" : "bgTrack_32" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_33.png" ,
-	"id" : "bgTrack_33" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_34.png" ,
-	"id" : "bgTrack_34" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_35.png" ,
-	"id" : "bgTrack_35" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_36.png" ,
-	"id" : "bgTrack_36" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_37.png" ,
-	"id" : "bgTrack_37" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_38.png" ,
-	"id" : "bgTrack_38" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_39.png" ,
-	"id" : "bgTrack_39" 
-},
-
-
-{
-	"src" : "assets/images/tinyfier/bg_track_40.png" ,
-	"id" : "bgTrack_40" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_41.png" ,
-	"id" : "bgTrack_41" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_42.png" ,
-	"id" : "bgTrack_42" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_43.png" ,
-	"id" : "bgTrack_43" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_44.png" ,
-	"id" : "bgTrack_44" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_45.png" ,
-	"id" : "bgTrack_45" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_46.png" ,
-	"id" : "bgTrack_46" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_47.png" ,
-	"id" : "bgTrack_47" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_48.png" ,
-	"id" : "bgTrack_48" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_49.png" ,
-	"id" : "bgTrack_49" 
-},
-
-
-{
-	"src" : "assets/images/tinyfier/bg_track_50.png" ,
-	"id" : "bgTrack_50" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_51.png" ,
-	"id" : "bgTrack_51" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_52.png" ,
-	"id" : "bgTrack_52" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_53.png" ,
-	"id" : "bgTrack_53" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_54.png" ,
-	"id" : "bgTrack_54" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_55.png" ,
-	"id" : "bgTrack_55" 
-},
-
-{
-	"src" : "assets/images/tinyfier/bg_track_56.png" ,
-	"id" : "bgTrack_56" 
-}
+// maniFest2 = [
 	
-]
+// ]
 
 
 
@@ -513,8 +396,8 @@ loader.addEventListener("complete" , loadingComplete);
 
 loader.loadManifest(maniFest,true);
 
-loader2 = new createjs.LoadQueue(false);
-loader2.loadManifest(maniFest2,true);
+// loader2 = new createjs.LoadQueue(false);
+// loader2.loadManifest(maniFest2,true);
 
 
 window.addEventListener("resize" , resize);
@@ -560,15 +443,6 @@ function loadingComplete(){
 	stage.canvas.height =  window.innerHeight - 50;
 
 	imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_0"));
-
-	
-
-	// dog1_name = new createjs.Text("콜호","20px Arial","#fefefe");
-	// dog2_name = new createjs.Text("민호", "20px Arial", "#fefefe");
-	// dog3_name = new createjs.Text("정", "20px Arial", "#fefefe");
-	// dog4_name = new createjs.Text("한울", "20px Arial", "#fefefe");
-	// dog5_name = new createjs.Text("시아버지", "20px Arial", "#fefefe");
-	// dog6_name = new createjs.Text("혼합", "20px Arial", "#fefefe");
 
 	round = new createjs.Text("라운드", "40px Bold", "#ffbb33");
 	count = new createjs.Text("00", "40px Bold", "#ffffff");
@@ -755,44 +629,26 @@ function resize(){
 		dog1_rank.scaleX = dog1_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		dog1_rank.x = $('#track_bg').width() / 7.5;
 		dog1_rank.y = windowW / 17;
-		// dog1_name.scaleX = dog1_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		// dog1_name.x = dog1_rank.x + 15;
-		// dog1_name.y = dog1_rank.y;
 
 		dog2_rank.scaleX = dog2_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		dog2_rank.x = $('#track_bg').width() / 3.98;
 		dog2_rank.y = windowW / 17;
-		// dog2_name.scaleX = dog2_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		// dog2_name.x = dog2_rank.x + 12;
-		// dog2_name.y = dog2_rank.y;
 
 		dog3_rank.scaleX = dog3_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		dog3_rank.x = $('#track_bg').width() / 2.7;
 		dog3_rank.y = windowW / 17;
-		// dog3_name.scaleX = dog3_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		// dog3_name.x = dog3_rank.x + 20;
-		// dog3_name.y = dog3_rank.y;
 
 		dog4_rank.scaleX = dog4_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		dog4_rank.x = $('#track_bg').width() / 2.01;
 		dog4_rank.y = windowW / 17;
-		// dog4_name.scaleX = dog4_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		// dog4_name.x = dog4_rank.x + 15;
-		// dog4_name.y = dog4_rank.y;
 
 		dog5_rank.scaleX = dog5_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		dog5_rank.x = $('#track_bg').width() / 1.63;
 		dog5_rank.y = windowW / 17;
-		// dog5_name.scaleX = dog5_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		// dog5_name.x = dog5_rank.x + 2;
-		// dog5_name.y = dog5_rank.y;
 
 		dog6_rank.scaleX = dog6_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		dog6_rank.x = $('#track_bg').width() / 1.38;
 		dog6_rank.y = windowW / 17;
-		// dog6_name.scaleX = dog6_name.scaleY =  (windowW - (windowW / 1.7)) / bg.image.height;
-		// dog6_name.x = dog6_rank.x + 15;
-		// dog6_name.y = dog6_rank.y;
 
 		rank.scaleX = rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;// scale
 		rank.x = $('#track_bg').width() / 18;//position
@@ -832,12 +688,6 @@ function getRank(){
 	if (finish == false) {
 
 		innerpos = [];
-		// ranks[0]['dog_name'] = dog1_name;
-		// ranks[1]['dog_name'] = dog2_name;
-		// ranks[2]['dog_name'] = dog3_name;
-		// ranks[3]['dog_name'] = dog4_name;
-		// ranks[4]['dog_name'] = dog5_name;
-		// ranks[5]['dog_name'] = dog6_name;
 
 		rpos = [1.38,1.63,2.01,2.7,3.98,7.5];
 		for(i = 0; i < ranks.length; i++) {
@@ -977,7 +827,7 @@ function startLine(){
 var num = 0;
 var newnum;
 
-var num2 = 22;
+var num2 = 0;
 
 function runTrack(num,num2){
 
@@ -1014,8 +864,9 @@ function runTrack(num,num2){
 						num++;
 						num2++;
 
-					if (num > 25) {
-						if (num2 == 48) {
+					if (num > 22) {
+
+						if (num2 == 26) {
 							num2 = 22;
 						}
 						loopTrack(num,num2);
@@ -1032,7 +883,7 @@ function runTrack(num,num2){
 
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+49));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+27));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1043,7 +894,7 @@ function runTrack(num,num2){
 					},80)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+50));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+28));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1054,7 +905,7 @@ function runTrack(num,num2){
 					},160)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+51));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+29));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1065,7 +916,7 @@ function runTrack(num,num2){
 					},240)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+52));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+30));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1076,7 +927,7 @@ function runTrack(num,num2){
 					},320)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+53));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+31));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1087,7 +938,7 @@ function runTrack(num,num2){
 					},400)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+54));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+32));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1098,7 +949,7 @@ function runTrack(num,num2){
 					},480)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+55));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+33));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1107,17 +958,17 @@ function runTrack(num,num2){
 						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
 						stage.update();
 					},560)
-					setTimeout(function(){
+					// setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+56));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
+					// 	imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+56));
+					// 	bgContainer.removeAllChildren();
+					// 	bgContainer.addChild(imageBackground);
 
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},640)
+					// 	var windowW = window.innerWidth;
+					// 	imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+					// 	imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+					// 	stage.update();
+					// },640)
 						
 					
 					$('#track_bg').css('opacity' , 1);
@@ -1131,10 +982,11 @@ function runTrack(num,num2){
 						num++;
 						num2++;
 
-					if (num > 25) {
-						if (num2 == 48) {
+					if (num > 22) {
+						if (num2 == 26) {
 							num2 = 22;
 						}
+
 						loopTrack(num,num2);
 
 					} else {
@@ -1149,7 +1001,7 @@ function runTrack(num,num2){
 
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+49));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+27));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1160,7 +1012,7 @@ function runTrack(num,num2){
 					},80)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+50));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+28));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1171,7 +1023,7 @@ function runTrack(num,num2){
 					},160)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+51));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+29));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1182,7 +1034,7 @@ function runTrack(num,num2){
 					},240)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+52));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+30));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1193,7 +1045,7 @@ function runTrack(num,num2){
 					},320)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+53));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+31));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1204,7 +1056,7 @@ function runTrack(num,num2){
 					},400)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+54));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+32));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1215,7 +1067,7 @@ function runTrack(num,num2){
 					},480)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+55));
+						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+33));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1224,17 +1076,6 @@ function runTrack(num,num2){
 						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
 						stage.update();
 					},560)
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+56));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},640)
 						
 					
 					$('#track_bg').css('opacity' , 1);
@@ -1246,11 +1087,18 @@ function runTrack(num,num2){
 	}
 }
 
+
+// window.mobilecheck = function() {
+//   var check = false;
+//   (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+//   return check;
+// };
+
 	function changeTrack(num,num2) {
 		// console.log(num)
 		// if (shouldStart) {
 			// if (num == 22) {
-				imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+num));
+				imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+num));
 				bgContainer.removeAllChildren();
 				bgContainer.addChild(imageBackground);
 
@@ -1270,7 +1118,7 @@ function runTrack(num,num2){
 		// console.log(num2)
 		// if (shouldStart) {
 			
-			imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+num2));
+			imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+num2));
 			bgContainer.removeAllChildren();
 			bgContainer.addChild(imageBackground);
 
