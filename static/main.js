@@ -207,7 +207,11 @@ maniFest = [
 	{
 		"src" : "assets/images/flags6.png" ,
 		"id" : "flag6" 
-	},
+	}
+
+]
+
+maniFest2 = [
 	{
 		"src" : "assets/images/tinyfier/bg_track_0.png" ,
 		"id" : "bgTrack_0" 
@@ -380,12 +384,7 @@ maniFest = [
 		"src" : "assets/images/tinyfier/bg_track_33.png" ,
 		"id" : "bgTrack_33" 
 	}
-
 ]
-
-// maniFest2 = [
-	
-// ]
 
 
 
@@ -396,8 +395,8 @@ loader.addEventListener("complete" , loadingComplete);
 
 loader.loadManifest(maniFest,true);
 
-// loader2 = new createjs.LoadQueue(false);
-// loader2.loadManifest(maniFest2,true);
+loader2 = new createjs.LoadQueue(false);
+loader2.loadManifest(maniFest2,true);
 
 
 window.addEventListener("resize" , resize);
@@ -883,7 +882,7 @@ function runTrack(num,num2){
 
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+27));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+27));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -894,7 +893,7 @@ function runTrack(num,num2){
 					},80)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+28));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+28));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -905,7 +904,7 @@ function runTrack(num,num2){
 					},160)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+29));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+29));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -916,7 +915,7 @@ function runTrack(num,num2){
 					},240)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+30));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+30));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -927,7 +926,7 @@ function runTrack(num,num2){
 					},320)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+31));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+31));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -938,7 +937,7 @@ function runTrack(num,num2){
 					},400)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+32));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+32));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -949,7 +948,7 @@ function runTrack(num,num2){
 					},480)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+33));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+33));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -960,7 +959,7 @@ function runTrack(num,num2){
 					},560)
 					// setTimeout(function(){
 						
-					// 	imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+56));
+					// 	imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+56));
 					// 	bgContainer.removeAllChildren();
 					// 	bgContainer.addChild(imageBackground);
 
@@ -1001,7 +1000,7 @@ function runTrack(num,num2){
 
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+27));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+27));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1012,7 +1011,7 @@ function runTrack(num,num2){
 					},80)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+28));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+28));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1023,7 +1022,7 @@ function runTrack(num,num2){
 					},160)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+29));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+29));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1034,7 +1033,7 @@ function runTrack(num,num2){
 					},240)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+30));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+30));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1045,7 +1044,7 @@ function runTrack(num,num2){
 					},320)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+31));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+31));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1056,7 +1055,7 @@ function runTrack(num,num2){
 					},400)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+32));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+32));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1067,7 +1066,7 @@ function runTrack(num,num2){
 					},480)
 					setTimeout(function(){
 						
-						imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+33));
+						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+33));
 						bgContainer.removeAllChildren();
 						bgContainer.addChild(imageBackground);
 
@@ -1098,7 +1097,7 @@ function runTrack(num,num2){
 		// console.log(num)
 		// if (shouldStart) {
 			// if (num == 22) {
-				imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+num));
+				imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+num));
 				bgContainer.removeAllChildren();
 				bgContainer.addChild(imageBackground);
 
@@ -1118,7 +1117,7 @@ function runTrack(num,num2){
 		// console.log(num2)
 		// if (shouldStart) {
 			
-			imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_"+num2));
+			imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+num2));
 			bgContainer.removeAllChildren();
 			bgContainer.addChild(imageBackground);
 
