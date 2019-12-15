@@ -207,15 +207,15 @@ maniFest = [
 	{
 		"src" : "assets/images/flags6.png" ,
 		"id" : "flag6" 
-	}
-
-]
-
-maniFest2 = [
+	},
 	{
 		"src" : "assets/images/tinyfier/bg_track_0.png" ,
 		"id" : "bgTrack_0" 
 	},
+
+]
+
+maniFest2 = [
 
 	{
 		"src" : "assets/images/tinyfier/bg_track_1.png" ,
