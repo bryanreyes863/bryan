@@ -39,7 +39,8 @@
 		
 		<div class="button-holder" style="margin: auto;">
 			
-			<button class="btn btn-success">무작위</button>
+			<button class="success-status">적용</button>
+			<button class="clear-result">삭제</button>
 
 		</div>
 
@@ -215,6 +216,15 @@
 				'speed6' : res1['speed'],
 		})
 
+		$('.success-status').css({
+		  'background' : 'green',
+		})
+
+
+		 $('.clear-result').css({
+		      'background' : 'none',
+		})
+
 
 	})
 
@@ -288,6 +298,15 @@
 				'speed6' : res1['speed'],
 		})
 
+		$('.success-status').css({
+		  'background' : 'green',
+		})
+
+
+		 $('.clear-result').css({
+		      'background' : 'none',
+		})
+
 	})
 	$('#flag3').click(function(){
 
@@ -357,6 +376,15 @@
 				'move4_1': res1['move4'],
 				'win_res6' : res1['win_res'],
 				'speed6' : res1['speed'],
+		})
+
+		$('.success-status').css({
+		  'background' : 'green',
+		})
+
+
+		 $('.clear-result').css({
+		      'background' : 'none',
 		})
 	})
 	$('#flag4').click(function(){
@@ -428,6 +456,15 @@
 					'win_res6' : res1['win_res'],
 					'speed6' : res1['speed'],
 			})
+
+			$('.success-status').css({
+			  'background' : 'green',
+			})
+
+
+			 $('.clear-result').css({
+			      'background' : 'none',
+			})
 		})
 	$('#flag5').click(function(){
 
@@ -498,6 +535,15 @@
 				'move4_1': res1['move4'],
 				'win_res6' : res1['win_res'],
 				'speed6' : res1['speed'],
+		})
+
+		$('.success-status').css({
+		  'background' : 'green',
+		})
+
+
+		 $('.clear-result').css({
+		      'background' : 'none',
 		})
 	})
 	$('#flag6').click(function(){
@@ -571,6 +617,52 @@
 				'win_res1' : res1['win_res'],
 				'speed1' : res1['speed'],
 		})
+
+		$('.success-status').css({
+		  'background' : 'green',
+		})
+
+
+		 $('.clear-result').css({
+		      'background' : 'none',
+		})
+	})
+
+	socket.on('sec',function(seconds){
+		if(seconds == 59) {
+			$('.success-status').css({
+			   'background' : 'none',
+			 });
+
+			  $('.clear-result').css({
+			       'background' : 'none',
+			 })
+			  $('#res-flag6').hide();
+			  $('#res-flag2').hide();
+			  $('#res-flag3').hide();
+			  $('#res-flag4').hide();
+			  $('#res-flag5').hide();
+			  $('#res-flag1').hide();
+
+		}
+	})
+
+	$('.clear-result').click(function(){
+	     $('.success-status').css({
+	      'background' : 'none',
+	    });
+
+	     $('.clear-result').css({
+	          'background' : 'red',
+	    })
+
+	     $('#res-flag6').hide();
+	     $('#res-flag2').hide();
+	     $('#res-flag3').hide();
+	     $('#res-flag4').hide();
+	     $('#res-flag5').hide();
+	     $('#res-flag1').hide();
+
 	})
 
 </script>
