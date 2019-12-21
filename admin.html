@@ -628,25 +628,6 @@
 		})
 	})
 
-	socket.on('sec',function(seconds){
-		if(seconds == 59) {
-			$('.success-status').css({
-			   'background' : 'none',
-			 });
-
-			  $('.clear-result').css({
-			       'background' : 'none',
-			 })
-			  $('#res-flag6').hide();
-			  $('#res-flag2').hide();
-			  $('#res-flag3').hide();
-			  $('#res-flag4').hide();
-			  $('#res-flag5').hide();
-			  $('#res-flag1').hide();
-
-		}
-	})
-
 	$('.clear-result').click(function(){
 	     $('.success-status').css({
 	      'background' : 'none',
