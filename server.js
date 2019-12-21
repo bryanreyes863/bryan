@@ -8,8 +8,8 @@ var server = http.Server(app);
 var io = socketIO(server);
 
 var moment = require('moment');
-// var url = "mongodb://localhost:27017/dograce";
-var url = "mongodb+srv://joemar12:joemar12@dograce-oh6ud.mongodb.net/test?retryWrites=true&w=majority";
+var url = "mongodb://localhost:27017/dograce";
+// var url = "mongodb+srv://joemar12:joemar12@dograce-oh6ud.mongodb.net/test?retryWrites=true&w=majority";
 
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
@@ -37,13 +37,13 @@ var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
 
 
-// server.listen(5000, function() {
-//   console.log('Starting server on port 5000');
-// });
+server.listen(5000, function() {
+  console.log('Starting server on port 5000');
+});
 
-server.listen(server_port , server_ip_address , function(){
-	console.log('Listening on' + server_ip_address + ', port' + server_port);	
-})
+// server.listen(server_port , server_ip_address , function(){
+// 	console.log('Listening on' + server_ip_address + ', port' + server_port);	
+// })
 
 
 app.use(express.static('./'));
@@ -570,7 +570,7 @@ setInterval(function(){
 					
 				},5000);
 
-			},30000);
+			},52000);
 
 
 
