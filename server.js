@@ -268,7 +268,7 @@ setInterval(function(){
 
 		var roundx = moment().format('HH') * 60;
 		var roundy = moment().format('mm');
-		var rounds = (parseInt(roundy)+parseInt(roundx)) + 2;
+		var rounds = (parseInt(roundy)+parseInt(roundx)) + 1;
 		var nowdate = moment().format('YYYY-MM-DD');
 
 		var secret_code = rounds+'cointoss'+moment().format('DD-MM-YYYY');
