@@ -143,7 +143,6 @@
 	function getSureLose(){
 		return (Math.random() * -8) + -3;
 	}
-
 	
 	$('#flag1').click(function(){
 		$('#res-flag1').show();
@@ -629,6 +628,23 @@
 	})
 
 	$('.clear-result').click(function(){
+
+	var desider = Math.floor(Math.random() * 6);
+
+	if (desider == 0) {
+		$('#flag1').click()
+	} else if (desider == 1){
+		$('#flag2').click()
+	} else if (desider == 2){
+		$('#flag3').click()
+	} else if (desider == 3){
+		$('#flag4').click()
+	} else if (desider == 4){
+		$('#flag5').click()
+	} else if (desider == 5){
+		$('#flag6').click()
+	}
+
 	     $('.success-status').css({
 	      'background' : 'none',
 	    });
