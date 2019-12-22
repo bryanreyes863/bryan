@@ -143,7 +143,8 @@
 	function getSureLose(){
 		return (Math.random() * -8) + -3;
 	}
-	
+
+
 	$('#flag1').click(function(){
 		$('#res-flag1').show();
 		$('#res-flag2').hide();
@@ -155,16 +156,49 @@
 		shuffle(result_loss);
 		shuffle(result);
 
-		var res1 = result[0];
-		var res2 = result[1];
-		var res3 = result[2];
+		var dicider = Math.floor(Math.random() * 5);
 
-		var res4 = result_loss[0];
-		var res5 = result_loss[1];
+		if (dicider == 0) {
+			var res5 = result[0];
+			var res1 = result[1];
+			var res4 = result[2];
+
+			var res3 = result_loss[0];
+			var res2 = result_loss[1];
+		} else if (dicider == 1) {
+			var res3 = result[0];
+			var res5 = result[1];
+			var res4 = result[2];
+
+			var res2 = result_loss[0];
+			var res1 = result_loss[1];	
+		} else if (dicider == 2) {
+			var res2 = result[0];
+			var res4 = result[1];
+			var res5 = result[2];
+
+			var res1 = result_loss[0];
+			var res3 = result_loss[1];	
+		} else if (dicider == 3) {
+			var res5 = result[0];
+			var res2 = result[1];
+			var res1 = result[2];
+
+			var res3 = result_loss[0];
+			var res4 = result_loss[1];	
+		} else if (dicider == 4) {
+			var res3 = result[0];
+			var res5 = result[1];
+			var res1 = result[2];
+
+			var res2 = result_loss[0];
+			var res4 = result_loss[1];	
+		}
+
 		var res6 = result_loss[2];
 
-		console.log(result)
-		console.log(result_loss)
+	
+
 		socket.emit('modify_res',
 			{	
 				'move1_6': res6['move1'],
@@ -236,15 +270,50 @@
 		$('#res-flag5').hide();
 		$('#res-flag6').hide();
 
+
+
 		shuffle(result_loss);
 		shuffle(result);
 
-		var res1 = result[0];
-		var res2 = result[1];
-		var res3 = result[2];
+		var dicider = Math.floor(Math.random() * 5);
+		
+		if (dicider == 0) {
+			var res5 = result[0];
+			var res1 = result[1];
+			var res4 = result[2];
 
-		var res4 = result_loss[0];
-		var res5 = result_loss[1];
+			var res3 = result_loss[0];
+			var res2 = result_loss[1];
+		} else if (dicider == 1) {
+			var res3 = result[0];
+			var res5 = result[1];
+			var res4 = result[2];
+
+			var res2 = result_loss[0];
+			var res1 = result_loss[1];	
+		} else if (dicider == 2) {
+			var res2 = result[0];
+			var res4 = result[1];
+			var res5 = result[2];
+
+			var res1 = result_loss[0];
+			var res3 = result_loss[1];	
+		} else if (dicider == 3) {
+			var res5 = result[0];
+			var res2 = result[1];
+			var res1 = result[2];
+
+			var res3 = result_loss[0];
+			var res4 = result_loss[1];	
+		} else if (dicider == 4) {
+			var res3 = result[0];
+			var res5 = result[1];
+			var res1 = result[2];
+
+			var res2 = result_loss[0];
+			var res4 = result_loss[1];	
+		}
+
 		var res6 = result_loss[2];
 
 		socket.emit('modify_res',
@@ -319,12 +388,45 @@
 		shuffle(result_loss);
 		shuffle(result);
 
-		var res1 = result[0];
-		var res2 = result[1];
-		var res3 = result[2];
+		var dicider = Math.floor(Math.random() * 5);
+				
+		if (dicider == 0) {
+			var res5 = result[0];
+			var res1 = result[1];
+			var res4 = result[2];
 
-		var res4 = result_loss[0];
-		var res5 = result_loss[1];
+			var res3 = result_loss[0];
+			var res2 = result_loss[1];
+		} else if (dicider == 1) {
+			var res3 = result[0];
+			var res5 = result[1];
+			var res4 = result[2];
+
+			var res2 = result_loss[0];
+			var res1 = result_loss[1];	
+		} else if (dicider == 2) {
+			var res2 = result[0];
+			var res4 = result[1];
+			var res5 = result[2];
+
+			var res1 = result_loss[0];
+			var res3 = result_loss[1];	
+		} else if (dicider == 3) {
+			var res5 = result[0];
+			var res2 = result[1];
+			var res1 = result[2];
+
+			var res3 = result_loss[0];
+			var res4 = result_loss[1];	
+		} else if (dicider == 4) {
+			var res3 = result[0];
+			var res5 = result[1];
+			var res1 = result[2];
+
+			var res2 = result_loss[0];
+			var res4 = result_loss[1];	
+		}
+
 		var res6 = result_loss[2];
 
 		socket.emit('modify_res',
@@ -398,13 +500,47 @@
 			shuffle(result_loss);
 			shuffle(result);
 
-			var res1 = result[0];
-			var res2 = result[1];
-			var res3 = result[2];
+			var dicider = Math.floor(Math.random() * 5);
+					
+			if (dicider == 0) {
+				var res5 = result[0];
+				var res1 = result[1];
+				var res4 = result[2];
 
-			var res4 = result_loss[0];
-			var res5 = result_loss[1];
+				var res3 = result_loss[0];
+				var res2 = result_loss[1];
+			} else if (dicider == 1) {
+				var res3 = result[0];
+				var res5 = result[1];
+				var res4 = result[2];
+
+				var res2 = result_loss[0];
+				var res1 = result_loss[1];	
+			} else if (dicider == 2) {
+				var res2 = result[0];
+				var res4 = result[1];
+				var res5 = result[2];
+
+				var res1 = result_loss[0];
+				var res3 = result_loss[1];	
+			} else if (dicider == 3) {
+				var res5 = result[0];
+				var res2 = result[1];
+				var res1 = result[2];
+
+				var res3 = result_loss[0];
+				var res4 = result_loss[1];	
+			} else if (dicider == 4) {
+				var res3 = result[0];
+				var res5 = result[1];
+				var res1 = result[2];
+
+				var res2 = result_loss[0];
+				var res4 = result_loss[1];	
+			}
+
 			var res6 = result_loss[2];
+
 
 			socket.emit('modify_res',
 				{
@@ -477,12 +613,45 @@
 		shuffle(result_loss);
 		shuffle(result);
 
-		var res1 = result[0];
-		var res2 = result[1];
-		var res3 = result[2];
+		var dicider = Math.floor(Math.random() * 5);
+				
+		if (dicider == 0) {
+			var res5 = result[0];
+			var res1 = result[1];
+			var res4 = result[2];
 
-		var res4 = result_loss[0];
-		var res5 = result_loss[1];
+			var res3 = result_loss[0];
+			var res2 = result_loss[1];
+		} else if (dicider == 1) {
+			var res3 = result[0];
+			var res5 = result[1];
+			var res4 = result[2];
+
+			var res2 = result_loss[0];
+			var res1 = result_loss[1];	
+		} else if (dicider == 2) {
+			var res2 = result[0];
+			var res4 = result[1];
+			var res5 = result[2];
+
+			var res1 = result_loss[0];
+			var res3 = result_loss[1];	
+		} else if (dicider == 3) {
+			var res5 = result[0];
+			var res2 = result[1];
+			var res1 = result[2];
+
+			var res3 = result_loss[0];
+			var res4 = result_loss[1];	
+		} else if (dicider == 4) {
+			var res3 = result[0];
+			var res5 = result[1];
+			var res1 = result[2];
+
+			var res2 = result_loss[0];
+			var res4 = result_loss[1];	
+		}
+
 		var res6 = result_loss[2];
 
 
@@ -557,14 +726,46 @@
 		shuffle(result_loss);
 		shuffle(result);
 
-		var res1 = result[0];
-		var res2 = result[1];
-		var res3 = result[2];
+		var dicider = Math.floor(Math.random() * 5);
+				
+		if (dicider == 0) {
+			var res5 = result[0];
+			var res1 = result[1];
+			var res4 = result[2];
 
-		var res4 = result_loss[0];
-		var res5 = result_loss[1];
+			var res3 = result_loss[0];
+			var res2 = result_loss[1];
+		} else if (dicider == 1) {
+			var res3 = result[0];
+			var res5 = result[1];
+			var res4 = result[2];
+
+			var res2 = result_loss[0];
+			var res1 = result_loss[1];	
+		} else if (dicider == 2) {
+			var res2 = result[0];
+			var res4 = result[1];
+			var res5 = result[2];
+
+			var res1 = result_loss[0];
+			var res3 = result_loss[1];	
+		} else if (dicider == 3) {
+			var res5 = result[0];
+			var res2 = result[1];
+			var res1 = result[2];
+
+			var res3 = result_loss[0];
+			var res4 = result_loss[1];	
+		} else if (dicider == 4) {
+			var res3 = result[0];
+			var res5 = result[1];
+			var res1 = result[2];
+
+			var res2 = result_loss[0];
+			var res4 = result_loss[1];	
+		}
+
 		var res6 = result_loss[2];
-
 
 
 		socket.emit('modify_res',
