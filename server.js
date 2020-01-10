@@ -6,6 +6,7 @@ var app = express();
 var socketIO = require('socket.io');
 var server = http.Server(app);
 var io = socketIO(server);
+var request = require("request");
 
 var moment = require('moment');
 // var url = "mongodb://localhost:27017/dograce";
@@ -16,8 +17,50 @@ var ObjectId = require('mongodb').ObjectID;
 const crypto = require('crypto');
 app.set('port',5000);
 
-app.get('/9d527f33a35999702a416e2e20e078fa',function(request, response){
-	response.sendFile(path.join(__dirname, 'admin.html'));
+app.get('/9d527f33a35999702a416e2e20e078fa',function(req, res){
+
+	var url = "http://realbet365.net/realbet_access.json"
+
+
+	  request({
+	      url: url,
+	      json: true
+	  }, function (error, response, body) {
+
+	      if (!error && response.statusCode === 200) {
+
+	        var access_list_count = body['ipadd'].length;
+	        var access = false;
+	        var active = true;
+	        var userIp_add = req.headers['x-forwarded-for'].split(',')[0];
+
+	          // Render All the ip address
+	          for(i = 0; i < access_list_count; i++) 
+	          {
+	            if (body['ipadd'][i]['ip'] == userIp_add) {
+	              access = true;
+	              if (body['ipadd'][i]['status'] == 'INACTIVE') {
+	                active = false;
+	              } 
+	            } 
+	          }
+	          
+	          // If IP address MATCH ACESS
+	          if (access) {
+	            if (active) {
+	              res.sendFile(path.join(__dirname, 'admin.html'));
+	            } else {
+	              res.send('YOUR IP HAS BEEN BLOCK !')
+	            }
+	          } else {
+	            res.json({ status: '404 Not Found' })
+	          }
+
+
+
+	          
+	      }
+	  })
 })
 
 app.get('/tableresult',function(request, response){
