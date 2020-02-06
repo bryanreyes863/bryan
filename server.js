@@ -578,7 +578,7 @@ setInterval(function(){
 
 						var gameObj = {
 							nowdate : nowdate,
-							rounds : rounds,
+							rounds : rounds + 1,
 							hash : hash,
 							first_place : first_place,
 							second_place : second_place,
