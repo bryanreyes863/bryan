@@ -1653,8 +1653,8 @@ function runTrack(num,num2){
 													
 	    } else {
 
-	    	if (dog1obj.alpha) {
-	    		
+	    	if (dog1obj) {
+
 				finish = true;
 				tabActive = false;	
 				runTrack(0,0);	
