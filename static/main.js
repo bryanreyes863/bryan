@@ -1637,18 +1637,22 @@ function runTrack(num,num2){
 		
 	        // tween resume() code goes here
 
-	        var windowW = window.innerWidth;
+	        if (shouldStart) {
+	        	var windowW = window.innerWidth;
 
-	        	createjs.Tween.get(inactive_load)
-	        	.to({x: ($('#track_bg').width() * -0.1)}, 500, createjs.Ease.linear);
+	        		createjs.Tween.get(inactive_load)
+	        		.to({x: ($('#track_bg').width() * -0.1)}, 500, createjs.Ease.linear);
 
-	        	createjs.Tween.get(inactive_load_text)
-	        	.to({x: ($('#track_bg').width() / 3.5)}, 500, createjs.Ease.linear);
-	        setTimeout(function(){
+	        		createjs.Tween.get(inactive_load_text)
+	        		.to({x: ($('#track_bg').width() / 3.5)}, 500, createjs.Ease.linear);
+	        	setTimeout(function(){
 
-	        	tabActive = true;	
-	        },10000);
-	        console.log("tab is visible - has focus");
+	        		tabActive = true;	
+	        	},10000);
+	        	console.log("tab is visible - has focus");
+	        }
+
+	       
 
 													
 	    } else {
