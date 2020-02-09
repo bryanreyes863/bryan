@@ -1652,17 +1652,21 @@ function runTrack(num,num2){
 
 													
 	    } else {
-			finish = true;
-			tabActive = false;	
-			runTrack(0,0);	
-			dog1obj.alpha = 0;
-			dog2obj.alpha = 0;
-			dog3obj.alpha = 0;
-			dog4obj.alpha = 0;
-			dog5obj.alpha = 0;
-			dog6obj.alpha = 0;
-			resize();
-			createjs.Tween.get(line).to({scaleX: (windowW * 8.4)  / bg.image.height}, 0, createjs.Ease.linear);
+
+	    	if (dog1obj.alpha) {
+	    		
+				finish = true;
+				tabActive = false;	
+				runTrack(0,0);	
+				dog1obj.alpha = 0;
+				dog2obj.alpha = 0;
+				dog3obj.alpha = 0;
+				dog4obj.alpha = 0;
+				dog5obj.alpha = 0;
+				dog6obj.alpha = 0;
+				resize();
+				createjs.Tween.get(line).to({scaleX: (windowW * 8.4)  / bg.image.height}, 0, createjs.Ease.linear);
+	    	}
 
         // console.log("tab is invisible - has blur");		
 	        // $('#') 
