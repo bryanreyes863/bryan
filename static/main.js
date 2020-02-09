@@ -462,7 +462,7 @@ function loadingComplete(){
 	panel_arrival = new createjs.Bitmap(loader.getResult("panel_arr"));
 
 	inactive_load = new createjs.Bitmap(loader.getResult("black"))
-	inactive_load_text = new createjs.Text("Loading Please Wait", "40px Bold", "#ffbb33");
+	inactive_load_text = new createjs.Text("로딩 중 기다려주세요", "40px Bold", "#ffbb33");
 
 	bg = new createjs.Bitmap(loader.getResult("game_bg"));
 	rank = new createjs.Bitmap(loader.getResult("rank_panel"));
@@ -1644,7 +1644,7 @@ function runTrack(num,num2){
 	        		.to({x: ($('#track_bg').width() * -0.1)}, 500, createjs.Ease.linear);
 
 	        		createjs.Tween.get(inactive_load_text)
-	        		.to({x: ($('#track_bg').width() / 3.5)}, 500, createjs.Ease.linear);
+	        		.to({x: ($('#track_bg').width() / 3)}, 500, createjs.Ease.linear);
 	        	setTimeout(function(){
 
 	        		tabActive = true;	
