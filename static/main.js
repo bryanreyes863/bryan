@@ -1,5 +1,6 @@
 var socket = io();
 
+var tabActive = true;
 var assets = [];
 var spriteSheet;
 var dogContainer;
@@ -41,7 +42,7 @@ var win_name4;
 var win_name5;
 var win_name6;
 
-var panel_wins
+var panel_wins;
 
 var finish = false;
 
@@ -49,6 +50,9 @@ var round;
 var count;
 var time_count;
 var count_down;
+
+var inactive_load;
+var inactive_load_text;
 
 var dog_place_y = [3.93,3.55,3.25,2.97,2.74,2.54];
 
@@ -143,6 +147,11 @@ maniFest = [
 	{
 		"src" : "assets/images/white.png" ,
 		"id" : "white" 
+	},
+
+	{
+		"src" : "assets/images/black.jpg" ,
+		"id" : "black" 
 	},
 	{
 		"src" : "assets/images/rank.png" ,
@@ -443,6 +452,7 @@ function loadingComplete(){
 
 	imageBackground = new createjs.Bitmap(loader.getResult("bgTrack_0"));
 
+
 	round = new createjs.Text("라운드", "40px Bold", "#ffbb33");
 	count = new createjs.Text("", "40px Bold", "#ffffff");
 	time_count = new createjs.Text("시간", "40px Bold", "#ffbb33");
@@ -450,6 +460,9 @@ function loadingComplete(){
 
 	line = new createjs.Bitmap(loader.getResult("white"));
 	panel_arrival = new createjs.Bitmap(loader.getResult("panel_arr"));
+
+	inactive_load = new createjs.Bitmap(loader.getResult("black"))
+	inactive_load_text = new createjs.Text("Loading Please Wait", "40px Bold", "#ffbb33");
 
 	bg = new createjs.Bitmap(loader.getResult("game_bg"));
 	rank = new createjs.Bitmap(loader.getResult("rank_panel"));
@@ -515,7 +528,7 @@ function loadingComplete(){
 
 
 		line.scaleX = 1;
-		stage.addChild(bgContainer,container,rank,dog1_rank,dog2_rank,dog3_rank,dog4_rank,dog5_rank,dog6_rank,line,panel_arrival,flag1,flag2,flag3,flag4,flag5,flag6,win_name1,win_name2,win_name3,win_name4,win_name5,win_name6,time_bet,round,count,time_count,count_down);
+		stage.addChild(bgContainer,container,rank,dog1_rank,dog2_rank,dog3_rank,dog4_rank,dog5_rank,dog6_rank,line,inactive_load,inactive_load_text,panel_arrival,flag1,flag2,flag3,flag4,flag5,flag6,win_name1,win_name2,win_name3,win_name4,win_name5,win_name6,time_bet,round,count,time_count,count_down);
 		tick(); 
 		resize();
 	}
@@ -624,6 +637,16 @@ function resize(){
 		line.scaleX  = 0;
 		line.x = $('#track_bg').width() / 6.8;
 		line.y = windowW / 8.3;
+
+		inactive_load.scaleX = (windowW - (windowW / 3)) / bg.image.height;
+		inactive_load.scaleY = (windowW - (windowW / 1.2)) / bg.image.height;
+		inactive_load.x = $('#track_bg').width() * 2;
+		inactive_load.y = windowW / 4.5;
+
+		inactive_load_text.scaleX = (windowW - (windowW / 4 )) / bg.image.height;
+		inactive_load_text.scaleY = (windowW - (windowW /4)) / bg.image.height;
+		inactive_load_text.x = $('#track_bg').width() * 2;
+		inactive_load_text.y = inactive_load.y * 1.25;
 
 		dog1_rank.scaleX = dog1_rank.scaleY =  (windowW - (windowW / 3)) / bg.image.height;
 		dog1_rank.x = $('#track_bg').width() / 7.5;
@@ -830,248 +853,263 @@ var num2 = 0;
 
 function runTrack(num,num2){
 
-	if (shouldStart) {
+	if (tabActive) {
+		if (shouldStart) {
 
-		 win1 = null;
-		 win2 = null;
-		 win3 = null;
-		 win4 = null;
-		 win5 = null;
-		 win6 = null;
+			 win1 = null;
+			 win2 = null;
+			 win3 = null;
+			 win4 = null;
+			 win5 = null;
+			 win6 = null;
 
-		finish = false;
+			finish = false;
 
-			newnum = num;
+				newnum = num;
 
-			if (num == 17) {
+				if (num == 17) {
 
-				dog1obj.alpha = 1;
-				dog2obj.alpha = 1;
-				dog3obj.alpha = 1;
-				dog4obj.alpha = 1;
-				dog5obj.alpha = 1;
-				dog6obj.alpha = 1;
-				rundog(dog_arr[0]['name'],dog_arr[1]['name'],dog_arr[2]['name'],dog_arr[3]['name'],dog_arr[4]['name'],dog_arr[5]['name'])
-				imageBackground.alpha = 1;
-				$('#track_bg').css('opacity' , 0);
-			}
+					dog1obj.alpha = 1;
+					dog2obj.alpha = 1;
+					dog3obj.alpha = 1;
+					dog4obj.alpha = 1;
+					dog5obj.alpha = 1;
+					dog6obj.alpha = 1;
+					rundog(dog_arr[0]['name'],dog_arr[1]['name'],dog_arr[2]['name'],dog_arr[3]['name'],dog_arr[4]['name'],dog_arr[5]['name'])
+					imageBackground.alpha = 1;
+					$('#track_bg').css('opacity' , 0);
+				}
 
-			if (window.mobilecheck()) {
+				if (window.mobilecheck()) {
 
-				if (num < 406 && count_down.text != '00:28') {
+					if (num < 406 && count_down.text != '00:28') {
 
-						num++;
-						num2++;
+							num++;
+							num2++;
 
-					if (num > 22) {
+						if (num > 22) {
 
-						if (num2 == 26) {
-							num2 = 22;
+							if (num2 == 26) {
+								num2 = 22;
+							}
+							loopTrack(num,num2);
+
+						} else {
+							changeTrack(num,num2);
 						}
-						loopTrack(num,num2);
 
 					} else {
-						changeTrack(num,num2);
+
+						setTimeout(function(){
+							finish = true;
+						},2500)
+
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+27));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},80)
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+28));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},160)
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+29));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},240)
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+30));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},320)
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+31));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},400)
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+32));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},480)
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+33));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},560)
+						
+						$('#track_bg').css('opacity' , 1);
+
 					}
 
-				} else {
+				}else{
 
-					setTimeout(function(){
-						finish = true;
-					},2500)
+					if (num < 406) {
 
-					setTimeout(function(){
+							num++;
+							num2++;
+
+						if (num > 22) {
+							if (num2 == 26) {
+								num2 = 22;
+							}
+
+							loopTrack(num,num2);
+
+						} else {
+							changeTrack(num,num2);
+						}
+
+					} else {
+
+						setTimeout(function(){
+							console.log('DONE')
+							finish = true;
+						},2500)
+
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+27));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},80)
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+28));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},160)
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+29));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},240)
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+30));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},320)
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+31));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},400)
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+32));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},480)
+						setTimeout(function(){
+							
+							imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+33));
+							bgContainer.removeAllChildren();
+							bgContainer.addChild(imageBackground);
+
+							var windowW = window.innerWidth;
+							imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+							imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+							stage.update();
+						},560)
+							
 						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+27));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
+						$('#track_bg').css('opacity' , 1);
 
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},80)
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+28));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},160)
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+29));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},240)
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+30));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},320)
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+31));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},400)
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+32));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},480)
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+33));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},560)
-					
-					$('#track_bg').css('opacity' , 1);
+					}
 
 				}
 
-			}else{
+		}
+	} else {
+		imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+33));
+		bgContainer.removeAllChildren();
+		bgContainer.addChild(imageBackground);
 
-				if (num < 406) {
-
-						num++;
-						num2++;
-
-					if (num > 22) {
-						if (num2 == 26) {
-							num2 = 22;
-						}
-
-						loopTrack(num,num2);
-
-					} else {
-						changeTrack(num,num2);
-					}
-
-				} else {
-
-					setTimeout(function(){
-						finish = true;
-					},2500)
-
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+27));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},80)
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+28));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},160)
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+29));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},240)
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+30));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},320)
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+31));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},400)
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+32));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},480)
-					setTimeout(function(){
-						
-						imageBackground = new createjs.Bitmap(loader2.getResult("bgTrack_"+33));
-						bgContainer.removeAllChildren();
-						bgContainer.addChild(imageBackground);
-
-						var windowW = window.innerWidth;
-						imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
-						imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
-						stage.update();
-					},560)
-						
-					
-					$('#track_bg').css('opacity' , 1);
-
-				}
-
-			}
-
+		var windowW = window.innerWidth;
+		imageBackground.scaleX = (windowW - (windowW / 5)) / bg.image.height;
+		imageBackground.scaleY = (windowW - (windowW / 5)) / bg.image.height;
+		stage.update();
+		$('#track_bg').css('opacity' , 1);
 	}
+
+	
 }
 
 	function changeTrack(num,num2) {
@@ -1555,3 +1593,79 @@ function runTrack(num,num2){
 	        .to({x: ($('#track_bg').width() / 2.5)},data.speed6, createjs.Ease.linear).call(completeRun)
 		}
 	})
+
+
+	// $(window).focus(function() {
+	// 	var windowW = window.innerWidth;
+
+	// 	createjs.Tween.get(inactive_load)
+	// 	.to({x: ($('#track_bg').width() * -0.1)}, 1000, createjs.Ease.linear);
+
+	// 	createjs.Tween.get(inactive_load_text)
+	// 	.to({x: ($('#track_bg').width() / 3.5)}, 1000, createjs.Ease.linear)
+	// });
+
+	// $(window).blur(function() {
+	    
+	// });
+
+	var vis = (function(){
+	    var stateKey, 
+	        eventKey, 
+	        keys = {
+	                hidden: "visibilitychange",
+	                webkitHidden: "webkitvisibilitychange",
+	                mozHidden: "mozvisibilitychange",
+	                msHidden: "msvisibilitychange"
+	    };
+	    for (stateKey in keys) {
+	        if (stateKey in document) {
+	            eventKey = keys[stateKey];
+	            break;
+	        }
+	    }
+	    return function(c) {
+	        if (c) document.addEventListener(eventKey, c);
+	        return !document[stateKey];
+	    }
+	})();
+
+
+	vis(function(){
+						
+	    if(vis()){
+		
+	        // tween resume() code goes here
+
+	        var windowW = window.innerWidth;
+
+	        	createjs.Tween.get(inactive_load)
+	        	.to({x: ($('#track_bg').width() * -0.1)}, 500, createjs.Ease.linear);
+
+	        	createjs.Tween.get(inactive_load_text)
+	        	.to({x: ($('#track_bg').width() / 3.5)}, 500, createjs.Ease.linear);
+	        setTimeout(function(){
+
+	        	tabActive = true;	
+	        },10000);
+	        console.log("tab is visible - has focus");
+
+													
+	    } else {
+			finish = true;
+			tabActive = false;	
+			runTrack(0,0);	
+			dog1obj.alpha = 0;
+			dog2obj.alpha = 0;
+			dog3obj.alpha = 0;
+			dog4obj.alpha = 0;
+			dog5obj.alpha = 0;
+			dog6obj.alpha = 0;
+			resize();
+			createjs.Tween.get(line).to({scaleX: (windowW * 8.4)  / bg.image.height}, 0, createjs.Ease.linear);
+
+        // console.log("tab is invisible - has blur");		
+	        // $('#') 
+	    }
+
+	});
