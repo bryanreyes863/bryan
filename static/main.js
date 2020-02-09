@@ -1669,7 +1669,7 @@ function runTrack(num,num2){
 				dog5obj.alpha = 0;
 				dog6obj.alpha = 0;
 				resize();
-				createjs.Tween.get(line).to({scaleX: (windowW * 8.4)  / bg.image.height}, 0, createjs.Ease.linear);
+
 	    	}
 
         // console.log("tab is invisible - has blur");		
