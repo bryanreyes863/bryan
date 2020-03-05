@@ -550,16 +550,50 @@ setInterval(function(){
 			// console.log(result_container)
 
 
-				var jsonObj = {
-					rounds : rounds,
-					first : first_place,
-					second : second_place,
-					third : third_place,
-					fourth : fourth_place,
-					fifth : fifth_place,
-					sixth : sixth_place
+			if (first_place == 'dog1') {
+				var res1 = "DOG1";
+				var res2 = 'under';
+				var res3 = 'ODD';
+			} else if (first_place == 'dog2') {
+				var res1 = "DOG2";
+				var res2 = 'under';
+				var res3 = 'EVEN';
+			} else if (first_place == 'dog3') {
+				var res1 = "DOG3";
+				var res2 = 'under';
+				var res3 = 'ODD';
+			} else if (first_place == 'dog4') {
+				var res1 = "DOG4";
+				var res2 = 'over';
+				var res3 = 'EVEN';
+			} else if (first_place == 'dog5') {
+				var res1 = "DOG5";
+				var res2 = 'over';
+				var res3 = 'ODD';
+			} else if (first_place == 'dog6') {
+				var res1 = "DOG6";
+				var res2 = 'over';
+				var res3 = 'EVEN';
+			}
 
+
+				var jsonObj = {
+					'rounds' : rounds,
+					'result1' : res1,
+					'result2' : res2,
+					'result3' : res3,
+					
 				}
+				// var jsonObj = {
+				// 	rounds : rounds,
+				// 	first : first_place,
+				// 	second : second_place,
+				// 	third : third_place,
+				// 	fourth : fourth_place,
+				// 	fifth : fifth_place,
+				// 	sixth : sixth_place
+
+				// }
 
 			  		var fs = require('fs');
 			  		let data = JSON.stringify(jsonObj);
