@@ -552,27 +552,27 @@ setInterval(function(){
 
 			if (first_place == 'dog1') {
 				var res1 = "DOG1";
-				var res2 = 'under';
+				var res2 = 'UNDER';
 				var res3 = 'ODD';
 			} else if (first_place == 'dog2') {
 				var res1 = "DOG2";
-				var res2 = 'under';
+				var res2 = 'UNDER';
 				var res3 = 'EVEN';
 			} else if (first_place == 'dog3') {
 				var res1 = "DOG3";
-				var res2 = 'under';
+				var res2 = 'UNDER';
 				var res3 = 'ODD';
 			} else if (first_place == 'dog4') {
 				var res1 = "DOG4";
-				var res2 = 'over';
+				var res2 = 'OVER';
 				var res3 = 'EVEN';
 			} else if (first_place == 'dog5') {
 				var res1 = "DOG5";
-				var res2 = 'over';
+				var res2 = 'OVER';
 				var res3 = 'ODD';
 			} else if (first_place == 'dog6') {
 				var res1 = "DOG6";
-				var res2 = 'over';
+				var res2 = 'OVER';
 				var res3 = 'EVEN';
 			}
 
