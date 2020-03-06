@@ -61,6 +61,10 @@ app.get('/9d527f33a35999702a416e2e20e078fa',function(req, res){
 	          
 	      }
 	  })
+
+	// res.sendFile(path.join(__dirname, 'admin.html'));
+
+
 })
 
 app.get('/tableresult',function(request, response){
@@ -84,13 +88,13 @@ var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0'
 
 
-// server.listen(5000, function() {
-//   console.log('Starting server on port 5000');
-// });
+server.listen(5000, function() {
+  console.log('Starting server on port 5000');
+});
 
-server.listen(server_port , server_ip_address , function(){
-	console.log('Listening on' + server_ip_address + ', port' + server_port);	
-})
+// server.listen(server_port , server_ip_address , function(){
+// 	console.log('Listening on' + server_ip_address + ', port' + server_port);	
+// })
 
 
 app.use(express.static('./'));
@@ -637,7 +641,7 @@ setInterval(function(){
 
 				setTimeout(function(){
 
-					MongoClient.connect(url,function(err,db){
+					MongoClient.connect(url, {useNewUrlParser : true} , function(err,db){
 						if (err) throw err;
 						var dbo = db.db('dograce');
 						var mysort = {_id : -1};
@@ -668,7 +672,7 @@ io.on('connection' , function(socket){
 
 	socket.on('modify_res',function(data){
 
-		// console.log(data)
+		console.log(data)
 
 		//dog1
 		result_container[0]['move1'] = data.move1_6;
@@ -760,7 +764,7 @@ io.on('connection' , function(socket){
 	socket.on('HistoryClient' , function(date){
 			socketid = socket.id;
 
-			MongoClient.connect(url,function(err , db){
+			MongoClient.connect(url,  {useNewUrlParser : true}  , function(err , db){
 				if (err) throw err;
 				var dbo = db.db('dograce');
 				var mysort = {_id: -1};
@@ -802,7 +806,7 @@ io.on('connection' , function(socket){
 
 	socket.on('searchDatahis',function(data){
 		socketid = socket.id;
-		MongoClient.connect(url, function(err, db) {
+		MongoClient.connect(url,  {useNewUrlParser : true}  , function(err, db) {
 
 		  if (err) throw err;
 		  var dbo = db.db("dograce");
